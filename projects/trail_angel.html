@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./dist/output.css" rel="stylesheet" />
+
+    <!-- Add these in the head section -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flow-bite@2.0.0/dist/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    
+    
 </head>
 <body>
     
@@ -64,95 +72,188 @@
     </div>
 </section>
 
+
+
 <section id="case_study" class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="flex mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+
       
-      <div class="max-w-2xl mx-auto p-8">
+        <aside class="w-1/4 p-4 sticky top-16 max-h-screen overflow-y-auto hidden md:block">
+          <!-- Sidebar content -->
+
+          <ul class="space-y-2">
+            <li>
+              <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-overview" data-collapse-toggle="dropdown-overview">
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap">Overview</span>
+                  <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <ul id="dropdown-overview" class="hidden py-2 space-y-2">
+                  <li>
+                      <a href="#solution" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Solution</a>
+                  </li>
+                  <li>
+                      <a href="#approach" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Approach</a>
+                  </li>
+                  
+              </ul>
+            </li>
+
+            <li>
+                <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-thesis" data-collapse-toggle="dropdown-thesis">
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Thesis</span>
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <ul id="dropdown-thesis" class="hidden py-2 space-y-2">
+                        <li>
+                            <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                        </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-antithesis" data-collapse-toggle="dropdown-antithesis">
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Antithesis</span>
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <ul id="dropdown-antithesis" class="hidden py-2 space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Forgot Password</a>
+                    </li>
+                </ul>
+            </li>
+            
+          
+            <li>
+                <button type="button" class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-synthesis" data-collapse-toggle="dropdown-synthesis">
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Synthesis</span>
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <ul id="dropdown-synthesis" class="hidden py-2 space-y-2">
+                    <li>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Forgot Password</a>
+                    </li>
+                </ul>
+            </li>
+          
+            <li>
+              <a href="#takeaway" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                  <span class="ml-3">Takeaway</span>
+              </a>
+          </li>
+        </ul>
+
+        </aside>
+      
+      
+  
+     
+
+      <div class="flex-1 max-w-2xl mx-auto p-4">
 
         <div id="overview">
           <h1 class="text-4xl font-bold mb-8">Overview</h1>
         
           <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Trail Angel is a mobile app that assists active people to plan adventures outdoors without worrying about air pollution due to wildfires. The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.</p>
           <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Track work across the enterprise through an open, collaborative platform. <strong class="font-semibold text-gray-900 dark:text-white">Link issues across Jira</strong> and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
-          <h2 class="text-3xl font-bold mb-8">Solution</h2>
-          <div>
-            <h3 class="text-2xl font-bold mb-3">On-time Information</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Individuals can employ the portable air quality monitor to instantaneously visualize and continuously monitor real-time air quality.</p>
-            <div class="flex flex-col items-center mb-3">
-              <img src="/img/trail-angel/air-tracker.png" alt="Air Tracker" style="width: 50%; border-radius: 10%;" />
+          
+          <div id="solution">
+            <h2 class="text-3xl font-bold mb-8">Solution</h2>
+            <div>
+              <h3 class="text-2xl font-bold mb-3">On-time Information</h3>
+              <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Individuals can employ the portable air quality monitor to instantaneously visualize and continuously monitor real-time air quality.</p>
+              <div class="flex flex-col items-center mb-3">
+                <img src="/img/trail-angel/air-tracker.png" alt="Air Tracker" style="width: 50%; border-radius: 10%;" />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold mb-3">Make a Trail Plan</h3>
+              <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can access a sophisticated platform that not only facilitates the creation of personalized outdoor trail plans but also provides real-time air quality index data. This empowers users to enjoy a pristine outdoor experience, ensuring they breathe in clean, fresh air throughout their journey.</p>
+              <div class="flex flex-col items-center mb-3 ">
+                <img src="/img/trail-angel/gif_2.gif" alt="Make a Trail Plan" style="width: 50%; border-radius: 10%;" />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold mb-3">Detour A Trail</h3>
+              <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.</p>
+              <div class="flex flex-col items-center mb-3">
+                <img src="/img/trail-angel/gif_3.gif" alt="Detour A Trail" style="width: 50%; border-radius: 10%;" />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold mb-3">Change A Trail Plan</h3>
+              <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can access real-time air pollution forecasts, allowing them to adjust their travel plans proactively prior to reaching their destination.</p>
+              <div class="flex flex-col items-center mb-8">
+                <img src="/img/trail-angel/gif_4.gif" alt="Change A Trail Plan" style="width: 50%; border-radius: 10%;" />
+              </div>
             </div>
           </div>
-
-          <div>
-            <h3 class="text-2xl font-bold mb-3">Make a Trail Plan</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can access a sophisticated platform that not only facilitates the creation of personalized outdoor trail plans but also provides real-time air quality index data. This empowers users to enjoy a pristine outdoor experience, ensuring they breathe in clean, fresh air throughout their journey.</p>
-            <div class="flex flex-col items-center mb-3 ">
-              <img src="/img/trail-angel/gif_2.gif" alt="Make a Trail Plan" style="width: 50%; border-radius: 10%;" />
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-2xl font-bold mb-3">Detour A Trail</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.</p>
-            <div class="flex flex-col items-center mb-3">
-              <img src="/img/trail-angel/gif_3.gif" alt="Detour A Trail" style="width: 50%; border-radius: 10%;" />
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-2xl font-bold mb-3">Change A Trail Plan</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can access real-time air pollution forecasts, allowing them to adjust their travel plans proactively prior to reaching their destination.</p>
-            <div class="flex flex-col items-center mb-8">
-              <img src="/img/trail-angel/gif_4.gif" alt="Change A Trail Plan" style="width: 50%; border-radius: 10%;" />
-            </div>
-
+          <div id="approach">
             <h2 class="text-3xl font-bold mb-8">Approach</h2>
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-                                    <!-- Card 1: Thesis -->
-                                    <div class="bg-white p-4 rounded-lg ">
-                                        <h5 class="text-lg font-semibold mb-2">Thesis</h5>
-                                        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                                            <li>Observation</li>
-                                            <li>Secondary Research</li>
-                                            <li>Interview</li>
-                                            <li>Affinity Diagram</li>
-                                            <li>Inspirations</li>
-                                        </ul>
-                                    </div>
+              <!-- Card 1: Thesis -->
+              <div class="bg-white p-4 rounded-lg ">
+                  <h5 class="text-lg font-semibold mb-2">Thesis</h5>
+                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                       <li>Observation</li>
+                      <li>Secondary Research</li>
+                       <li>Interview</li>
+                       <li>Affinity Diagram</li>
+                       <li>Inspirations</li>
+                  </ul>
+              </div>
 
-                                    <!-- Card 2: Antithesis -->
-                                    <div class="bg-white p-4 rounded-lg ">
-                                        <h5 class="text-lg font-semibold mb-2">Antithesis</h5>
-                                        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                                            <li>Target Market</li>
-                                            <li>Target Audience</li>
-                                            <li>Compeptitive Analysis</li>
-                                        </ul>
-                                    </div>
+              <!-- Card 2: Antithesis -->
+              <div class="bg-white p-4 rounded-lg ">
+                  <h5 class="text-lg font-semibold mb-2">Antithesis</h5>
+                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                      <li>Target Market</li>
+                      <li>Target Audience</li>
+                      <li>Compeptitive Analysis</li>
+                  </ul>
+              </div>
 
-                                    <!-- Card 3: Synthesis -->
-                                    <div class="bg-white p-4 rounded-lg ">
-                                        <h5 class="text-lg font-semibold mb-2">Synthesis</h5>
-                                        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                                            <li>Primary Methods</li>
-                                            <li>Ideation</li>
-                                            <li>Product Sketch</li>
-                                            <li>Wireframe</li>
-                                            <li>Design System</li>
-                                            <li>Proof of Concept</li>
-                                            <li>Test and Iteration</li>
-                                        </ul>
-                                    </div>
+              <!-- Card 3: Synthesis -->
+              <div class="bg-white p-4 rounded-lg ">
+                  <h5 class="text-lg font-semibold mb-2">Synthesis</h5>
+                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+                      <li>Primary Methods</li>
+                      <li>Ideation</li>
+                      <li>Product Sketch</li>
+                      <li>Wireframe</li>
+                      <li>Design System</li>
+                      <li>Proof of Concept</li>
+                      <li>Test and Iteration</li>
+                  </ul>
+              </div>
             </div>
-
           </div>
         </div>
 
         <div id="Thesis">
           <h1 class="text-4xl font-bold mb-8">Thesis</h1>
       
-          <div>
-            <h3 class="text-2xl font-bold mb-3">Observation</h3>
+          <div id="observation">
+            <h3 class="text-3xl font-bold mb-3">Observation</h3>
             <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">During California's nine-month wildfire season, people never know if they'll be in a polluted area from a wildfire at any time.</p>
             <div id="animation-carousel" class="relative w-full" data-carousel="static">
               <!-- Carousel wrapper -->
@@ -199,7 +300,7 @@
           </div>
 
           <div>
-            <h3 class="text-2xl font-bold mb-3">Secondary Research</h3>
+            <h3 class="text-3xl font-bold mb-3">Secondary Research</h3>
             <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Find up-to-date statistics on CA wildfires and CAL FIRE activity. The Website www.fire.ca.gov combine state and federal data to track the number of fires and acres burned in California for 2023.</p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
@@ -221,7 +322,7 @@
           </div>
 
           <div>
-            <h3 class="text-2xl font-bold mb-3">Detour A Trail</h3>
+            <h3 class="text-2xl font-bold mb-3">Health Impact</h3>
             <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.</p>
             <div class="flex flex-col items-center mb-3">
               <img src="img/trail-angel/gif_3.gif" alt="Detour A Trail" style="width: 50%; border-radius: 10%;" />
@@ -278,11 +379,26 @@
         </div>
 
       </div> 
+
+      <!-- Right Sidebar -->
+      
+
     </div>   
   
 
     
 </section>
+
+<!-- Back-to-Top Button -->
+<button
+id="backToTopButton"
+class="fixed bottom-10 right-10 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center"
+@click="scrollTop"
+>
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+</svg>
+</button>
 
 
 <footer class="bg-white dark:bg-gray-900">
@@ -333,5 +449,6 @@
 
     <script src="../flowbite/dist/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>
 </html>
