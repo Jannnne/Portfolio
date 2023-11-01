@@ -560,23 +560,30 @@
               <li>S: The app is more utilitarian than it is social.</li>
               <li>T: The battery lasts a day</li>
             </ul>
-          
-            <h3 class="text-2xl font-bold mb-3">Experts Interview</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Target audience segmentation is essential to solve the problem. Make one concept really clear to benefit the audience. Designers need to know users’ behavior patterns. It will mean that the air monitor has some kind of GPS system, and also a GPS module and audio. It can connect to the internet.</p>
-            
-            <img class="h-auto max-w-full" src="/img/trail-angel/interview-expert.png" alt="image description">
-
           </div>
 
           <div id="affinity-diagram">
-            <h3 class="text-3xl font-bold mb-3">Affinity Diagram</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Wildfires do not only have health physical impacts on humans, they also have an emotional effect. What my target audience needs: Valuable air quality Information, wildfire data Accurate wildfire, and Air Quality real-time predictions and alerts.</p>
+            <h3 class="text-3xl font-bold mb-3">Competitive Metrics</h3>
             <div class="flex flex-col items-center mb-3">
               <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/affinity-diagram.png" alt="Affinity Diagram Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <img src="/img/trail-angel/usability-metrics.png" alt="Usability Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <div class="relative">
-                        <img src="/img/trail-angel/affinity-diagram.png" alt="Affinity Diagram Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <img src="/img/trail-angel/usability-metrics.png" alt="Usability Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/feature-metrics.png" alt="Feature Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/feature-metrics.png" alt="Feature Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
                         <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                             &times;
                         </button>
