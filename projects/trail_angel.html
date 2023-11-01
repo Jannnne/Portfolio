@@ -430,14 +430,35 @@
             <h3 class="text-3xl font-bold mb-3">Target Audience</h3>
             <h3 class="text-2xl font-bold mb-3">Primary Audience</h3>
             
-            <img class="h-auto max-w-full" src="/img/trail-angel/target-audience.png" alt="target Audience Image">
-
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/target-audience.png" alt="Target Audience Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/target-audience.png" alt="Target Audience Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
           
             <h3 class="text-2xl font-bold mb-3">Secondary Audience</h3>
             
-            
-            <img class="h-auto max-w-full" src="/img/trail-angel/secondary-audience.png" alt="Secondary Audience Image">
-
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/secondary-audience.png" alt="Secondary Audience Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/secondary-audience.png" alt="Secondary Audience Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
             
           </div>
 
@@ -593,22 +614,23 @@
             </div>
           </div>
 
-          <div id="how-might-we">
-            <h3 class="text-3xl font-bold mb-3">How Might We...</h3>
-            <h3 class="text-2xl font-bold mb-3">Remind people far away about wildfire and air pollution areas in wildfire season?</h3>
-            
-          </div>
-
-          <div id="inspiration">
-            <h3 class="text-3xl font-bold mb-3">Inspiration</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">According to three case studies, The Tesla Automobile Is A Big Example Of The Internet Of Things And Potential Problems And Benefits Of This Idea, How Netflix Uses Data To Pick Movies And Curate Content, and Using Machine Learning To Predict Value Of Homes On Airbnb, I have a potential idea about how to help people avoid breathing in smoke from wildfires.</p>
-            
-            <img class="h-auto max-w-full" src="/img/trail-angel/inspiration.png" alt="image description">
-
-          </div>
         </div>
 
-        
+        <div id="synthesis">
+          <h1 class="text-4xl font-bold mb-8">Synthesis</h1>
+          <div id="design-goals">
+            <h3 class="text-3xl font-bold mb-3">Design Goals</h3>
+              <p class="mb-8 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#1</p>
+              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Provide users with trails that meet their air quality requirements.</p>
+            
+              <p class="mb-8 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#2</p>
+              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Make wildfire air pollution forecasts for users.</p>
+            
+              <p class="mb-8 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#3</p>
+              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Alert users to air pollution in real-time.</p>
+            
+          </div>
+        </div>
 
       </div> 
 
