@@ -630,7 +630,53 @@
               <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Alert users to air pollution in real-time.</p>
             
           </div>
+          <div id="proof-of-consept">
+            <h3 class="text-3xl font-bold mb-3">Proof of Consept</h3>
+            <h3 class="text-2xl font-bold mb-3">Personas</h3>
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
 
       </div> 
 
