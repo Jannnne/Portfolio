@@ -224,6 +224,9 @@
                        <li>Inspirations</li>
                   </ul>
               </div>
+            </div>
+          </div>
+        </div>
 
               <!-- Card 2: Antithesis -->
               <div class="bg-white p-4 rounded-lg ">
@@ -1057,14 +1060,63 @@
             </div>
           </div>
 
+          <div id="product-design">
+            <h3 class="text-2xl font-bold mb-3">Product Design</h3>
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/design-system.png" alt="Product Design Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/design-system.png" alt="Product Design Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                          &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div id="final-delivery">
+            <h3 class="text-2xl font-bold mb-3">Final Delivery</h3>
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/final-delivery.png" alt="Final Delivery Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/final-delivery.png" alt="Final Delivery Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                          &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+        </div>
+
+        <div id="takeaways">
+          <h1 class="text-4xl font-bold mb-8">Takeaways</h1>
+          <h3 class="text-2xl font-bold mb-3">What I Learned</h3>
+        
+          <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
+            <li>Right Segmentation: Accurately defining and targeting the appropriate market segments is crucial for the success of any project. A well-executed segmentation strategy can lead to more effective marketing and product development.</li>
+            <li>Opportunity from Competitors: Analyzing competitors can reveal valuable opportunities for improvement and innovation. Identifying gaps in the market or areas where competitors fall short can guide strategic decision-making.</li>
+            <li>Understanding User Behavior and Biology: A deep understanding of user behavior, including the psychological and biological factors that influence it, is essential for designing products and experiences that resonate with your target audience.</li>
+            <li>Methodology Application to My Project: Ensuring that the chosen methodology is applicable and tailored to your specific project is key to achieving consistent and meaningful results.</li>
+            <li>Brand Strategy Development: Crafting a well-defined brand strategy is vital for establishing a strong brand identity and effectively communicating your brand's values and unique selling points.</li>
+            <li>Utilizing Brand Identity in UX/UI Design: Integrating your brand identity into user experience (UX) and user interface (UI) design helps create a cohesive and memorable user journey, enhancing brand recognition and user engagement.</li>
+            <li>Realistic Tech Implementation: Implementing technology solutions in a realistic and feasible manner is essential to avoid costly setbacks and ensure the successful execution of your project.</li>
+          </ul>
+          
+          
         </div>
 
 
       </div> 
 
-      <!-- Right Sidebar -->
+      
       
 
     </div>   
