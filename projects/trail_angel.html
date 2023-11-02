@@ -614,10 +614,6 @@
             </div>
           </div>
 
-        </div>
-
-        <div id="synthesis">
-          <h1 class="text-4xl font-bold mb-8">Synthesis</h1>
           <div id="design-goals">
             <h3 class="text-3xl font-bold mb-3">Design Goals</h3>
               <p class="mb-8 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#1</p>
@@ -630,51 +626,93 @@
               <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Alert users to air pollution in real-time.</p>
             
           </div>
+
+        </div>
+
+        <div id="synthesis">
+          <h1 class="text-4xl font-bold mb-8">Synthesis</h1>
+          
           <div id="proof-of-consept">
             <h3 class="text-3xl font-bold mb-3">Proof of Consept</h3>
-            <h3 class="text-2xl font-bold mb-3">Personas</h3>
-            <div class="flex flex-col items-center mb-3">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+
+            <div id="personas">
+              <h3 class="text-2xl font-bold mb-3">Personas</h3>
+              <div class="flex flex-col items-center mb-3">
+                <div x-data="{ isZoomed: false }">
+                  <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                  <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                      <div class="relative">
+                          <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                          <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                             &times;
-                        </button>
-                    </div>
+                          </button>
+                      </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="flex flex-col items-center mb-3">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+              <div class="flex flex-col items-center mb-3">
+                <div x-data="{ isZoomed: false }">
+                  <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                  <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                      <div class="relative">
+                          <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                          <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                             &times;
-                        </button>
-                    </div>
+                          </button>
+                      </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="flex flex-col items-center mb-3">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+              <div class="flex flex-col items-center mb-3">
+                <div x-data="{ isZoomed: false }">
+                  <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                  <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                      <div class="relative">
+                          <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                          <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                             &times;
-                        </button>
-                    </div>
+                          </button>
+                      </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div id="MVP">
+            <h3 class="text-2xl font-bold mb-3">MVPs</h3>
+            <h3 class="text-xl font-bold mb-3">Trail plan</h3>
+            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The trail planning system we offer comes with some key features that make it a valuable resource for outdoor enthusiasts. By integrating an air quality index map, a wildfire history map, and prescribed fire sources, we empower users to make well-informed decisions when selecting their outdoor activities. This innovative approach brings several benefits to the table, primarily targeting sensitive groups of people. With this system, users can proactively steer clear of potentially unsafe trails, enhancing their outdoor experiences and safety. The technical features at the core of this solution include the AQI map, fire source data, air pollution information, and digital administration tools, all working together to provide a comprehensive and user-friendly trail planning experience for those who prioritize their health and well-being during outdoor adventures.</p>
+            <img class="h-auto max-w-full" src="/img/trail-angel/mvp-trail-plan.png" alt="MVP Trail Plan Image">
+            <h3 class="text-xl font-bold mb-3">Wildfire Prediction</h3>
+            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The app's primary objective is to leverage machine learning to provide valuable insights into California's wildfire history. By doing so, it empowers users to navigate and make informed decisions during wildfire seasons. Through this innovative technology, the app assists people in filtering wildfire-prone areas and identifying safe trails, all with the aim of ensuring their safety.
+
+              The benefits of this app are evident in its ability to guide individuals in creating trail plans that take into account potential fire and smoke risks. This critical functionality is designed to help users make well-informed choices, keeping them safe during their forest excursions.
+              
+              The app's simple target audience comprises individuals who frequently spend extended periods of time in forested areas. It caters to the needs of hikers, campers, and outdoor enthusiasts, ensuring they can enjoy nature while staying aware of potential wildfire risks.
+              
+              To make this all possible, the app utilizes technical features like the Wildfire history API and a wildfire filter, which work together to provide users with up-to-date and accurate information about wildfire history and the safety of specific areas. Through this combination of technology and data, the app offers a valuable resource for those seeking to enjoy the beauty of California's natural landscapes while minimizing the risks associated with wildfires.</p>
+            <img class="h-auto max-w-full" src="/img/trail-angel/mvp-wildfire-prediction.png" alt="Wildfire Prediction Image">
+
+            <h3 class="text-xl font-bold mb-3">AQI Alert</h3>
+            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The air tracker, a remarkable application of the Internet of Things, plays a crucial role in providing real-time air pollution alerts to individuals. This innovative technology offers a multitude of benefits, with perhaps the most significant being the ability for people to promptly evacuate areas plagued by air pollution. This solution is particularly tailored to cater to a specific audience - the sensitive group of outdoor enthusiasts who depend on clean and safe air for their activities. Under the hood, the air tracker leverages technical features such as the Internet of Things, beacon technology, and Bluetooth connectivity to ensure that users are constantly informed and protected against harmful air quality conditions.</p>
+            <img class="h-auto max-w-full" src="/img/trail-angel/mvp-aqi-alert.png" alt="MVP AQI Alert Image">
+
+          </div>
+
+          <div id="task-flow">
+            <h3 class="text-2xl font-bold mb-3">Task flow</h3>
+            <h3 class="text-xl font-bold mb-3">Wyatt Hill</h3>
+
+            <h3 class="text-xl font-bold mb-3">Harper Forest</h3>
+
+            <h3 class="text-xl font-bold mb-3">Judy Woodruff</h3>
+
+          </div>
+
+
         </div>
 
 
