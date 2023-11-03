@@ -1062,10 +1062,24 @@
             <h3 class="text-2xl font-bold mb-3">Product Design</h3>
             <div class="flex flex-col items-center mb-3">
               <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/design-system.png" alt="Product Design Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <img src="/img/trail-angel/product-design-sketch.png" alt="Product Design Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <div class="relative">
-                        <img src="/img/trail-angel/design-system.png" alt="Product Design Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <img src="/img/trail-angel/product-design-sketch.png" alt="Product Design Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                          &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center mb-3">
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/trail-angel/product-design-mockup.png" alt="Product Design Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/trail-angel/product-design-mockup.png" alt="Product Design Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
                         <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                           &times;
                         </button>
