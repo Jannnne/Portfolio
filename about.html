@@ -6,6 +6,12 @@
     <title>Document</title>
     <link href="./dist/output.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <style>
+      /* Hide/Show dot */
+      .hidden {
+        display: none;
+      }
+    </style>
 </head>
 <body>
     
@@ -49,7 +55,7 @@
       <br>
       <br>
       <br>
-      <section id="case_study" class="bg-white dark:bg-gray-900">
+      <section id="who I am" class="bg-white dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           
           <div class="max-w-4xl mx-auto p-8">
@@ -75,6 +81,84 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
           </div>
         </div>
       </section>
+
+      <div class="bg-white text-black mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="container max-w-4xl mx-auto p-8">
+          <!-- Section Title -->
+          <div class="text-4xl font-bold mb-8">What I can do</div>
+      
+          <!-- Services List and Content -->
+          <div class="flex flex-col lg:flex-row">
+            <!-- Services List -->
+            <div class="mb-4 lg:mb-0 lg:mr-4">
+              <ul class="space-y-4">
+                <li id="designStrategyTab" class="cursor-pointer font-semibold hover:text-gray-600" onclick="changeContent('designStrategy')">
+                  <span class="dot">•</span> Design strategy
+                </li>
+                <li id="userResearchTab" class="cursor-pointer font-semibold hover:text-gray-600" onclick="changeContent('userResearch')">
+                  <span class="dot hidden">•</span> User Research
+                </li>
+                <li id="uxuiDesignTab" class="cursor-pointer font-semibold hover:text-gray-600" onclick="changeContent('uxuiDesign')">
+                  <span class="dot hidden">•</span> UX/UI Design
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Content Area -->
+            <div class="flex-1 p-4 border border-gray-300 rounded" id="contentArea">
+              <!-- Default content: Design Strategy -->
+              <div>
+                <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Audits</button>
+                <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Brand strategy</button>
+                <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Workshops</button>
+              </div>
+              <p class="mt-4">
+                Information about Design Strategy...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        // Content for each tab
+        const contents = {
+          designStrategy: {
+            tags: ['Audits', 'Brand strategy', 'UX Workshops'],
+            text: 'Information about Design Strategy...'
+          },
+          userResearch: {
+            tags: ['Quantitative', 'Qualitative'],
+            text: 'User research is a vital aspect of UX design that helps to understand the needs, behaviors, and preferences of the target audience. This information is then used to inform the design decisions and improve the overall user experience. User research methods such as usaility testing, surveys, and interviews rpovide valuable insights into how users interact with a product and their pain points. By conducting user research, we can identify any issues and opportunities for improvement, and make data-driven decisions to enhance the usability and satisfaction of the product.'
+          },
+          uxuiDesign: {
+            tags: ['Wireframes', 'Figma designs'],
+            text: 'Information about UX/UI Design...'
+          }
+        };
+      
+        // Function to change content and update active tab
+        function changeContent(selectedTab) {
+          // Hide all dots
+          document.querySelectorAll('.dot').forEach(dot => {
+            dot.classList.add('hidden');
+          });
+      
+          // Show the dot for the active tab
+          const activeDot = document.querySelector(`#${selectedTab}Tab .dot`);
+          activeDot.classList.remove('hidden');
+      
+          // Update the content area
+          const area = document.getElementById('contentArea');
+          const content = contents[selectedTab];
+          let tagsHtml = content.tags.map(tag => `<button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">${tag}</button>`).join('');
+          area.innerHTML = `<div>${tagsHtml}</div><p class="mt-4">${content.text}</p>`;
+        }
+      
+        // Initialize with Design Strategy content
+        changeContent('designStrategy');
+      </script>
+      
 
 
 
