@@ -7,6 +7,104 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        /* Custom CSS for animations */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+}
+
+.animate-drop-in {
+  animation: dropIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-rise {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.animate-rise-description {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 2.5s;
+}
+
+.animate-rise-socials {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 3s;
+}
+
+.animate-rise-contact {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 3.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* iPad screen size and below */
+  .container {
+    text-align: center; /* Center-align text for smaller screens */
+    padding: 0 1rem; /* Add padding to prevent text touching the screen edges */
+  }
+  .container > div, /* Adjust hero text and image */
+  .container > p, /* Adjust description paragraph */
+  .container > div > div, /* Adjust social links and email container */
+  .container > div > div > a { /* Adjust social links and email items */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+    margin-bottom: 0.5rem; /* Add a little space between stacked items */
+  }
+}
+
+      </style>
 </head>
 <body>
     
@@ -46,39 +144,40 @@
         </div>
       </nav>
       
-      <div data-w-id="b55025b3-8733-7a6c-9137-db8787cc5f1d" class="home-hero-section min-h-screen flex items-center justify-center">
-        <div class="oval-hero-section bg-black w-16 h-16"></div>
-        <div style="opacity: 0" class="scroll-indicator-wrapper z-10">
-            <a href="#latest-projects" class="scroll-indicator flex flex-col items-center w-inline-block p-4 transition-transform duration-300 transform hover:translate-y-2">
-                <div class="button-text-style text-black">see my work</div>
-                <div class="scroll-line-wrapper flex items-center">
-                    <div class="scroll-line-light w-6 h-1 bg-gray-800"></div>
-                    <div data-w-id="bcb2b76a-f733-ad2f-4912-f1adbd7e03b6" class="scroll-line-dark w-6 h-1 bg-black transition-transform duration-500 ease-in-out"></div>
-                </div>
-            </a>
-        </div>
-        <div class="default-wrapper relative z-10 text-black text-center">
-            <div class="hero-title-wrapper">
-                <h1 class="hidden">
-                    <span class="span-title _1 opacity-0 transform translate-y-16 transition-transform duration-500 ease-in-out">Hi !</span>
-                    <span class="span-title _2 opacity-0 transform translate-y-16 transition-transform duration-500 ease-in-out">i'm</span>
-                    <span class="span-title _3 opacity-0 transform translate-y-16 transition-transform duration-500 ease-in-out">charlie</span>
-                </h1>
-                <div class="text-block-max-width _1 opacity-0 transform translate-y-10 transition-transform duration-500 ease-in-out">
-                    <p>I’ve been in the design industry for over 15 years. I craft digital products that are useful & enjoyable for the final users.</p>
-                </div>
+      <!-- Hero Section -->
+      <section class="bg-white text-black py-20 px-4 relative overflow-hidden">
+        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+          <!-- Hero text and image container -->
+          <div class="flex flex-col items-center lg:items-start lg:flex-row mb-6">
+            <!-- Animated Hey! -->
+            <h1 class="text-6xl font-bold opacity-0 animate-drop-in">Hey!</h1>
+            <!-- Animated I'm -->
+            <p class="text-6xl font-bold opacity-0 animate-rise">I'm</p>
+            <!-- Profile image with animation -->
+            <img src="path_to_layla_image.jpg" alt="Layla" class="w-24 h-24 rounded-full mx-4 opacity-0 animate-pop-in">
+            <!-- Animated Layla. with move to right -->
+            <p class="text-6xl font-bold opacity-0 animate-slide-right">Layla.</p>
+          </div>
+          <!-- Animated description -->
+          <p class="text-xl opacity-0 animate-rise-description">
+            Digital product designer with years of experience under my belt. I specialize in creating websites and mobile experiences for projects in the lifestyle, design, and fashion industries.
+          </p>
+          <!-- Social links and email container -->
+          <div class="flex flex-col lg:flex-row justify-between items-center w-full absolute bottom-4 lg:static">
+            <!-- Social links -->
+            <div class="flex space-x-4 opacity-0 animate-rise-socials">
+              <a href="https://instagram.com" class="hover:underline">Instagram</a>
+              <a href="https://dribbble.com" class="hover:underline">Dribbble</a>
+              <a href="https://behance.net" class="hover:underline">Behance</a>
             </div>
-            <div class="hero-title-wrapper mt-8">
-                <div class="text-block-max-width _2 opacity-0 transform translate-y-10 transition-transform duration-500 ease-in-out">
-                    <p>I’ve worked with some of the most ambitious brands such as Google, Apple, Chanel, and many more.</p>
-                </div>
-                <h1 class="span-title _4 opacity-0 transform translate-y-16 transition-transform duration-500 ease-in-out">
-                    <span class="span-title _5 opacity-0 transform translate-y-16 transition-transform duration-500 ease-in-out">digital</span>
-                    <span class="span-title _6 opacity-0 transform translate-y-16 transition-transform duration-500 ease-in-out">designer</span>
-                </h1>
+            <!-- Contact email -->
+            <div class="opacity-0 animate-rise-contact">
+              <a href="mailto:hello@layla.com" class="hover:underline">hello@layla.com</a>
             </div>
+          </div>
         </div>
-    </div>
+      </section>
+      
 
 <br>
 <br>
@@ -216,5 +315,7 @@
 
     <script src="../flowbite/dist/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="hero.js"></script>
 </body>
 </html>
