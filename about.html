@@ -11,6 +11,134 @@
       .hidden {
         display: none;
       }
+
+      
+        /* Custom CSS for animations */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+}
+
+.animate-drop-in {
+  animation: dropIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-rise {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.animate-rise-description {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 2.5s;
+}
+
+.animate-rise-socials {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 3s;
+}
+
+.animate-rise-contact {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 3.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* iPad screen size and below */
+  .container {
+    text-align: center; /* Center-align text for smaller screens */
+    padding: 0 1rem; /* Add padding to prevent text touching the screen edges */
+  }
+  .container > div, /* Adjust hero text and image */
+  .container > p, /* Adjust description paragraph */
+  .container > div > div, /* Adjust social links and email container */
+  .container > div > div > a { /* Adjust social links and email items */
+    flex-direction: column;
+    align-items: left;
+    width: 100%; /* Full width */
+    margin-bottom: 0.5rem; /* Add a little space between stacked items */
+  }
+}
+
+@media (max-width: 1920px) {
+  /* h1, p {
+    font-size: 9rem; /* Large font size for 1920px wide screens */
+  }
+} */
+
+@media (max-width: 1024px) { /* For tablet screens */
+  .text-9xl {
+    font-size: 6rem; /* Smaller font size for better readability */
+  }
+  .text-6xl {
+    font-size: 4rem;
+  }
+  .container {
+    text-align: center; /* Center-align text for tablet screens */
+  }
+}
+
+@media (max-width: 375px) { /* For iPhone 13 mini and similar sizes */
+  .text-9xl {
+    font-size: 4rem; /* Further reduced font size for small screens */
+  }
+  .text-6xl {
+    font-size: 1.5rem;
+  }
+  .text-3xl {
+    font-size: 1rem; /* Adjusting social links and email font size */
+  }
+}
+
+      
     </style>
 </head>
 <body>
@@ -55,17 +183,42 @@
       <br>
       <br>
       <br>
+      <section class="bg-white text-black mx-auto w-full max-w-screen-xl py-20 px-4 relative overflow-hidden">
+        <div class="container mx-auto flex flex-col items-center lg:items-start justify-center">
+          <br>
+          <br>
+          <br>
+          <br>
+          <!-- Hero text and image container -->
+          <div class="flex flex-col lg:flex-row items-center lg:items-start mb-6 text-left lg:text-left">
+            <!-- Animated Hey! -->
+            
+            <h1 class="text-6xl font-bold opacity-0 animate-drop-in text-left">Zheng is My Name</h1>
+            
+            <!-- Profile image with animation -->
+            <!-- <img src="./img/zheng_about_picture.jpg" alt="Zheng" class="w-48 h-48 rounded-full mx-4 opacity-0 animate-pop-in"> -->
+            
+          </div>
+          
+          
+        </div>
+      </section> 
+
       <section id="who I am" class="bg-white dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           
           <div class="max-w-4xl mx-auto p-8">
+            
+            <!-- <h2 class="text-2xl font-semibold mb-4">Zheng is My Name</h2>
             <div class="flex flex-col items-center mb-3 ">
               <img src="/img/about_photo.jpg" alt="About Me Photo" class="w-full">
-            </div>
-            <h2 class="text-2xl font-semibold mb-4">Hi, I am Zheng</h2>
+            </div> -->
+            <!-- Profile image with animation -->
+            <img src="./img/zheng_about_picture.jpg" alt="Zheng" class="opacity-0 animate-pop-in">
+            <br>
                             <div class="flex flex-col md:flex-row">
-                                <div class=" mb-3 text-xl text-gray-700 dark:text-gray-300">
-                                    I will complete my Master of Fine Arts in Interaction UX|UI Design at the Academy of Art University in San Francisco this winter. I'm genuinely passionate about user-centered design and have always been eager to delve deeper into the world of product design.
+                                <div class=" mb-3 text-xl text-gray-700 dark:text-gray-300 opacity-0 animate-rise-description">
+                                     I'm genuinely passionate about user-centered design and have always been eager to delve deeper into the world of product design.
                                     <br>
                                     <br>
 One of my standout qualities is <span class="font-bold">my enthusiasm for learning</span>. I always seek new ways to expand my UX|UI design skills and knowledge. This passion has led me to take on diverse projects, including designing for behavior and creating win-win solutions for both users and products.
@@ -88,33 +241,28 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
           <div class="text-4xl font-bold mb-8">What I can do</div>
       
           <!-- Services List and Content -->
-          <div class="flex flex-col lg:flex-row">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Services List -->
-            <div class="mb-4 lg:mb-0 lg:mr-4">
-              <ul class="space-y-4">
-                <li id="designStrategyTab" class="cursor-pointer font-semibold hover:text-gray-600" onclick="changeContent('designStrategy')">
-                  <span class="dot">•</span> Design strategy
+            <div>
+              <ul class="space-y-4 pb-4">
+                <li id="designStrategyTab" class="cursor-pointer text-2xl font-semibold hover:text-gray-600" onclick="changeContent('designStrategy')">
+                  <span class="dot hidden">•</span> Design strategy
                 </li>
-                <li id="userResearchTab" class="cursor-pointer font-semibold hover:text-gray-600" onclick="changeContent('userResearch')">
+                <div class="border-t border-gray-500 pt-3"></div>
+                <li id="userResearchTab" class="cursor-pointer text-2xl font-semibold hover:text-gray-600" onclick="changeContent('userResearch')">
                   <span class="dot hidden">•</span> User Research
                 </li>
-                <li id="uxuiDesignTab" class="cursor-pointer font-semibold hover:text-gray-600" onclick="changeContent('uxuiDesign')">
+                <div class="border-t border-gray-500 pt-3"></div>
+                <li id="uxuiDesignTab" class="cursor-pointer text-2xl font-semibold hover:text-gray-600" onclick="changeContent('uxuiDesign')">
                   <span class="dot hidden">•</span> UX/UI Design
                 </li>
+                <div class="border-t border-gray-500 pt-3"></div>
               </ul>
             </div>
       
             <!-- Content Area -->
-            <div class="flex-1 p-4 border border-gray-300 rounded" id="contentArea">
-              <!-- Default content: Design Strategy -->
-              <div>
-                <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Audits</button>
-                <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Brand strategy</button>
-                <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Workshops</button>
-              </div>
-              <p class="mt-4">
-                Information about Design Strategy...
-              </p>
+            <div class="p-4 border border-gray-500 rounded" id="contentArea">
+              <!-- Placeholder content, will be replaced by JavaScript -->
             </div>
           </div>
         </div>
@@ -125,86 +273,90 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
         const contents = {
           designStrategy: {
             tags: ['Audits', 'Brand strategy', 'UX Workshops'],
-            text: 'Information about Design Strategy...'
+            text: 'Effective communication and partnership with the client to comprehend their goals and identify user requirements is crucial for the success of a product. We actively engage with users, empathize with their needs, and consider the business objectives. By conducting UI/UX evaluations, user interviews, and product definition workshops, we can accurately define the scope and suggest the most suitable solutions to align with the company’s vision.'
           },
           userResearch: {
             tags: ['Quantitative', 'Qualitative'],
-            text: 'User research is a vital aspect of UX design that helps to understand the needs, behaviors, and preferences of the target audience. This information is then used to inform the design decisions and improve the overall user experience. User research methods such as usaility testing, surveys, and interviews rpovide valuable insights into how users interact with a product and their pain points. By conducting user research, we can identify any issues and opportunities for improvement, and make data-driven decisions to enhance the usability and satisfaction of the product.'
+            text: 'User research is a vital aspect of UX design that helps to understand the needs, behaviors, and preferences of the target audience. This information is then used to inform the design decisions and improve the overall user experience. User research methods such as usability testing, surveys, and interviews provide valuable insights into how users interact with a product and their pain points. By conducting user research, we can identify any issues and opportunities for improvement, and make data-driven decisions to enhance the usability and satisfaction of the product.'
           },
           uxuiDesign: {
-            tags: ['Wireframes', 'Figma designs'],
-            text: 'Information about UX/UI Design...'
+            tags: ['Wireframes', 'Figma designs', 'prototype'],
+            text: 'We work closely with clients to understand their goals and gather feedback from users to identify pain points and areas for improvement. Through the use of design thinking and user-centered design, we create solutions that are tailored to the user’s needs, while also aligning with the company’s vision. Our goal is to create products that are intuitive, efficient, and visually pleasing to the user.'
           }
         };
       
         // Function to change content and update active tab
-        function changeContent(selectedTab) {
-          // Hide all dots
-          document.querySelectorAll('.dot').forEach(dot => {
-            dot.classList.add('hidden');
-          });
-      
-          // Show the dot for the active tab
-          const activeDot = document.querySelector(`#${selectedTab}Tab .dot`);
-          activeDot.classList.remove('hidden');
-      
+        // function changeContent(selectedTab) {
           // Update the content area
-          const area = document.getElementById('contentArea');
-          const content = contents[selectedTab];
-          let tagsHtml = content.tags.map(tag => `<button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">${tag}</button>`).join('');
-          area.innerHTML = `<div>${tagsHtml}</div><p class="mt-4">${content.text}</p>`;
-        }
+        //   const area = document.getElementById('contentArea');
+        //   const content = contents[selectedTab];
+        //   let tagsHtml = content.tags.map(tag => `<button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">${tag}</button>`).join('');
+        //   area.innerHTML = `<div>${tagsHtml}</div><p class="mt-4">${content.text}</p>`;
+        // }
+        function changeContent(selectedTab) {
+  // Hide all dots
+  document.querySelectorAll('.dot').forEach(dot => {
+    dot.classList.add('hidden');
+  });
+
+  // Show the dot for the active tab
+  const activeDot = document.querySelector(`#${selectedTab}Tab .dot`);
+  activeDot.classList.remove('hidden');
+
+  // Update the content area
+  const area = document.getElementById('contentArea');
+  const content = contents[selectedTab];
+  let tagsHtml = content.tags.map(tag => `<button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">${tag}</button>`).join('');
+  area.innerHTML = `<div>${tagsHtml}</div><p class="mt-4">${content.text}</p>`;
+}
       
         // Initialize with Design Strategy content
         changeContent('designStrategy');
       </script>
       
+      
 
 
 
 
-<footer class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+      <footer class="bg-white text-black">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            
+            <div class="border-t border-gray-500 pt-3"></div>
+          <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm  sm:text-center dark:text-gray-400">© 2023 Zheng Wei All Rights Reserved.
+              </span>
+              <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                  
+                  <a href="#" class=" hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                        </svg>
+                      <span class="sr-only">Discord community</span>
+                  </a>
+                  <!-- <a href="#" class=" hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
                     </svg>
-                  <span class="sr-only">Facebook page</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                      <span class="sr-only">Twitter page</span>
+                  </a> -->
+                  <a href="https://www.linkedin.com" class="hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-20c0-1.1-.9-2-2-2zm-11 19h-3v-10h3v10zm-1.5-11.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm11.5 11.5h-3v-5.5c0-.3-.2-.5-.5-.5h-.5c-.3 0-.5.2-.5.5v5.5h-3v-10h3v1.5c.5-.8 1.3-1.5 2.5-1.5 1.9 0 3.5 1.6 3.5 3.5v6.5z"/>
                     </svg>
-                  <span class="sr-only">Discord community</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                </svg>
-                  <span class="sr-only">Twitter page</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="sr-only">GitHub account</span>
-              </a>
-              <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
-                </svg>
-                  <span class="sr-only">Dribbble account</span>
-              </a>
+                    <span class="sr-only">LinkedIn page</span>
+                  </a>
+                  <a href="#" class=" hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="sr-only">GitHub account</span>
+                  </a>
+                  
+              </div>
           </div>
-      </div>
-    </div>
-</footer>
+        </div>
+    </footer>
 
 
   
