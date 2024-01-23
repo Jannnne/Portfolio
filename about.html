@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <style>
-      /* Hide/Show dot */
-      .hidden {
-        display: none;
-      }
-
-      
         /* Custom CSS for animations */
 @keyframes dropIn {
   0% {
@@ -102,7 +98,7 @@
   .container > div > div, /* Adjust social links and email container */
   .container > div > div > a { /* Adjust social links and email items */
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     width: 100%; /* Full width */
     margin-bottom: 0.5rem; /* Add a little space between stacked items */
   }
@@ -136,86 +132,108 @@
   .text-3xl {
     font-size: 1rem; /* Adjusting social links and email font size */
   }
+  .text-xl {
+    font-size: 1rem; /* Adjusting social links and email font size */
+  }
 }
 
-      
-    </style>
+      </style>
 </head>
 <body>
-    
-
-  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-    <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
-        <a href="https://zhennnngwei.com/" class="flex items-center">
-            <img src="/img/logo.png" class="h-8 mr-3" alt="Zheng Wei Logo">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Zheng Wei</span>
-        </a>
-        <div class="flex items-center md:order-2">
-            <!-- Navigation Links -->
-            <ul class="flex flex-row space-x-8 font-medium mr-4">
-                <li>
-                    <a href="./index.html#project" class="hover:underline">Projects</a>
-                </li>
-                <li>
-                    <a href="./about.html" class="hover:underline">About</a>
-                </li>
-                <li>
-                    <a href="path_to_resume.pdf" target="_blank" class="hover:underline">Resume</a>
-                </li>
-            </ul>
-            <!-- Contact Email Button -->
-            <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
+    <!-- Navigation Bar -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+            <!-- Logo and Title -->
+            <a href="https://zhennnngwei.com/" class="flex items-center">
+                <img src="/img/logo.png" class="h-8 mr-3" alt="Zheng Wei Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Zheng Wei</span>
             </a>
-            <!-- Mobile Menu Button (if needed, include your toggle script) -->
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                <!-- ... -->
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <!-- Navigation Links -->
+                <div class="flex flex-row space-x-8 font-medium" id="navLinks">
+                    <a href="./index.html#project" class="hover:underline">Projects</a>
+                    <a href="./about.html" class="text-gray-400">About</a>
+                    <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+                </div>
+                <!-- Contact Email Button -->
+                <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
+                    <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
         </div>
-        <!-- Responsive navbar items -->
-        <!-- ... -->
-    </div>
-</nav>
-      <br>
-      <br>
-      <br>
-      <section class="bg-white text-black mx-auto w-full max-w-screen-xl py-20 px-4 relative overflow-hidden">
-        <div class="container mx-auto flex flex-col items-center lg:items-start justify-center">
-          <br>
-          <br>
-          <br>
-          <br>
-          <!-- Hero text and image container -->
-          <div class="flex flex-col lg:flex-row items-center lg:items-start mb-6 text-left lg:text-left">
-            <!-- Animated Hey! -->
-            
-            <h1 class="text-6xl font-bold opacity-0 animate-drop-in text-left">Zheng is My Name</h1>
-            
-            <!-- Profile image with animation -->
-            <!-- <img src="./img/zheng_about_picture.jpg" alt="Zheng" class="w-48 h-48 rounded-full mx-4 opacity-0 animate-pop-in"> -->
-            
-          </div>
-          
-          
+        <!-- Mobile Menu Dropdown -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
+                <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
+                <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+            </div>
         </div>
-      </section> 
+    </nav>
+    
+    <script>
+        // JavaScript for the mobile menu toggle
+        const mobileMenuButton = document.querySelector('[data-collapse-toggle="mobile-menu"]');
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    
+    </script>
 
-      <section id="who I am" class="bg-white dark:bg-gray-900">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden">
+  <div class="container mx-auto flex flex-col justify-center items-start text-left">
+    <h1 class="text-9xl font-bold animate-drop-in">Zheng is My Name</h1>
+    <br>
+    <!-- Container for images -->
+    <div class="flex justify-end w-full mt-auto">
+      <!-- First image -->
+      <img src="./img/about_arrow.png" alt="Arrow" class="hidden md:block animate-pop-in w-auto h-72">
+      <!-- Second image -->
+      <img src="./img/zheng_about_picture.jpg" alt="Zheng" class="animate-pop-in w-auto lg:h-96">
+    </div>
+    <div>
+      <!-- Animated description -->
+      <p class="text-6xl opacity-0 animate-rise-description">
+        I'm genuinely passionate about user-centered design and have always been eager to delve deeper into the world of product design.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+      <section id="who I am" class="bg-white text-black mx-auto w-full max-w-screen-xl pt-5 pb-5 px-4 relative overflow-hidden">
+        <div class="mx-auto w-full max-w-screen-xl p-2  ">
           
-          <div class="max-w-4xl mx-auto p-8">
+          <div class="max-w-4xl mx-auto ">
             
             <!-- <h2 class="text-2xl font-semibold mb-4">Zheng is My Name</h2>
             <div class="flex flex-col items-center mb-3 ">
               <img src="/img/about_photo.jpg" alt="About Me Photo" class="w-full">
             </div> -->
-            <!-- Profile image with animation -->
-            <img src="./img/zheng_about_picture.jpg" alt="Zheng" class="opacity-0 animate-pop-in">
-            <br>
+            
+            
                             <div class="flex flex-col md:flex-row">
                                 <div class=" mb-3 text-xl text-gray-700 dark:text-gray-300 opacity-0 animate-rise-description">
-                                     I'm genuinely passionate about user-centered design and have always been eager to delve deeper into the world of product design.
-                                    <br>
+                                     
                                     <br>
 One of my standout qualities is <span class="font-bold">my enthusiasm for learning</span>. I always seek new ways to expand my UX|UI design skills and knowledge. This passion has led me to take on diverse projects, including designing for behavior and creating win-win solutions for both users and products.
 <br>
@@ -231,8 +249,8 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
         </div>
       </section>
 
-      <div class="bg-white text-black mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="container max-w-4xl mx-auto p-8">
+      <div class="bg-white text-black mx-auto w-full max-w-screen-xl py-5 px-4 relative overflow-hidden">
+        <div class="container max-w-8xl mx-auto p-8">
           <!-- Section Title -->
           <div class="text-4xl font-bold mb-8">What I can do</div>
       
@@ -257,7 +275,7 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
             </div>
       
             <!-- Content Area -->
-            <div class="p-4 border border-gray-500 rounded" id="contentArea">
+            <div class="p-4 border border-gray-500 rounded text-xl" id="contentArea">
               <!-- Placeholder content, will be replaced by JavaScript -->
             </div>
           </div>
@@ -276,7 +294,7 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
             text: 'User research is a vital aspect of UX design that helps to understand the needs, behaviors, and preferences of the target audience. This information is then used to inform the design decisions and improve the overall user experience. User research methods such as usability testing, surveys, and interviews provide valuable insights into how users interact with a product and their pain points. By conducting user research, we can identify any issues and opportunities for improvement, and make data-driven decisions to enhance the usability and satisfaction of the product.'
           },
           uxuiDesign: {
-            tags: ['Wireframes', 'Figma designs', 'prototype'],
+            tags: ['Wireframes', 'Figma designs', 'Prototype'],
             text: 'We work closely with clients to understand their goals and gather feedback from users to identify pain points and areas for improvement. Through the use of design thinking and user-centered design, we create solutions that are tailored to the user’s needs, while also aligning with the company’s vision. Our goal is to create products that are intuitive, efficient, and visually pleasing to the user.'
           }
         };
@@ -359,5 +377,8 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
 
     <script src="../flowbite/dist/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="hero.js"></script>
 </body>
 </html>
