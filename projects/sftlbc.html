@@ -18,38 +18,65 @@
 <body>
     
 
+  <!-- Navigation Bar -->
   <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo and Title -->
         <a href="https://zhennnngwei.com/" class="flex items-center">
-            <img src="/img/logo.png" class="h-8 mr-3" alt="Zheng Wei Logo">
+            <img src="/img/logo.png" class="h-5 mr-2" alt="Zheng Wei Logo">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Zheng Wei</span>
         </a>
-        <div class="flex items-center md:order-2">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
             <!-- Navigation Links -->
-            <ul class="flex flex-row space-x-8 font-medium mr-4">
-                <li>
-                    <a href="./index.html#project" class="hover:underline">Projects</a>
-                </li>
-                <li>
-                    <a href="./about.html" class="hover:underline">About</a>
-                </li>
-                <li>
-                    <a href="path_to_resume.pdf" target="_blank" class="hover:underline">Resume</a>
-                </li>
-            </ul>
+            <div class="flex flex-row space-x-8 font-medium" id="navLinks">
+                <a href="./index.html#project" class="hover:underline">Projects</a>
+                <a href="./about.html" class="hover:underline">About</a>
+                <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+            </div>
             <!-- Contact Email Button -->
             <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
                 <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
             </a>
-            <!-- Mobile Menu Button (if needed, include your toggle script) -->
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                <!-- ... -->
-            </button>
         </div>
-        <!-- Responsive navbar items -->
-        <!-- ... -->
+        <!-- Mobile Menu Button -->
+        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- Mobile Menu Dropdown -->
+    <div class="hidden md:hidden" id="mobile-menu">
+        <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
+            <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
+            <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
+            <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+            <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
+                <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
+            </a>
+        </div>
     </div>
 </nav>
+
+<script>
+    // JavaScript for the mobile menu toggle
+    const mobileMenuButton = document.querySelector('[data-collapse-toggle="mobile-menu"]');
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+</script>
 
 
 <section id="hero_image">
@@ -805,7 +832,7 @@
           <a class="hvr-underline-from-left" href="./index.html#projects">All</a> /
           <a class="hvr-underline-from-left " href="./endear.html">Endear</a> /
           <a class="hvr-underline-from-left text-gray-400" href="./SFTLBC.html">S.F. True Light Baptiset Church</a> /
-          <a class="hvr-underline-from-left " href="./trailangel.html">Trail Angel</a>
+          <a class="hvr-underline-from-left " href="./trail_angel.html">Trail Angel</a>
           
       </p>
     </div>
