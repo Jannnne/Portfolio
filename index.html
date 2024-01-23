@@ -102,6 +102,39 @@
     width: 100%; /* Full width */
     margin-bottom: 0.5rem; /* Add a little space between stacked items */
   }
+  .project-title {
+    order: 2;
+  }
+
+  .description-text {
+    order: 3;
+  }
+
+  .read-more-link {
+    order: 4;
+    margin-top: 1rem; /* add space above the Read More link */
+  }
+
+  .tags-container {
+    order: 1;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  #project .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-link {
+    order: 0; /* Image comes first */
+  }
 }
 
 @media (max-width: 1920px) {
@@ -245,74 +278,90 @@
 <br>
 <!-- Section Title -->
 <div class="text-4xl font-bold mb-8">Latest Projects</div>
-      <!-- Top Bar Line -->
-      <div class="border-t border-gray-500 pt-3"></div>
-  
-      <!-- Titles and Read More Button above the image -->
-      <div class="flex justify-between items-center py-3">
-        <a href="./projects/endear.html" class="text-xl font-bold hover:text-gray-300">Material Co</a>
-        
-        <!-- Right arrow and Read More button -->
-        <a href="./projects/endear.html" class="flex items-center text-xl font-bold hover:text-gray-300">
-          
-          <span class="ml-2">Read More</span>
-          <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-      <!-- tags -->
-      <div>
-        <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Audits</button>
-        <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Brand strategy</button>
-        <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Workshops</button>
-      </div>
+
+<div class="max-w-6xl mx-auto w-full max-w-screen-xl">
+    <!-- Top Bar Line -->
+    <div class="border-t border-gray-500 pt-3"></div>
+
+    <!-- Titles and Read More Button above the image -->
+    <div class="flex justify-between items-center py-3">
+      <a href="./projects//endear.html" class="text-xl font-bold hover:text-gray-300">Endear</a>
       
-      <!-- Clickable Full-width Image -->
-      <a href="./projects/endear.html">
-        <img src="path_to_your_image.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90">
+      <!-- Right arrow and Read More button -->
+      <a href="./projects/endear.html" class="flex items-center text-xl font-bold hover:text-gray-300">
+        
+        <span class="ml-2">Read More</span>
+        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
       </a>
-      
-      <!-- Bottom Description -->
-      <p class="text-sm mt-3">
-        Crafting usable and engaging e-commerce platform for leading materials manufacturer.
-      </p>
     </div>
-    <br>
-    <br>
-    <div class="max-w-6xl mx-auto w-full max-w-screen-xl">
-        <!-- Top Bar Line -->
-        <div class="border-t border-gray-500 pt-3"></div>
+
+    <!-- tags -->
+  <div class="py-3">
+    <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Case Study</button>
+    <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Health Care</button>
+    <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">XR Design</button>
+  </div>
     
-        <!-- Titles and Read More Button above the image -->
-        <div class="flex justify-between items-center py-3">
-          <a href="./projects/sftlbc.html" class="text-xl font-bold hover:text-gray-300">Material Co</a>
-          
-          <!-- Right arrow and Read More button -->
-          <a href="./projects/sftlbc.html" class="flex items-center text-xl font-bold hover:text-gray-300">
-            
-            <span class="ml-2">Read More</span>
-            <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-          </a>
-        </div>
+    <!-- Clickable Full-width Image -->
+    <a href="./projects/endear.html" class="image-link">
+        <img src="./img/homepage_endear_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
+        <img src="./img/mobile_homepage_endear_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
+      </a>
+    
+    <!-- Bottom Description -->
+    <p class="text-xl mt-3">
+        Design and launch a groundbreaking digital journal app resulting in a
+27% increase in user engagement.
+    </p>
+  </div>
+  <br>
+  <br>
+      
+<div class="max-w-6xl mx-auto w-full max-w-screen-xl">
+    <!-- Top Bar Line -->
+    <div class="border-t border-gray-500 pt-3"></div>
+
+    <!-- Titles and Read More Button above the image -->
+    <div class="flex justify-between items-center py-3">
+      <a href="./projects/sftlbc.html" class="text-xl font-bold hover:text-gray-300">S.F. True Light Baptist Church</a>
+      
+      <!-- Right arrow and Read More button -->
+      <a href="./projects/sftlbc.html" class="flex items-center text-xl font-bold hover:text-gray-300">
         
-        <!-- Clickable Full-width Image -->
-        <a href="./projects/sftlbc.html">
-          <img src="path_to_your_image.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90">
-        </a>
-        
-        <!-- Bottom Description -->
-        <p class="text-sm mt-3">
-          Crafting usable and engaging e-commerce platform for leading materials manufacturer.
-        </p>
-      </div>
-      <br>
-      <br>
+        <span class="ml-2">Read More</span>
+        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+
+    <!-- tags -->
+  <div class="py-3">
+    <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Redesign</button>
+    <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">User Research</button>
+    <!-- <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Workshops</button> -->
+  </div>
+    
+    <!-- Clickable Full-width Image -->
+    <a href="./projects/sftlbc.html" class="image-link">
+        <img src="./img/homepage_sftlbc_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
+        <img src="./img/mobile_homepage_sftlbc_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
+      </a>
+    
+    <!-- Bottom Description -->
+    <p class="text-xl mt-3">
+        S.F. True Light Baptist Church website redesign. Lead website design, increasing user engagement by 63% through
+strategic <br> keyword optimization.
+    </p>
+  </div>
+  <br>
+  <br>
+
       <div class="max-w-6xl mx-auto w-full max-w-screen-xl">
         <!-- Top Bar Line -->
         <div class="border-t border-gray-500 pt-3"></div>
     
         <!-- Titles and Read More Button above the image -->
         <div class="flex justify-between items-center py-3">
-          <a href="./projects/trail_angel.html" class="text-xl font-bold hover:text-gray-300">Material Co</a>
+          <a href="./projects/trail_angel.html" class="text-xl font-bold hover:text-gray-300">Trail Angel</a>
           
           <!-- Right arrow and Read More button -->
           <a href="./projects/trail_angel.html" class="flex items-center text-xl font-bold hover:text-gray-300">
@@ -321,15 +370,25 @@
             <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           </a>
         </div>
+
+        <!-- tags -->
+      <div class="py-3">
+        <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Case Study</button>
+        <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Outdoor</button>
+        <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Industrial Design</button>
+      </div>
         
         <!-- Clickable Full-width Image -->
-        <a href="./projects/trail_angel.html">
-          <img src="path_to_your_image.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90">
-        </a>
+        <a href="./projects/trail_angel.html" class="image-link">
+            <img src="./img/homepage_trailangel_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
+            <img src="./img/mobile_homepage_trailangel_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
+          </a>
         
         <!-- Bottom Description -->
-        <p class="text-sm mt-3">
-          Crafting usable and engaging e-commerce platform for leading materials manufacturer.
+        <p class="text-xl mt-3">
+            Used Figma to implement an innovative mobile app featuring
+real-time air quality monitoring and dynamic route adjustments,<br>
+reducing users' exposure to hazardous air by 35%.
         </p>
       </div>
   </section>
