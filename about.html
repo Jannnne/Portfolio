@@ -145,7 +145,7 @@
         <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
             <!-- Logo and Title -->
             <a href="https://zhennnngwei.com/" class="flex items-center">
-                <img src="/img/logo.png" class="h-8 mr-3" alt="Zheng Wei Logo">
+                <img src="/img/logo.png" class="h-6 mr-2" alt="Zheng Wei Logo">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Zheng Wei</span>
             </a>
             <!-- Desktop Menu -->
@@ -171,10 +171,13 @@
         </div>
         <!-- Mobile Menu Dropdown -->
         <div class="hidden md:hidden" id="mobile-menu">
-            <div class="pt-2 pb-3 space-y-1">
+            <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
                 <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
                 <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
                 <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+                <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
+                  <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-3 py-2 text-center justify-center text-white">Contact</button>
+              </a>
             </div>
         </div>
     </nav>
@@ -203,11 +206,11 @@
     <h1 class="text-9xl font-bold animate-drop-in">Zheng is My Name</h1>
     <br>
     <!-- Container for images -->
-    <div class="flex justify-end w-full mt-auto">
+    <div class="flex justify-end w-full mt-auto animate-pop-in">
       <!-- First image -->
-      <img src="./img/about_arrow.png" alt="Arrow" class="hidden md:block animate-pop-in w-auto h-72">
+      <img src="./img/about_arrow.png" alt="Arrow" class="hidden pr-40 md:block  w-auto h-72">
       <!-- Second image -->
-      <img src="./img/zheng_about_picture.jpg" alt="Zheng" class="animate-pop-in w-auto lg:h-96">
+      <img src="./img/zheng_about_picture.jpg" alt="Zheng" class=" w-auto lg:h-96">
     </div>
     <div>
       <!-- Animated description -->
@@ -253,7 +256,8 @@ Lastly, I pride myself on being <span class="font-bold">a team player</span>. I 
         <div class="container max-w-8xl mx-auto p-8">
           <!-- Section Title -->
           <div class="text-4xl font-bold mb-8">What I can do</div>
-      
+          <!-- Top Bar Line -->
+      <div class="border-t border-gray-500 pt-3 pb-3"></div>
           <!-- Services List and Content -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Services List -->
