@@ -13,9 +13,11 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <style>
+      
 /* Add scroll-margin-top to headings */
 #overview, #solution, #approach, #thesis, #takeaways {
-  scroll-margin-top: 65px; /* Adjust this value based on your navbar height */
+  scroll-margin-top: 85px; /* Adjust this value based on your navbar height */
+  margin-bottom: 2em;
 }
 
 .clicked-link {
@@ -152,6 +154,33 @@
   .image-link {
     order: 0; /* Image comes first */
   }
+  .container {
+    padding: 0 10px;
+  }
+
+  .text-8xl {
+    font-size: 3.6rem; /* Further reduced font size for small screens */
+  }
+
+  h1 {
+    font-size: 2.986rem;
+  }
+
+  h2 {
+    font-size: 2.488rem;
+  }
+
+  h3 {
+    font-size: 2.074rem;
+  }
+
+  h4 {
+    font-size: 1.728rem;
+  }
+
+  aside {
+    display: none; /* Example: hide sidebar on small screens */
+  }
 }
 
 @media (max-width: 1920px) {
@@ -172,20 +201,6 @@
   }
 }
 
-@media (max-width: 375px) { /* For iPhone 13 mini and similar sizes */
-  .text-8xl {
-    font-size: 3rem; /* Further reduced font size for small screens */
-  }
-  .text-6xl {
-    font-size: 1.5rem;
-  }
-  .text-3xl {
-    font-size: 1.5rem; /* Adjusting social links and email font size */
-  } 
-  .text-lg {
-    font-size: 1rem;
-  }
-}
 
     </style>
     
@@ -280,80 +295,82 @@
       
         <aside class="w-1/4 p-4 sticky top-16 max-h-screen overflow-y-auto hidden md:block">
           <!-- Sidebar content -->
+          <br>
+          
 
           <ul class="space-y-2" id="sidebarLinks">
             <li>
-              <button type="button" class="flex items-center p-2 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-overview" data-collapse-toggle="dropdown-overview">
-                  <a href="#overview" class="flex-1 ml-3 text-left whitespace-nowrap text-lg focus:bg-gray-100">Overview</a>
+              <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-overview" data-collapse-toggle="dropdown-overview">
+                  <a href="#overview" class="flex-1 ml-3 text-left whitespace-nowrap text-lg font-medium">Overview</a>
                   <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
               </button>
               <ul id="dropdown-overview" class="hidden py-2 space-y-2">
                   <li>
-                      <a href="#solution" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Solution</a>
+                      <a href="#solution" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Solution</a>
                   </li>
                   <li>
-                      <a href="#approach" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Approach</a>
+                      <a href="#approach" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Approach</a>
                   </li>
                   
               </ul>
             </li>
 
             <li>
-                <button type="button" class="flex items-center p-2 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-thesis" data-collapse-toggle="dropdown-thesis">
+                <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-thesis" data-collapse-toggle="dropdown-thesis">
                     <a href="#thesis" class="flex-1 ml-3 text-left whitespace-nowrap">Thesis</a>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-thesis" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Products</a>
+                            <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Products</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Billing</a>
+                            <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Billing</a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Invoice</a>
+                            <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Invoice</a>
                         </li>
                 </ul>
             </li>
             <li>
-                <button type="button" class="flex items-center p-2 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-antithesis" data-collapse-toggle="dropdown-antithesis">
+                <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-antithesis" data-collapse-toggle="dropdown-antithesis">
                     <a href="#" class="flex-1 ml-3 text-left whitespace-nowrap">Antithesis</a>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-antithesis" class="hidden py-2 space-y-2">
                     <li>
-                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign In</a>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign In</a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign Up</a>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign Up</a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Forgot Password</a>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Forgot Password</a>
                     </li>
                 </ul>
             </li>
             
           
             <li>
-                <button type="button" class="flex items-center p-2 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-synthesis" data-collapse-toggle="dropdown-synthesis">
+                <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-synthesis" data-collapse-toggle="dropdown-synthesis">
                     <a href="#" class="flex-1 ml-3 text-left whitespace-nowrap">Synthesis</a>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
                 <ul id="dropdown-synthesis" class="hidden py-2 space-y-2">
                     <li>
-                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign In</a>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign In</a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign Up</a>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Sign Up</a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-normal text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Forgot Password</a>
+                        <a href="#" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Forgot Password</a>
                     </li>
                 </ul>
             </li>
           
             <li>
-              <a href="#takeaways" class="flex items-center p-2 text-lg font-normal text-gray-900 rounded-lg hover:underline dark:text-white dark:hover:underline group">
+              <a href="#takeaways" class="flex items-center p-2 text-lg font-medium text-gray-900 rounded-lg hover:underline dark:text-white dark:hover:underline group">
                   <span class="ml-3">Takeaways</span>
               </a>
           </li>
@@ -382,6 +399,8 @@
       <div class="flex-1 max-w-3xl mx-auto p-4">
         
         <div id="overview">
+          <br>
+          
           
           <h1 class="text-4xl font-bold mb-8">Overview</h1>
         
@@ -389,9 +408,10 @@
           
           
           <div id="solution">
-            <h2 class="text-3xl font-bold mb-8">Solution</h2>
+            
+            <h2 class="text-3xl font-bold my-6 pt-6">Solution</h2>
             <div>
-              <h3 class="text-2xl font-bold mb-3">On-time Information</h3>
+              <h3 class="text-2xl font-bold my-4">On-time Information</h3>
               <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Individuals can employ the portable air quality monitor to instantaneously visualize and continuously monitor real-time air quality.</p>
               
               <img class="h-auto max-w-full" src="/img/trail-angel/air-tracker.png" alt="image description">
@@ -400,7 +420,7 @@
             </div>
 
             <div>
-              <h3 class="text-2xl font-bold mb-3">Make a Trail Plan</h3>
+              <h3 class="text-2xl font-bold my-4">Make a Trail Plan</h3>
               <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can access a sophisticated platform that not only facilitates the creation of personalized outdoor trail plans but also provides real-time air quality index data. This empowers users to enjoy a pristine outdoor experience, ensuring they breathe in clean, fresh air throughout their journey.</p>
               
               <img class="h-auto max-w-full" src="/img/trail-angel/gif_2.gif" alt="image description">
@@ -409,7 +429,7 @@
             </div>
 
             <div>
-              <h3 class="text-2xl font-bold mb-3">Detour A Trail</h3>
+              <h3 class="text-2xl font-bold my-4">Detour A Trail</h3>
               <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.</p>
               
               <img class="h-auto max-w-full" src="/img/trail-angel/gif_3.gif" alt="image description">
@@ -418,7 +438,7 @@
             </div>
 
             <div>
-              <h3 class="text-2xl font-bold mb-3">Change A Trail Plan</h3>
+              <h3 class="text-2xl font-bold my-4">Change A Trail Plan</h3>
               <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Users can access real-time air pollution forecasts, allowing them to adjust their travel plans proactively prior to reaching their destination.</p>
               
               <img class="h-auto max-w-full" src="/img/trail-angel/gif_4.gif" alt="image description">
@@ -426,7 +446,7 @@
             </div>
           </div>
           <div id="approach">
-            <h2 class="text-3xl font-bold mb-8">Approach</h2>
+            <h2 class="text-3xl font-bold my-6 pt-6">Approach</h2>
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
               <!-- Card 1: Thesis -->
               <div class="bg-white p-4 rounded-lg ">
@@ -1365,7 +1385,7 @@
 
       // Scroll to the target element
       window.scrollTo({
-        top: targetElement.offsetTop - 65, // Adjust this value to match the scroll-margin-top
+        top: targetElement.offsetTop - 85, // Adjust this value to match the scroll-margin-top
         behavior: 'smooth'
       });
 
