@@ -12,7 +12,168 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
-    
+    <style>
+      .opacity-0 {
+  opacity: 0;
+}
+
+
+ /* Custom CSS for animations */
+ @keyframes dropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+}
+
+/* Adjust the existing classes to include the visibility effect */
+.animate-drop-in {
+  animation: dropIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-rise {
+  animation: rise 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+
+/* Positioning for the logo */
+.logo-container {
+  position: absolute;
+  top: 50%;  /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it's above the banner image */
+}
+
+/* Ensure the banner image is responsive and maintains aspect ratio */
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove bottom margin/space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* iPad screen size and below */
+  .container {
+    text-align: center; /* Center-align text for smaller screens */
+    padding: 0 1rem; /* Add padding to prevent text touching the screen edges */
+  }
+  .container > div, /* Adjust hero text and image */
+  .container > p, /* Adjust description paragraph */
+  .container > div > div, /* Adjust social links and email container */
+  .container > div > div > a { /* Adjust social links and email items */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+    margin-bottom: 0.5rem; /* Add a little space between stacked items */
+  }
+  .project-title {
+    order: 2;
+  }
+
+  .description-text {
+    order: 3;
+  }
+
+  .read-more-link {
+    order: 4;
+    margin-top: 1rem; /* add space above the Read More link */
+  }
+
+  .tags-container {
+    order: 1;
+  }
+
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  #project .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-link {
+    order: 0; /* Image comes first */
+  }
+}
+
+@media (max-width: 1920px) {
+  /* h1, p {
+    font-size: 9rem; /* Large font size for 1920px wide screens */
+  }
+} */
+
+@media (max-width: 1024px) { /* For tablet screens */
+  .text-9xl {
+    font-size: 6rem; /* Smaller font size for better readability */
+  }
+  .text-6xl {
+    font-size: 4rem;
+  }
+  .container {
+    text-align: center; /* Center-align text for tablet screens */
+  }
+}
+
+@media (max-width: 375px) { /* For iPhone 13 mini and similar sizes */
+  .text-8xl {
+    font-size: 3rem; /* Further reduced font size for small screens */
+  }
+  .text-6xl {
+    font-size: 1.5rem;
+  }
+  .text-3xl {
+    font-size: 1.5rem; /* Adjusting social links and email font size */
+  } 
+}
+
+    </style>
     
 </head>
 <body>
@@ -79,22 +240,23 @@
 </script>
 
 
-<section id="hero_image">
-    <div class="relative overflow-hidden bg-cover bg-no-repeat" style="background-position: 50%; background-image: url('/img/trail-angel/trail_angel_banner.png'); height: 1080px; ">
-    <div
-        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
-        <div class="flex h-full items-center justify-center">
-        <div class="px-6 text-center text-white md:px-12">
-            <img src="/img/trail-angel/trailangellogo.png" alt="Logo" class="w-40 h-30 mx-auto mb-4">
-            <h1 class="mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
-                Make the Invisible Tangible
-            </h1>
-        
-        </div>
-        </div>
+<!-- Hero Section -->
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden">
+  <div class="container mx-auto flex flex-col justify-center items-start text-left">
+    <!-- Title with animation, initially hidden -->
+    <h1 class="text-8xl font-bold opacity-0 animate-drop-in py-20">Make the Invisible Tangible</h1>
+    <!-- Container for images with relative positioning -->
+    <div class="relative w-full mt-auto">
+      <!-- Banner image with full width, initially hidden -->
+      <img src="/img/trail-angel/trail_angel_banner.png" alt="Trail Angel Banner" class="w-full h-auto object-cover opacity-0 animate-rise">
+      <!-- Logo image container with absolute positioning, initially hidden -->
+      
     </div>
-    </div>
+  </div>
 </section>
+
+
+
 
 
 
