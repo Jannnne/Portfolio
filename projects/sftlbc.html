@@ -313,11 +313,11 @@
 
         <ul class="space-y-2" id="sidebarLinks">
           <li>
-            <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-overview" data-collapse-toggle="dropdown-overview">
-                <a href="#overview" class="flex-1 ml-3 text-left whitespace-nowrap text-lg font-medium">Overview</a>
+            <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-brief" data-collapse-toggle="dropdown-brief">
+                <a href="#brief" class="flex-1 ml-3 text-left whitespace-nowrap text-lg font-medium">Brief</a>
                 <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
-            <ul id="dropdown-overview" class="hidden py-2 space-y-2">
+            <ul id="dropdown-brief" class="hidden py-2 space-y-2">
                 <li>
                     <a href="#solution" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Solution</a>
                 </li>
@@ -453,20 +453,20 @@ sidebarLinks.forEach(link => {
   
      
 
-      <div class="flex-1 max-w-2xl mx-auto p-4 mt-2 mb-8">
+      <div class="flex-1 max-w-2xl mx-auto p-4  mb-8">
         <br>
         <h3 class="text-2xl font-bold mb-4">S.F. True Light Baptist Church Responsive Design</h3>
           <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">We spearheaded an end-to-end design process for the S.F. True Light Baptist Church website to increase engagement and visibility for users by xx%.
           </p>
         <div id="brief">
-
-          <h1 class="text-4xl font-bold mb-8">Brief</h1>
+          
+          <h1 class="text-4xl font-bold mb-8 pt-6">Brief</h1>
         
           
           <div id="project-info">
             <h2 class="text-3xl font-bold my-6 pt-6">Project Info</h2>
 
-            <h3 class="text-2xl font-bold mb-3">My Role: UX Designer</h3>
+            <h3 class="text-2xl font-bold my-4">My Role: UX Designer</h3>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
               <!-- Card 1: Thesis -->
@@ -520,17 +520,17 @@ sidebarLinks.forEach(link => {
             </div>
 
             <div id="our-team">
-              <h3 class="text-2xl font-bold mb-3">Our Team</h3>
+              <h3 class="text-2xl font-bold my-4">Our Team</h3>
               <img class="h-auto max-w-full" src="/img/sftlbc/sftlbc_our_team.png" alt="Team Image">
             </div>
 
             <div id="stakeholders">
-              <h3 class="text-2xl font-bold mb-3">Stakeholders</h3>
+              <h3 class="text-2xl font-bold my-4">Stakeholders</h3>
               <img class="h-auto max-w-full" src="/img/sftlbc/sftlbc_stakeholders.png" alt="Stakeholders Image">
             </div>
 
             
-              <h3 class="text-2xl font-bold mb-3">Design Process</h3>
+              <h3 class="text-2xl font-bold my-4">Design Process</h3>
               <div x-data="{ isZoomed: false }">
                 <img src="/img/sftlbc/sftlbc_design_process.png" alt="Design Process Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -552,7 +552,7 @@ sidebarLinks.forEach(link => {
 
               <div id="challenge">
                 <h3 class="text-3xl font-bold my-6 pt-6">Challenge</h3>
-                <h3 class="text-2xl font-bold mb-3">How might we encourage engagement and increase conversions on the website?
+                <h3 class="text-2xl font-bold my-4">How might we encourage engagement and increase conversions on the website?
                 </h3>
                 
               </div>
@@ -594,7 +594,7 @@ sidebarLinks.forEach(link => {
               We learned a lot from the competitors about what they have in common and what sets them apart from each other.
               </p>
             
-            <h3 class="text-2xl font-bold mb-3">Competitors</h3>
+            <h3 class="text-2xl font-bold my-4">Competitors</h3>
             <img class="h-auto max-w-full" src="/img/sftlbc/competitors.png" alt="Competitors Image">
             <h3 class="text-xl font-bold mb-3">Analysis conclution</h3>
             
@@ -866,7 +866,7 @@ sidebarLinks.forEach(link => {
           </div>
 
           <div id="information-architecture">
-            <h3 class="text-2xl font-bold mb-3">Information Architecture</h3>
+            <h3 class="text-2xl font-bold my-4">Information Architecture</h3>
             <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">To understand better how users associate and group information on this website, we invited target users to do cart sorting for new and existing websites. According to the responses, we drew the website’s site map and combined all the low-fi wireframe screens onto one board so that we were able to see and adjust user flows and navigation quickly.
             </p>
             <div class="flex flex-col items-center mb-3">
@@ -888,7 +888,7 @@ sidebarLinks.forEach(link => {
         <div id="prototype-test">
           <h1 class="text-4xl font-bold mb-8 pt-6">Phase 4 - Iteration</h1>
           <div id="user-test">
-            <h3 class="text-2xl font-bold mb-3">User Test</h3>
+            <h3 class="text-2xl font-bold my-4">User Test</h3>
             <h3 class="text-xl font-bold mb-3">Usability Test</h3>
             <!-- <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Summary of Feedback</p> -->
             <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
@@ -1008,7 +1008,7 @@ sidebarLinks.forEach(link => {
 
         <div id="takeaways">
           <h1 class="text-4xl font-bold mb-8 pt-6">Takeaways</h1>
-          <h3 class="text-2xl font-bold mb-8">What I Learned</h3>
+          <h3 class="text-2xl font-bold my-4">What I Learned</h3>
         
           <p class="mb-3 text-lg font-semibold text-gray-700 dark:text-gray-300">Pros: Teamwork</p>
           <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Teamwork is essential in the world of UX design. Collaborating closely with developers has taught me the value of adopting a developer's mindset and considering the broader perspective. In my designs, I don't just focus on interface elements, user experience, and visuals; I also ensure that the product's functionality is well-addressed, translating my solutions into digital reality effectively.
@@ -1030,6 +1030,33 @@ sidebarLinks.forEach(link => {
 
     
 </section>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const sidebarLinks = document.querySelectorAll('#sidebarLinks a');
+
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      // Prevent default anchor behavior
+      event.preventDefault();
+
+      // Get the target element's ID from the href attribute
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      // Scroll to the target element
+      window.scrollTo({
+        top: targetElement.offsetTop - 85, // Adjust this value to match the scroll-margin-top
+        behavior: 'smooth'
+      });
+
+      // Optional: Add 'clicked-link' class to the clicked link
+      sidebarLinks.forEach(l => l.classList.remove('clicked-link'));
+      link.classList.add('clicked-link');
+    });
+  });
+});
+
+</script>
 
 <!-- Back-to-Top Button -->
 <button
