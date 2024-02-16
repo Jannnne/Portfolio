@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zheng Wei Portfolio</title>
+    <meta name="description" content="Zheng Wei's product designer portfolio showcasing UX/UI design projects.">
     <link href="./dist/output.css" rel="stylesheet" />
 
     <!-- Add these in the head section -->
@@ -346,15 +347,16 @@
                       <li>
                         <a href="#questionnaire" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Questionnaire</a>
                     </li>
-                      <li>
-                          <a href="#church-personality-survey" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Church Personaliy Survey</a>
-                      </li>
+                      
                       <li>
                           <a href="#target-audience" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Target Audience</a>
                       </li>
                       <li>
                         <a href="#observation" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Observation</a>
                     </li>
+                    <li>
+                      <a href="#church-personality-survey" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Church Personaliy Survey</a>
+                  </li>
                     <li>
                         <a href="#interview" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">User Interview & Synthesis</a>
                     </li>
@@ -460,8 +462,8 @@ sidebarLinks.forEach(link => {
 
       <div class="flex-1 max-w-2xl mx-auto p-4  mb-8">
         <br>
-        <h3 class="text-2xl font-bold mb-4">S.F. True Light Baptist Church Responsive Design</h3>
-          <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">We spearheaded an end-to-end design process for the S.F. True Light Baptist Church website to increase engagement and visibility for users by xx%.
+        <h3 class="text-2xl font-bold mb-4">S.F. True Light Baptist Church Website Redesign</h3>
+          <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">We spearheaded an end-to-end design process for the S.F. True Light Baptist Church website to increase engagement and visibility for users by 63%.
           </p>
         <div id="brief">
           
@@ -604,7 +606,7 @@ sidebarLinks.forEach(link => {
                 <h3 class="text-3xl font-bold my-6 pt-6">Solutions</h3>
                 <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
                   <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white mb-3">timely information</strong> 
+                    <strong class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Timely Information</strong> 
                     <p >We provide call-to-action sections to access updated information quickly. Toast notifications at the top of the webpage display the latest event information, allowing users to quickly understand and take action, thereby enhancing user engagement.
                     </p>
                     <div class="flex flex-col items-center mb-3">
@@ -625,7 +627,7 @@ sidebarLinks.forEach(link => {
                   </div>
                   </li>
                   <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white">clarification</strong>
+                    <strong class="text-2xl font-bold text-gray-900 dark:text-white">Clarification</strong>
                     
                     <p class="mb-4">It enables the user to understand the faith terms through explanations. Provide a Q&A session for new visitors to explain faith-related terminology, bridging the gap with users and enticing them to learn more, enhancing user engagement and understanding.</p>
                     <div class="flex flex-col items-center mb-3">
@@ -763,25 +765,28 @@ sidebarLinks.forEach(link => {
 
           <div id="questionnaire">
             <h3 class="text-3xl font-bold my-6 pt-6">Questionnaire</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">In order to better define the church branding style, we conducted a characteristic survey. From user perspective, the visual style including these elements: 
-              <strong class="font-semibold text-gray-900 dark:text-white">Up-to-date, Clear, informative, connected,spiritual, enlightening</strong>
+            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">We conducted a questionnaire to understand user browsing website behavior.
+              
             </p>
-            <figure>
-            <img class="h-auto max-w-full" src="/img/sftlbc/brand-personality.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">Church personality survey was conducted by Lian and me.</figcaption>
+            <div class="flex flex-col items-center mb-3">
+              <figure>
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/sftlbc/user-questionnaire-report.png" alt="competitive Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/sftlbc/user-questionnaire-report.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">User questionnaire inforgraphic created by me. </figcaption>
                     </figure>
+            </div>
           </div>
 
-          <div id="church-personality-survey">
-            <h3 class="text-3xl font-bold my-6 pt-6">Church Personaliy Survey</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">In order to better define the church branding style, we conducted a characteristic survey. From user perspective, the visual style including these elements: 
-              <strong class="font-semibold text-gray-900 dark:text-white">Up-to-date, Clear, informative, connected,spiritual, enlightening</strong>
-            </p>
-            <figure>
-            <img class="h-auto max-w-full" src="/img/sftlbc/brand-personality.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">Church personality survey was conducted by Lian and me.</figcaption>
-                    </figure>
-          </div>
+          
 
           <div id="target-audience">
             <h3 class="text-3xl font-bold my-6 pt-6">Target Audience</h3>
@@ -849,49 +854,73 @@ sidebarLinks.forEach(link => {
             </div>
           </div>
 
-          
+          <div id="church-personality-survey">
+            <h3 class="text-3xl font-bold my-6 pt-6">Church Personaliy Survey</h3>
+            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">In order to better define the church branding style, we conducted a characteristic survey. From user perspective, the visual style including these elements: 
+              <strong class="font-semibold text-gray-900 dark:text-white">Up-to-date, Clear, informative, connected,spiritual, enlightening</strong>
+            </p>
+            <figure>
+            <img class="h-auto max-w-full" src="/img/sftlbc/brand-personality.png" alt="image description">
+            <figcaption class=" text-gray-500 text-sm mt-2">Church personality survey was conducted by Lian and me.</figcaption>
+                    </figure>
+          </div>
 
           <div id="interview">
             <h3 class="text-3xl font-bold my-6 pt-6">User Interview & Synthesis</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">To better understand user' perspectives of using the website, we conducted interviews with 3 type of 16 users.</p>
+            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">To better understand user' perspectives of using the website, we conducted interviews with 3 type of 16 users.</p>
 
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">We asked some questions and learned lots of insights as follows:</p>
-            <figure>
-            <img class="h-auto max-w-full" src="/img/sftlbc/interview-audience.png" alt="Interview Synthesis">
-            <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
+            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">We asked some questions and learned lots of insights as follows:</p>
+            
+
+            <div class="flex flex-col items-center mb-3">
+              <figure>
+              <div x-data="{ isZoomed: false }">
+                <img src="/img/sftlbc/interview-audience.png" alt="Interview Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="relative">
+                        <img src="/img/sftlbc/interview-audience.png" alt="Interview Diagram Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+              </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
                     </figure>
+            </div>
+
             <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
               
-                <strong class="font-semibold text-gray-900 dark:text-white">New Member - 6 people</strong> 
-                <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">New Member - 6 people</strong> 
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                 New members want the site to be informative and up-to-date.
                 </li>
-                <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                   75% want to see photos of past events and get more event information.
                 </li>
-                <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                   80% are more concerned about the composition of church personnel.
                 </li>
-                <li class="mb-8 text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
                   55% wish it were easier to watch weekly Sundays.
                 </li>
               
-                <strong class="font-semibold text-gray-900 dark:text-white">Old members - 5 people</strong>
-                <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Old members - 5 people</strong>
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                   Old members hope to have more interaction with other members.
                   </li>
-                  <li class="mb-8 text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                  <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
                     85% want the website to have a mobile page.
                   </li>
                   
-                <strong class="font-semibold text-gray-900 dark:text-white">Those who are not a member of the church - 5 people</strong>
-                <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Those who are not a member of the church - 5 people</strong>
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                   90% think the Chinese fonts on the original church website are too crowded.
                   </li>
-                  <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                     Most don't know church terminology.
                   </li>
-                  <li class=" text-lg list-decimal list-inside text-gray-700 dark:text-gray-300">
+                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
                     All think that the effective page area of the website is too small.
                   </li>      
             </ul>
@@ -899,36 +928,59 @@ sidebarLinks.forEach(link => {
 
           <div id="affinity-diagram">
             <h3 class="text-3xl font-bold my-6 pt-6">Affinity Diagram</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">We took the responses through an affinity diagram to find common themes amongst the responders. </p>
-            <div class="flex flex-col items-center mb-3">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/affinity-diagram.png" alt="Affinity Diagram Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/affinity-diagram.png" alt="Affinity Diagram Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-            </div>
+            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">We took the responses through an affinity diagram to find common themes amongst the responders. </p>
+            
+            <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Website Information Enhancement:</strong>
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
+                  Integrate more offline event details.
+                  </li>
+                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
+                    Add photos from past events.
+                  </li>
+                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
+                    Ensure continuous updates with detailed event information.
+                  </li> 
+                  <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
+                    Clearly convey the faith message on the homepage.
+                  </li>
+
+                  <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Additional Features:</strong>
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
+                  Introduce new functionalities.
+                  </li>
+                  <li class=" mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
+                    Provide definitions for specific terminologies.
+                  </li>
+
+                  <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Interaction Improvement:</strong>
+                <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
+                  Include testimonial sections for personal stories and experiences.
+                  </li>
+
+                  <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Visualization and Readability:</strong>
+                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
+                  Optimize the use of graphics and textual content.
+                  </li>
+                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
+                    Improve text font to enhance readability.
+                  </li>
+
           </div>
           
           <div id="insights">
             <h3 class="text-3xl font-bold my-6 pt-6">Insights</h3>
             
-              <p class=" text-lg font-semibold text-gray-700 dark:text-gray-300">Insight#1</p>
+              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Insight#1</p>
               <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users expect the website to have enough information and continuous updates of the information.
               </p>
-              <p class=" text-lg font-semibold text-gray-700 dark:text-gray-300">Sub-insight#1</p>
+              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Sub-insight#1</p>
               <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users want to see photos and reviews of past events, and learn more event information.
               </p>
-              <p class=" text-lg font-semibold text-gray-700 dark:text-gray-300">Insight#2</p>
+              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Insight#2</p>
               <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users expect the website to provide (proprietary term explanation, clarification) question education and faith relate.</p>
             
-              <p class=" text-lg font-semibold text-gray-700 dark:text-gray-300">Insight#3</p>
-              <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users hope to have more interaction with other fellows through the church.</p>
+              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Insight#3</p>
+              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Users hope to have more interaction with other fellows through the church.</p>
             
           </div>
           
@@ -942,6 +994,7 @@ sidebarLinks.forEach(link => {
           <div id="persona">
             <h3 class="text-3xl font-bold my-6 pt-6">Persona & Problem Statement</h3>
             <div class="flex flex-col items-center mb-6">
+              
               <div x-data="{ isZoomed: false }">
                 <img src="/img/sftlbc/SFTLBC - Persona - 1.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -953,6 +1006,7 @@ sidebarLinks.forEach(link => {
                     </div>
                 </div>
               </div>
+              
             </div>
 
             <div class="flex flex-col items-center mb-6">
@@ -970,6 +1024,7 @@ sidebarLinks.forEach(link => {
             </div>
 
             <div class="flex flex-col items-center mb-8">
+              
               <div x-data="{ isZoomed: false }">
                 <img src="/img/sftlbc/SFTLBC - Persona - 3.png" alt="Persona3 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -981,6 +1036,7 @@ sidebarLinks.forEach(link => {
                     </div>
                 </div>
               </div>
+              
             </div>
           </div>
           
@@ -995,6 +1051,7 @@ sidebarLinks.forEach(link => {
             </p>
             
               <div class="flex flex-col items-center mb-8">
+                <figure>
                 <div x-data="{ isZoomed: false }">
                   <img src="/img/sftlbc/wireframe_sketch.png" alt="Design Sketch Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                   <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -1006,6 +1063,8 @@ sidebarLinks.forEach(link => {
                       </div>
                   </div>
                 </div>
+                <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
+                    </figure>
               </div>
 
           </div>
@@ -1015,6 +1074,7 @@ sidebarLinks.forEach(link => {
             <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">To understand better how users associate and group information on this website, we invited target users to do cart sorting for new and existing websites. According to the responses, we drew the website’s site map and combined all the low-fi wireframe screens onto one board so that we were able to see and adjust user flows and navigation quickly.
             </p>
             <div class="flex flex-col items-center mb-3">
+              <figure>
               <div x-data="{ isZoomed: false }">
                 <img src="/img/sftlbc/information-architecture.png" alt="Information Architecture Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -1026,6 +1086,8 @@ sidebarLinks.forEach(link => {
                     </div>
                 </div>
               </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
+                    </figure>
             </div>
           </div>
         </div>
@@ -1035,61 +1097,67 @@ sidebarLinks.forEach(link => {
           <div id="usability-test">
             
             <h3 class="text-3xl font-bold my-6 pt-6">Usability Test</h3>
-            <!-- <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Summary of Feedback</p> -->
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Home page 3 sessions' proposition is not right.</li>
-              <li>The map need more feature, micromotion.</li>
-              <li>The beacon tech need education.</li>
-              <li>The AQI alert page need emphasize.</li>
-              <li>The recording page arrangement need to be improved.</li>
-              <li>The flow is not few comfortable.</li>
-            </ul>
+            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Main User Tests Results</p>
+            
+
             <div class="flex flex-col items-center mb-3">
+              <figure>
               <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/usability-test-card-sorting.png" alt="Usability Test Card Sorting Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <img src="/img/sftlbc/after-test-font-size.png" alt="Usability Test Card Sorting Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <div class="relative">
-                        <img src="/img/trail-angel/usability-test-card-sorting.png" alt="Usability Test Card Sorting Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <img src="/img/sftlbc/after-test-font-size.png" alt="Usability Test Card Sorting Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
                         <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                           &times;
                         </button>
                     </div>
                 </div>
               </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">The user tests were conducted by Lian and me. The user tests conduct picture was designed by Lian.</figcaption>
+                    </figure>
             </div>
+
             <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Page: Save Real-time AQI recording page.</p>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Modification: Recognized the layout of Save Real-time AQI recording page.</p>
+            
+            
             <div class="flex flex-col items-center mb-3">
+              <figure>
               <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/usability-test-result.png" alt="Usability Test Result Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <img src="/img/sftlbc/after-test-side-bar.png" alt="Usability Test Result Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <div class="relative">
-                        <img src="/img/trail-angel/usability-test-result.png" alt="Usability Test Result Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <img src="/img/sftlbc/after-test-side-bar.png" alt="Usability Test Result Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
                         <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                           &times;
                         </button>
                     </div>
                 </div>
               </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">The user tests were conducted by Lian and me. The user tests conduct picture was designed by Lian.</figcaption>
+                    </figure>
             </div>
           </div>
             
           <div id="a/b-test"> 
             <h3 class="text-3xl font-bold mb-8 my-6 pt-6">A/B Test</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Page: Trail Detail Page</p>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The result is optional B, it organize the layout of the Trail detail page modal.</p>
+            
+            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Most of the users choose optional B.</p>
+            
             <div class="flex flex-col items-center mb-3">
+              <figure>
               <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/a-&-b-test.png" alt="A/B Test Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
+                <img src="/img/sftlbc/after-ab-test-homepage.png" alt="A/B Test Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <div class="relative">
-                        <img src="/img/trail-angel/a-&-b-test.png" alt="A/B Test Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
+                        <img src="/img/sftlbc/after-ab-test-homepage.png" alt="A/B Test Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
                         <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
                           &times;
                         </button>
                     </div>
                 </div>
               </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">The user tests were conducted by Lian and me. The user tests conduct picture was designed by Lian.</figcaption>
+                    </figure>
             </div>
           </div>
         
@@ -1135,6 +1203,7 @@ sidebarLinks.forEach(link => {
             </div>
 
             <div class="flex flex-col items-center mb-3">
+              <figure>
               <div x-data="{ isZoomed: false }">
                 <img src="/img/sftlbc/style-guide-3.png" alt="Design System Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
                 <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -1146,6 +1215,8 @@ sidebarLinks.forEach(link => {
                     </div>
                 </div>
               </div>
+              <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
+                    </figure>
             </div>
 
           </div>
