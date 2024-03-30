@@ -175,193 +175,140 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
-            <!-- Logo and Title -->
-            <a href="https://zhennnngwei.com/" class="flex items-center">
-                <img src="/img/logo.png" class="h-5 mr-2" alt="Zheng Wei Logo">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Zheng Wei</span>
-            </a>
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <!-- Navigation Links -->
-                <div class="flex flex-row space-x-8 font-medium" id="navLinks">
-                    <a href="./index.html#project" class="text-gray-400">Projects</a>
-                    <a href="./about.html" class="hover:underline">About</a>
-                    <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
-                </div>
-                <!-- Contact Email Button -->
-                <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                    <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
-                </a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-        <!-- Mobile Menu Dropdown -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
-                <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
-                <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
-                <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
-                <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                    <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
-                </a>
-            </div>
-        </div>
-    </nav>
-    
-    <script>
-        // JavaScript for the mobile menu toggle
-        const mobileMenuButton = document.querySelector('[data-collapse-toggle="mobile-menu"]');
-        const mobileMenu = document.getElementById("mobile-menu");
-    
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    
-    </script>
+    <nav class="bg-white dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600 mb-24">
+      <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+      <!-- Logo and Title -->
+      <a href="https://zhennnngwei.com/" class="flex items-center">
+          <img src="/img/logo.png" class="h-5 mr-2" alt="Zheng Wei Logo">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Zheng Wei</span>
+      </a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+          <!-- Navigation Links -->
+          <div class="flex flex-row space-x-8 font-medium" id="navLinks">
+              <a href="./index.html#project" class="text-gray-400">Projects</a>
+              <a href="./about.html" class="hover:underline">About</a>
+              <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+              <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="hover:underline">Email</a>
+              <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="hover:underline">LinkedIn</a>
+          </div>
+          
+      </div>
+      <!-- Mobile Menu Button -->
+      <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+  </div>
+  <!-- Mobile Menu Dropdown -->
+  <div class="hidden md:hidden" id="mobile-menu">
+      <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
+          <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
+          <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
+          <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+          <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Email</a>
+          <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">LinkedIn</a>
+      </div>
+  </div>
+</nav>
+
+<script>
+  // JavaScript for the mobile menu toggle
+  const mobileMenuButton = document.querySelector('[data-collapse-toggle="mobile-menu"]');
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+      });
+  });
+</script>
+
     
       
       
       
       <!-- Hero Section -->
-<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden">
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden mb-48">
     <div class="container mx-auto flex flex-col items-center lg:items-start justify-center">
       <!-- Hero text and image container -->
-      <div class="flex flex-col lg:flex-row items-center lg:items-start mb-6 text-center lg:text-left">
+      <div class="flex flex-col lg:flex-row lg:items-start mb-6 items-center text-align lg:text-left mb-16">
         <!-- Animated Hey! -->
-        <h1 class="text-9xl font-bold opacity-0 animate-drop-in">Hey!</h1>
+        <h1 class="text-8xl font-bold opacity-0 animate-drop-in">Hey! &nbsp;</h1>
         <!-- Animated I'm -->
-        <p class="text-9xl font-bold opacity-0 animate-rise">I'm</p>
+        <p class="text-8xl font-bold opacity-0 animate-rise">I'm &nbsp;</p>
         <!-- Profile image with animation -->
         <img src="./img/zheng_profile_picture.jpg" alt="Zheng" class="w-48 h-48 rounded-full mx-4 opacity-0 animate-pop-in">
         <!-- Animated Zheng. with move to right -->
-        <p class="text-9xl font-bold opacity-0 animate-slide-right">Zheng.</p>
+        <p class="text-8xl font-bold opacity-0 animate-slide-right">Zheng.</p>
       </div>
+      <br>
+      <br>
+      <br>
       <!-- Animated description -->
-      <p class="text-6xl opacity-0 animate-rise-description">
-        As a product designer, I aim to create seamless, intuitive experiences using advanced design practices, deeply connecting users with impactful and innovative products.
+      <p class="text-4xl opacity-0 text-center animate-rise-description">
+        Driven by empathy and innovation, I craft impactful UX/UI designs that transform user challenges into engaging, accessible digital experiences.
       </p>
-      <!-- Social links and email container -->
-      <!-- Social links and email container -->
-<div class="flex flex-col md:flex-row justify-between items-center w-full mt-8">
-    <!-- Social links -->
-    <div class="flex flex-col md:flex-row space-x-0 md:space-x-4 items-center opacity-0 animate-rise-socials">
-      <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="hover:underline text-3xl text-center mb-2 md:mb-0">LinkedIn</a>
-      <!-- <a href="https://discordapp.com/users/Jannnne#1501" class="hover:underline text-3xl text-center mb-2 md:mb-0">Discord</a> -->
-      <a href="https://github.com/Jannnne" class="hover:underline text-3xl text-center mb-2 md:mb-0">GitHub</a>
-    </div>
-    <!-- Contact email -->
-    <div class="opacity-0 animate-rise-contact mt-4 md:mt-0">
-      <a href="mailto:hello@layla.com" class="hover:underline text-3xl text-center">iam.weizheng@gmail.com</a>
-    </div>
-  </div>
   
     </div>
   </section>
   
 
 
-<section id="project" class="bg-white text-black py-5 px-5">
-    <div class="max-w-6xl mx-auto w-full max-w-screen-xl">
+<section id="project" class="bg-white text-black py-5 px-5 mb-24 ani">
+  <div class="max-w-6xl mx-auto w-full max-w-screen-xl">
         <br>
-<br>
-<br>
+        <br>
+        <br>
 <!-- Section Title -->
-<div class="text-4xl font-bold mb-8">Latest Projects</div>
+    <div class="text-8xl font-bold mb-16 text-center">Featured Projects</div>
 
-<div class="max-w-6xl mx-auto w-full max-w-screen-xl">
-    <!-- Top Bar Line -->
-    <div class="border-t border-gray-500 pt-3"></div>
-
-    <!-- Titles and Read More Button above the image -->
-    <div class="flex justify-between items-center py-3">
-      <a href="./projects//endear.html" class="text-xl font-bold hover:text-gray-300">Endear</a>
-      
-      <!-- Right arrow and Read More button -->
-      <a href="./projects/endear.html" class="flex items-center text-xl font-bold hover:text-gray-300">
+      <!-- SFTLBC -->
+      <div class="max-w-6xl mx-auto w-full max-w-screen-xl mb-24">
         
-        <span class="ml-2">Read More</span>
-        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-      </a>
-    </div>
-
-    <!-- tags -->
-  <div class="py-3">
-    <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Case Study</span>
-    <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Health Care</span>
-    <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">XR Design</span>
-  </div>
-    
-    <!-- Clickable Full-width Image -->
-    <a href="./projects/endear.html" class="image-link">
-        <img src="./img/homepage_endear_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
-        <img src="./img/mobile_homepage_endear_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
-      </a>
-    
-    <!-- Bottom Description -->
-    <p class="text-xl mt-3">
-        Design and launch a groundbreaking digital journal app resulting in a
-27% increase in user engagement.
-    </p>
-  </div>
-  <br>
-  <br>
-      
-<div class="max-w-6xl mx-auto w-full max-w-screen-xl">
-    <!-- Top Bar Line -->
-    <div class="border-t border-gray-500 pt-3"></div>
-
-    <!-- Titles and Read More Button above the image -->
-    <div class="flex justify-between items-center py-3">
-      <a href="./projects/sftlbc.html" class="text-xl font-bold hover:text-gray-300">S.F. True Light Baptist Church</a>
-      
-      <!-- Right arrow and Read More button -->
-      <a href="./projects/sftlbc.html" class="flex items-center text-xl font-bold hover:text-gray-300">
         
-        <span class="ml-2">Read More</span>
-        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-      </a>
-    </div>
-
-    <!-- tags -->
-  <div class="py-3">
-    <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Redesign</span>
-    <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">User Research</span>
-    <!-- <button class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Workshops</button> -->
-  </div>
     
-    <!-- Clickable Full-width Image -->
-    <a href="./projects/sftlbc.html" class="image-link">
-        <img src="./img/homepage_sftlbc_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
-        <img src="./img/mobile_homepage_sftlbc_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
-      </a>
-    
-    <!-- Bottom Description -->
-    <p class="text-xl mt-3">
-        S.F. True Light Baptist Church website redesign. Lead website design, increasing user engagement by 63% through
-strategic <br> keyword optimization.
-    </p>
-  </div>
-  <br>
-  <br>
+        <!-- Titles and Read More Button above the image -->
+        <div class="flex justify-between items-center py-3">
+          <a href="./projects/sftlbc.html" class="text-xl font-bold hover:text-gray-300">S.F. True Light Baptist Church</a>
+          
+          <!-- Right arrow and Read More button -->
+          <a href="./projects/sftlbc.html" class="flex items-center text-xl font-bold hover:text-gray-300">
+            
+            <span class="ml-2">Read More</span>
+            <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
 
-      <div class="max-w-6xl mx-auto w-full max-w-screen-xl">
-        <!-- Top Bar Line -->
-        <div class="border-t border-gray-500 pt-3"></div>
+        <!-- tags -->
+        <div class="py-3">
+          <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Case Study</span>
+          <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Real World Project</span>
+          
+        </div>
+        <!-- Bottom Description -->
+        <p class="text-xl mt-3 mb-6">
+          Redesign S.F. True Light Baptist Church website.
+          
+        </p>
+        <!-- Clickable Full-width Image -->
+        <a href="./projects/sftlbc.html" class="image-link">
+            <img src="./img/homepage_sftlbc_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
+            <img src="./img/mobile_homepage_sftlbc_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
+        </a>
+        
+        
+      </div>
+    
+    <!-- Trail Angel -->
+      <div class="max-w-6xl mx-auto w-full max-w-screen-xl mb-24">
+        
+        
     
         <!-- Titles and Read More Button above the image -->
         <div class="flex justify-between items-center py-3">
@@ -376,30 +323,46 @@ strategic <br> keyword optimization.
         </div>
 
         <!-- tags -->
-      <div class="py-3">
-        <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Case Study</span>
-        <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Outdoor</span>
-        <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Industrial Design</span>
-      </div>
-        
+        <div class="py-3">
+          <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">UX Case Study</span>
+          <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Outdoor</span>
+          <span class="bg-gray-100 py-2 px-4 rounded mr-2 text-black">Industrial Design</span>
+        </div>
+        <!-- Bottom Description -->
+        <p class="text-xl mt-3 mb-6">
+          Implement an innovative mobile app featuring real-time air quality monitoring.
+          
+        </p>
         <!-- Clickable Full-width Image -->
         <a href="./projects/trail_angel.html" class="image-link">
             <img src="./img/homepage_trailangel_banner.jpg" alt="Abstract shapes" class="w-full h-auto object-cover object-center hover:opacity-90 desktop-image">
             <img src="./img/mobile_homepage_trailangel_banner.jpg" alt="Abstract shapes" class="hidden w-full h-auto object-cover object-center hover:opacity-90 mobile-image">
-          </a>
+        </a>
         
-        <!-- Bottom Description -->
-        <p class="text-xl mt-3">
-            Used Figma to implement an innovative mobile app featuring
-real-time air quality monitoring and dynamic route adjustments,<br>
-reducing users' exposure to hazardous air by 35%.
-        </p>
+        
       </div>
-  </section>
+    </div>
+  </div>
+</section>
   
   
   
-  
+  <!-- Let's Get in Touch Section -->
+<div class="bg-white dark:bg-gray-900">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-8 py-10 items-center text-center">
+    <h2 class="text-4xl font-bold text-black dark:text-white mb-4">Let's Get in Touch</h2>
+    
+    <div class="space-x-4">
+      <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="text-2xl text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+        → LinkedIn
+      </a>
+      
+      <a href="mailto:iam.weizheng@gmail.com" class="text-2xl text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+        → Email
+      </a>
+    </div>
+  </div>
+</div>
   
 
 
@@ -409,38 +372,11 @@ reducing users' exposure to hazardous air by 35%.
 <footer class="bg-white text-black">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         
-        <div class="border-t border-gray-500 pt-3"></div>
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-xl  sm:text-center dark:text-gray-400">© 2024 Zheng Wei All Rights Reserved.
+        
+      <div class="sm:flex sm:items-center sm:justify-center">
+          <span class="text-xl  sm:text-center dark:text-gray-400">© 2024 Zheng Wei design and code with passion.
           </span>
-          <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-              
-              <!-- <a href="https://discordapp.com/users/Jannnne#1501" class=" hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                    </svg>
-                  <span class="sr-only">Discord community</span>
-              </a> -->
-              <!-- <a href="#" class=" hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                </svg>
-                  <span class="sr-only">Twitter page</span>
-              </a> -->
-              <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="hover:text-gray-900 dark:hover:text-white">
-                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-20c0-1.1-.9-2-2-2zm-11 19h-3v-10h3v10zm-1.5-11.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm11.5 11.5h-3v-5.5c0-.3-.2-.5-.5-.5h-.5c-.3 0-.5.2-.5.5v5.5h-3v-10h3v1.5c.5-.8 1.3-1.5 2.5-1.5 1.9 0 3.5 1.6 3.5 3.5v6.5z"/>
-                </svg>
-                <span class="sr-only">LinkedIn page</span>
-              </a>
-              <a href="https://github.com/Jannnne" class=" hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="sr-only">GitHub account</span>
-              </a>
-              
-          </div>
+          
       </div>
     </div>
 </footer>

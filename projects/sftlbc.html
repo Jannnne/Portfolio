@@ -225,7 +225,6 @@
 </head>
 <body>
     
-
   <!-- Navigation Bar -->
   <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
@@ -238,1115 +237,612 @@
         <div class="hidden md:flex items-center space-x-8">
             <!-- Navigation Links -->
             <div class="flex flex-row space-x-8 font-medium" id="navLinks">
-                <a href="/index.html#project" class="hover:underline">Projects</a>
-                <a href="/about.html" class="hover:underline">About</a>
-                <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+                <a href="./index.html#project" class="hover:underline">Projects</a>
+                <a href="./about.html" class="hover:underline">About</a>
+                <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+                <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="hover:underline">Email</a>
+                <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="hover:underline">LinkedIn</a>
             </div>
-            <!-- Contact Email Button -->
-            <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
-            </a>
+            
         </div>
         <!-- Mobile Menu Button -->
         <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
     </div>
     <!-- Mobile Menu Dropdown -->
     <div class="hidden md:hidden" id="mobile-menu">
         <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
-            <a href="/index.html#project" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900">Projects</a>
-            <a href="/about.html" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900">About</a>
-            <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900">Resume</a>
-            <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
-            </a>
+            <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
+            <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
+            <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+            <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Email</a>
+            <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">LinkedIn</a>
         </div>
     </div>
-</nav>
-
-<script>
+  </nav>
+  
+  <script>
     // JavaScript for the mobile menu toggle
     const mobileMenuButton = document.querySelector('[data-collapse-toggle="mobile-menu"]');
     const mobileMenu = document.getElementById("mobile-menu");
-
+  
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
-
+  
     // Close mobile menu when a link is clicked
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
         });
     });
-
-</script>
+  </script>
 
 
 <!-- Hero Section -->
-<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden">
-  <div class="container mx-auto flex flex-col justify-center items-start text-left">
-    <!-- Title with animation, initially hidden -->
-    <h1 class="text-8xl font-bold opacity-0 animate-drop-in py-20 ">Illuminating Hearts, Building Community, Embracing Tomorrow.</h1>
-    <!-- Container for images with relative positioning -->
-    <div class="relative w-full mt-auto">
-      <!-- Banner image with full width, initially hidden -->
-      <img src="/img/sftlbc/sftlbc_banner.jpg" alt="sftlbc Banner" class="w-full h-auto object-cover opacity-0 animate-rise">
-      
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden mb-16">
+  <div class="container mx-auto flex flex-col justify-center items-start text-left ">
+    
+    <!-- Container for banner image -->
+    <div class="w-full mt-auto mb-8">
+      <img src="/img/sftlbc/sftlbc_banner.jpg" alt="S.F True Light Baptist Church Banner" class="w-full h-auto object-cover animate-drop-in">
+    </div>
+    
+    <!-- Title and Subtitle -->
+    <div>
+      <h3 class="text-3xl animate-rise mb-2">A platform that help people knowing God and Christian</h3>
+      <h2 class="text-5xl font-bold animate-rise mb-16">S.F True Light Baptist Church - Illuminating Hearts, Building Community, Embracing Tomorrow.</h2>
+    </div>
+    
+    <!-- Grid container for the three columns -->
+    <div class="w-full grid grid-cols-3 gap-4">
+      <!-- Role Column -->
+      <div class="flex flex-col">
+        <h2 class="text-xl font-bold">Role</h2>
+        <p>Product Designer</p>
+      </div>
+
+      <!-- Team Column -->
+      <div class="flex flex-col">
+        <h2 class="text-xl font-bold">Team</h2>
+        <p>Designers: Zheng Wei (me), Lianlian Ma</p>
+        <p>Software Engineer: Haoyu Yan</p>
+      </div>
+
+      <!-- Duration Column -->
+      <div class="flex flex-col">
+        <h2 class="text-xl font-bold">Duration</h2>
+        <p>July 2022 to present</p>
+      </div>
     </div>
   </div>
 </section>
 
 
 
+
 <section id="case_study" class="bg-white dark:bg-gray-900">
-    <div class="flex mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
 
-      
-      <aside class="w-1/4 p-4 sticky top-16 max-h-screen overflow-y-auto hidden md:block">
-        <!-- Sidebar content -->
-        <br>
-        
-
-        <ul class="space-y-2" id="sidebarLinks">
-          <li>
-            <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-brief" data-collapse-toggle="dropdown-brief">
-                <a href="#brief" class="flex-1 ml-3 text-left whitespace-nowrap text-lg font-medium">Brief</a>
-                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-            <ul id="dropdown-brief" class="hidden py-2 space-y-2">
-                <li>
-                    <a href="#project-information" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Project Information</a>
-                </li>
-                <li>
-                      <a href="#background" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Background</a>
-                  </li>
-                <li>
-                    <a href="#challenge" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Challenge</a>
-                </li>
-                <li>
-                  <a href="#solutions" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Solutions</a>
-              </li>
-                
-            </ul>
-          </li>
-
-          <li>
-              <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-research" data-collapse-toggle="dropdown-research">
-                  <a href="#research" class="flex-1 ml-3 text-left whitespace-nowrap">Research</a>
-                  <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-              <ul id="dropdown-research" class="hidden py-2 space-y-2">
-                      <li>
-                          <a href="#competitive-analysis" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Competitive Analysis</a>
-                      </li>
-                      <li>
-                        <a href="#questionnaire" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Questionnaire</a>
-                    </li>
-                      
-                      <li>
-                          <a href="#target-audience" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Target Audience</a>
-                      </li>
-                      <li>
-                        <a href="#observation" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Observation</a>
-                    </li>
-                    <li>
-                      <a href="#church-personality-survey" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Church Personaliy Survey</a>
-                  </li>
-                    <li>
-                        <a href="#interview" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">User Interview & Synthesis</a>
-                    </li>
-                    <li>
-                        <a href="#affinity-diagram" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Affinity Diagram</a>
-                    </li>
-                    <li>
-                      <a href="#insights" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Insights</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-define" data-collapse-toggle="dropdown-define">
-                  <a href="#define" class="flex-1 ml-3 text-left whitespace-nowrap">Define</a>
-                  <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-              <ul id="dropdown-define" class="hidden py-2 space-y-2">
-                  
-                  <li>
-                      <a href="#persona" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Persona & Problem Statement</a>
-                  </li>
-                  
-              </ul>
-          </li>
-          
-          
-          
-          <li>
-              <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-ideation" data-collapse-toggle="dropdown-ideation">
-                  <a href="#ideation" class="flex-1 ml-3 text-left whitespace-nowrap">Ideation</a>
-                  <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-              <ul id="dropdown-ideation" class="hidden py-2 space-y-2">
-                  <li>
-                      <a href="#design-sketch" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Design Sketch</a>
-                  </li>
-                  <li>
-                      <a href="#information-architecture" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Information Architecture</a>
-                  </li>
-                  
-              </ul>
-          </li>
-
-          <li>
-            <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-iteration" data-collapse-toggle="dropdown-iteration">
-                <a href="#iteration" class="flex-1 ml-3 text-left whitespace-nowrap">Iteration</a>
-                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-            <ul id="dropdown-iteration" class="hidden py-2 space-y-2">
-                <li>
-                    <a href="#usability-test" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Usability Test</a>
-                </li>
-                <li>
-                    <a href="#a/b-test" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">A/B Test</a>
-                </li>
-                
-            </ul>
-        </li>
-
-        <li>
-          <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-deliver" data-collapse-toggle="dropdown-deliver">
-              <a href="#deliver" class="flex-1 ml-3 text-left whitespace-nowrap">Deliver</a>
-              <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-          <ul id="dropdown-deliver" class="hidden py-2 space-y-2">
-              <li>
-                  <a href="#hand-off-to-developers" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Hand Off to Developers</a>
-              </li>
-              <li>
-                  <a href="#design-system" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Design System</a>
-              </li>
-              
-          </ul>
-      </li>
-        
-          <li>
-            <a href="#takeaways" class="flex-1 ml-3 text-left whitespace-nowrap flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Takeaways</a>
-              
-        
-        </li>
-      </ul>
-
-      </aside>
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-const sidebarLinks = document.querySelectorAll('aside ul li a');
-
-sidebarLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    // Remove 'clicked-link' class from all links
-    sidebarLinks.forEach(l => l.classList.remove('clicked-link'));
-    
-    // Add 'clicked-link' class to the clicked link
-    link.classList.add('clicked-link');
-  });
-});
-});
-    </script>
-      
-      
-  
-     
-
-      <div class="flex-1 max-w-2xl mx-auto p-4  mb-8">
-        <br>
-        <h3 class="text-2xl font-bold mb-4">S.F. True Light Baptist Church Website Redesign</h3>
-          <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">We spearheaded an end-to-end design process for the S.F. True Light Baptist Church website to increase engagement and visibility for users by 63%.
-          </p>
-        <div id="brief">
-          
-          <h1 class="text-4xl font-bold mb-6 pt-6">Brief</h1>
-        
-          
-          <div id="project-information">
-            <h2 class="text-3xl font-bold my-6 pt-6">Project Information</h2>
-
-            <h3 class="text-2xl font-bold my-4">My Role: UX Designer</h3>
-
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <!-- Card 1: Thesis -->
-              <div class="bg-white p-4 rounded-lg ">
-                  <h5 class="text-l g font-semibold mb-2">My Key Contributions</h5>
-                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                    <li>Enthographic Research</li>
-                    <li>Interviews</li>
-                    <li>Competitive Research</li>
-                    <li>Concetp Ideation</li>
-                    <li>Web UX Design</li>
-                    <li>UI Design</li>
-                    <li>User Testing</li>
-               </ul>
-              </div>
-              
-              
-            
-
-              <!-- Card 2: Antithesis -->
-              <div class="bg-white p-4 rounded-lg ">
-                  <h5 class="text-lg font-semibold mb-2">Team</h5>
-                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                      <li>Software Engineer x1</li>
-                      <li>UX Designer x2</li>
-                      <li>Stakeholders x2</li>
-                  </ul>
-              </div>
-
-              <!-- Card 3: Synthesis -->
-              <div class="bg-white p-4 rounded-lg ">
-                  <h5 class="text-lg font-semibold mb-2">Duration</h5>
-                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                      <li>Research & Sprit - 4 weeks</li>
-                      <li>UX & User Testing - 2 weeks</li>
-                      <li>UI - 2 weeks</li>
-                      
-                  </ul>
-                </div>
-
-              <div class="bg-white p-4 rounded-lg ">
-                <h5 class="text-lg font-semibold mb-2">Tools</h5>
-                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                    <li>Figma</li>
-                    <li>FigJam</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe Photoshop</li>
-                    <li>Github</li>
-                </ul>
-              </div>
-            </div>
-
-            <div id="our-team">
-              <h3 class="text-2xl font-bold my-4">Our Team</h3>
-              <img class="h-auto max-w-full" src="/img/sftlbc/sftlbc_our_team.png" alt="Team Image">
-            </div>
-
-            <div id="stakeholders">
-              <h3 class="text-2xl font-bold my-4">Stakeholders</h3>
-              <div>
-              <figure>
-                <div x-data="{ isZoomed: false }">
-              <img class="h-auto max-w-full" src="/img/sftlbc/sftlbc_stakeholders.png" alt="Stakeholders Image">
-              <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                <div class="relative">
-                    <img src="/img/sftlbc/sftlbc_stakeholders.png" alt="Stakeholders Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                    <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                        &times;
-                    </button>
-                </div>
-            </div>
-          </div> 
-              <figcaption class=" text-gray-500 text-sm mt-2">Stakeholders map was made by me.</figcaption>
-            </figure>
-          </div>
-            </div>
-
-            
-              <h3 class="text-2xl font-bold my-4">Design Process</h3>
-              <div>
-            <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/sftlbc_design_process.png" alt="Design Process Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/sftlbc_design_process.png" alt="Design Process Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div> 
-              <figcaption class=" text-gray-500 text-sm mt-2">Design process diagram was made by me.</figcaption>
-            </figure>
-          </div>
-            
-              <div id="background">
-                <h2 class="text-3xl font-bold my-6 pt-6">Background</h2>
-                <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">True Light Baptist Church, established in 2002, has about 90 members. The existing website for True Light Baptist Church was built in 2017. The old visual style of the website is not conducive to propaganda work and has almost no effect on communication and interaction within the church community. Especially during the epidemic, the old website could not meet the new needs of the church's development. Our stakeholders want the church website to become the primary carrier of information transmission, enhance the interaction between the new and old church members, and attract new visitors to join True Light Baptist Church. Therefore, the main redesign goals of the church website are to promote church information, recruit new members, and interact with the church.
-                </p>
-                
-              <div>
-                <figure>
-                  <div x-data="{ isZoomed: false }">
-                    <img src="/img/sftlbc/sftlbc_old_website.png" alt="Design Process Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                    <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div class="relative">
-                            <img src="/img/sftlbc/sftlbc_old_website.png" alt="Design Process Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                            <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                                &times;
-                            </button>
-                        </div>
-                    </div>
-                  </div> 
-                  <figcaption class=" text-gray-500 text-sm mt-2">Design process diagram was made by me.</figcaption>
-                </figure>
-              </div>
-              </div>
-
-              <div id="challenge">
-                <h3 class="text-3xl font-bold my-6 pt-6">Challenge</h3>
-                <h3 class="text-2xl font-bold my-4">How might we encourage engagement and increase conversions on the website?
-                </h3>
-                
-              </div>
-
-            
-              
-              <div id="solutions">
-                <h3 class="text-3xl font-bold my-6 pt-6">Solutions</h3>
-                <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-                  <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Timely Information</strong> 
-                    <p >We provide call-to-action sections to access updated information quickly. Toast notifications at the top of the webpage display the latest event information, allowing users to quickly understand and take action, thereby enhancing user engagement.
-                    </p>
-                    <div class="flex flex-col items-center mb-3">
-                    <figure>
-                      <div x-data="{ isZoomed: false }">
-                      <img class="h-auto max-w-full" src="/img/sftlbc/timely-information.png" alt="image description">
-                      <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div class="relative">
-                            <img src="/img/sftlbc/timely-information.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                            <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                                &times;
-                            </button>
-                        </div>
-                    </div>
-                  </div>
-                      <figcaption class=" text-gray-500 text-sm mt-2">Set a toast above the navigation bar to announce the new fellowship event news.</figcaption>
-                    </figure>
-                  </div>
-                  </li>
-                  <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white">Clarification</strong>
-                    
-                    <p class="mb-4">It enables the user to understand the faith terms through explanations. Provide a Q&A session for new visitors to explain faith-related terminology, bridging the gap with users and enticing them to learn more, enhancing user engagement and understanding.</p>
-                    <div class="flex flex-col items-center mb-3">
-                    <figure>
-                      <div x-data="{ isZoomed: false }">
-                      <img class="h-auto max-w-full" src="/img/sftlbc/clarification.png" alt="image description">
-                      <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div class="relative">
-                            <img src="/img/sftlbc/clarification.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                            <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                                &times;
-                            </button>
-                        </div>
-                    </div>
-                  </div>
-                      <figcaption class=" text-gray-500 text-sm mt-2">Set a section for the people who new to the website that have a lot of common questions.</figcaption>
-                    </figure>
-                  </div>
-                  </li>
-                  <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white">Efficiency</strong>
-                    
-                    <p class="mb-4">We improve information architecture to make user and website interaction more effective. The sidebar offers well-organized information and clear navigation for easy recognition, catering to the needs of an aging user demographic. By minimizing website hierarchy levels and utilizing sidebar and breadcrumb navigation, a clear browsing path and information architecture are provided, reducing the cognitive load on users.</p>
-                    <div class="flex flex-col items-center mb-3">
-                    <figure>
-                      <div x-data="{ isZoomed: false }">
-                      <img class="h-auto max-w-full" src="/img/sftlbc/efficiency.png" alt="image description">
-                      <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div class="relative">
-                            <img src="/img/sftlbc/efficiency.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                            <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                                &times;
-                            </button>
-                        </div>
-                    </div>
-                  </div>
-                      <figcaption class=" text-gray-500 text-sm mt-2">Build horizontal navigation bar for the first level menu and side bar for sub-menus.</figcaption>
-                    </figure>
-                  </div>
-                  </li>
-                  <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white">Up-to-date</strong>
-                    
-                    <p class="mb-4">We provide various methods for retrieving information with continuous updates to maintain activity. Users can access historical Sunday service videos, newsletters, and daily devotionals, making it convenient to browse and view historical records. This encourages church members to regularly visit the church website.</p>
-                    <div class="flex flex-col items-center mb-3">
-                    <figure>
-                      <div x-data="{ isZoomed: false }">
-                      <img class="h-auto max-w-full" src="/img/sftlbc/solution4.png" alt="image description">
-                      <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div class="relative">
-                            <img src="/img/sftlbc/solution4.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                            <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                                &times;
-                            </button>
-                        </div>
-                    </div>
-                  </div>
-                      <figcaption class=" text-gray-500 text-sm mt-2">Support visiters to get our church resourcs.</figcaption>
-                    </figure>
-                  </div>
-                  </li>
-                  <li class="mb-6">
-                    <strong class="text-2xl font-bold text-gray-900 dark:text-white">Activity</strong>
-                    
-                    <p class="mb-4">We offer real historical information and photos to build more trust, increase internal engagement, and enhance approachability. Display authentic activities and testimonial sharing to provide new users with a better understanding of the church and to foster interaction among existing members.</p>
-                    <div class="flex flex-col items-center mb-3">
-                    <figure>
-                      <div x-data="{ isZoomed: false }">
-                      <img class="h-auto max-w-full" src="/img/sftlbc/solution5.png" alt="image description">
-                      <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                        <div class="relative">
-                            <img src="/img/sftlbc/solution5.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                            <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                                &times;
-                            </button>
-                        </div>
-                    </div>
-                  </div>
-                      <figcaption class=" text-gray-500 text-sm mt-2">Update fellowship events photos to attract visiter to our church in person.</figcaption>
-                    </figure>
-                  </div>
-                  </li>
-                </ul>
-                
-              </div>
-
-          
-          
-          </div>
-        </div>
-
-        <div id="research">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Phase 1 - Research</h1>
-
-          <div id="competitive-analysis">
-            <h3 class="text-3xl font-bold my-6 pt-6">Competitive Analysis</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Our UX team members compiled a list of competitor and stakeholder-selected websites that we searched through to find consistent industry themes. 
-              <br>
-              We learned a lot from the competitors about what they have in common and what sets them apart from each other.
-              </p>
-            
-            <h3 class="text-2xl font-bold my-4">Competitors</h3>
-            <figure>
-            <img class="h-auto max-w-full" src="/img/sftlbc/competitors.png" alt="Competitors Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Three compititors are provided by Lianlian.</figcaption>
-                    </figure>
-            <h3 class="text-xl font-bold mb-3">Analysis conclution</h3>
-            
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>It is necessary and important to show the information and events.</li>
-              <li>All competitors don't have a consistent visual design system. (our website's visual design should keep consistent)</li>
-              <li>Excessive religious terminology set a barry for atheists to browse the website</li>
-              <li>It could be attractive and trustable to have historic photos.</li>
-              <li>It would be inclusiveness to have multiple languages </li>
-            </ul>
-
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/competitive_analysis.png" alt="competitive Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/competitive_analysis.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Competitive metric was created by Lian and me. </figcaption>
-                    </figure>
-            </div>
-            
-          </div>
-
-          <div id="questionnaire">
-            <h3 class="text-3xl font-bold my-6 pt-6">Questionnaire</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">We conducted a questionnaire to understand user browsing website behavior.
-              
-            </p>
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/user-questionnaire-report.png" alt="competitive Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/user-questionnaire-report.png" alt="competitive Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">User questionnaire inforgraphic created by me. </figcaption>
-                    </figure>
-            </div>
-          </div>
-
-          
-
-          <div id="target-audience">
-            <h3 class="text-3xl font-bold my-6 pt-6">Target Audience</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">After in-depth communication with stakeholders, according to the requirements and goals of stakeholders, the target users of the website are potential new members, new members who have joined, and old members. Using the church's demographics, we narrow down our target audience. Considering the established time of the church, it's no surprise that the followers tend to be older. 23-40 years old is 27%, 41-56 is 52%, and 57+ years old is 15%. Regarding gender, men and women are equally represented in the church.
-              <br>
-              So we determined that 23-56-year-olds are the website's most significant cohort. Since the old website launched in 2017, there have been 4514 visitors. To conduct effective user research, we separated the target audience into three types.
-              </p>
-              <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-                <li>Primary user: New member</li>
-                <li>People have the potential to be a new member (online visitors)</li>
-                <li>Old members</li>
-              </ul>
-              <figure>
-            <img class="h-auto max-w-full" src="/img/sftlbc/target_audience.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">The chart was designed by me.</figcaption>
-                    </figure>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300"> According to the survey, we learned that a friend's reference and website are the best ways to join the community.
-            </p>
-          </div>
-
-          <div id="observation">
-            <h3 class="text-3xl font-bold my-6 pt-6">Observation</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">During California's nine-month wildfire season, people never know if they'll be in a polluted area from a wildfire at any time.</p>
-            <div id="animation-carousel" class="relative w-full z-10" data-carousel="static">
-              <!-- Carousel wrapper -->
-              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                   <!-- Item 1 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/sftlbc/observation1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 2 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/sftlbc/observation2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 3 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                      <img src="/img/sftlbc/observation3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 4 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/sftlbc/observation4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 5 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/sftlbc/observation5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-              </div>
-              <!-- Slider controls -->
-              <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                      <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                      </svg>
-                      <span class="sr-only">Previous</span>
-                  </span>
-              </button>
-              <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                      <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                      </svg>
-                      <span class="sr-only">Next</span>
-                  </span>
-              </button>
-            </div>
-          </div>
-
-          <div id="church-personality-survey">
-            <h3 class="text-3xl font-bold my-6 pt-6">Church Personaliy Survey</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">In order to better define the church branding style, we conducted a characteristic survey. From user perspective, the visual style including these elements: 
-              <strong class="font-semibold text-gray-900 dark:text-white">Up-to-date, Clear, informative, connected,spiritual, enlightening</strong>
-            </p>
-            <figure>
-            <img class="h-auto max-w-full" src="/img/sftlbc/brand-personality.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">Church personality survey was conducted by Lian and me.</figcaption>
-                    </figure>
-          </div>
-
-          <div id="interview">
-            <h3 class="text-3xl font-bold my-6 pt-6">User Interview & Synthesis</h3>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">To better understand user' perspectives of using the website, we conducted interviews with 3 type of 16 users.</p>
-
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">We asked some questions and learned lots of insights as follows:</p>
-            
-
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/interview-audience.png" alt="Interview Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/interview-audience.png" alt="Interview Diagram Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
-                    </figure>
-            </div>
-
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              
-                <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">New Member - 6 people</strong> 
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                New members want the site to be informative and up-to-date.
-                </li>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  75% want to see photos of past events and get more event information.
-                </li>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  80% are more concerned about the composition of church personnel.
-                </li>
-                <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
-                  55% wish it were easier to watch weekly Sundays.
-                </li>
-              
-                <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Old members - 5 people</strong>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  Old members hope to have more interaction with other members.
-                  </li>
-                  <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
-                    85% want the website to have a mobile page.
-                  </li>
-                  
-                <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Those who are not a member of the church - 5 people</strong>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  90% think the Chinese fonts on the original church website are too crowded.
-                  </li>
-                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                    Most don't know church terminology.
-                  </li>
-                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                    All think that the effective page area of the website is too small.
-                  </li>      
-            </ul>
-          </div>
-
-          <div id="affinity-diagram">
-            <h3 class="text-3xl font-bold my-6 pt-6">Affinity Diagram</h3>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">We took the responses through an affinity diagram to find common themes amongst the responders. </p>
-            
-            <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Website Information Enhancement:</strong>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  Integrate more offline event details.
-                  </li>
-                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                    Add photos from past events.
-                  </li>
-                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                    Ensure continuous updates with detailed event information.
-                  </li> 
-                  <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
-                    Clearly convey the faith message on the homepage.
-                  </li>
-
-                  <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Additional Features:</strong>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  Introduce new functionalities.
-                  </li>
-                  <li class=" mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
-                    Provide definitions for specific terminologies.
-                  </li>
-
-                  <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Interaction Improvement:</strong>
-                <li class="mb-4 text-lg list-inside text-gray-700 dark:text-gray-300">
-                  Include testimonial sections for personal stories and experiences.
-                  </li>
-
-                  <strong class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">Visualization and Readability:</strong>
-                <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                  Optimize the use of graphics and textual content.
-                  </li>
-                  <li class=" text-lg list-inside text-gray-700 dark:text-gray-300">
-                    Improve text font to enhance readability.
-                  </li>
-
-          </div>
-          
-          <div id="insights">
-            <h3 class="text-3xl font-bold my-6 pt-6">Insights</h3>
-            
-              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Insight#1</p>
-              <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users expect the website to have enough information and continuous updates of the information.
-              </p>
-              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Sub-insight#1</p>
-              <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users want to see photos and reviews of past events, and learn more event information.
-              </p>
-              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Insight#2</p>
-              <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Users expect the website to provide (proprietary term explanation, clarification) question education and faith relate.</p>
-            
-              <p class=" text-xl font-semibold text-gray-900 dark:text-gray-300">Insight#3</p>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Users hope to have more interaction with other fellows through the church.</p>
-            
-          </div>
-          
-
-          
-        </div>
-
-        <div id="define">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Phase 2 - Define</h1>
-      
-          <div id="persona">
-            <h3 class="text-3xl font-bold my-6 pt-6">Persona & Problem Statement</h3>
-            <div class="flex flex-col items-center mb-6">
-              
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/SFTLBC - Persona - 1.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/SFTLBC - Persona - 1.png" alt="Persona1 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              
-            </div>
-
-            <div class="flex flex-col items-center mb-6">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/SFTLBC - Persona - 2.png" alt="Persona2 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/SFTLBC - Persona - 2.png" alt="Persona2 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-col items-center mb-8">
-              
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/SFTLBC - Persona - 3.png" alt="Persona3 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/SFTLBC - Persona - 3.png" alt="Persona3 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-          
-        </div>
-
-        <div id="ideation">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Phase 3 - Ideation</h1>
-          
-          <div id="design-sketch">
-            <h3 class="text-3xl font-bold my-6 pt-6">Design Sketch</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">With all the research and insights in mind, we moved into the next phase of actually building the website. Starting with some rough sketches on paper, we drew up some different concepts on the whiteboard, sought feedback from teammates and then brought the final ideas to life in Figma.
-            </p>
-            
-              <div class="flex flex-col items-center mb-8">
-                <figure>
-                <div x-data="{ isZoomed: false }">
-                  <img src="/img/sftlbc/wireframe_sketch.png" alt="Design Sketch Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                  <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                      <div class="relative">
-                          <img src="/img/sftlbc/wireframe_sketch.png" alt="Design Sketch Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                          <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                          </button>
-                      </div>
-                  </div>
-                </div>
-                <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
-                    </figure>
-              </div>
-
-          </div>
-
-          <div id="information-architecture">
-            <h3 class="text-3xl font-bold my-6 pt-6">Information Architecture</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">To understand better how users associate and group information on this website, we invited target users to do cart sorting for new and existing websites. According to the responses, we drew the website’s site map and combined all the low-fi wireframe screens onto one board so that we were able to see and adjust user flows and navigation quickly.
-            </p>
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/information-architecture.png" alt="Information Architecture Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/information-architecture.png" alt="Information Architecture Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
-                    </figure>
-            </div>
-          </div>
-        </div>
-
-        <div id="iteration">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Phase 4 - Iteration</h1>
-          <div id="usability-test">
-            
-            <h3 class="text-3xl font-bold my-6 pt-6">Usability Test</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Main User Tests Results</p>
-            
-
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/after-test-font-size.png" alt="Usability Test Card Sorting Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/after-test-font-size.png" alt="Usability Test Card Sorting Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The user tests were conducted by Lian and me. The user tests conduct picture was designed by Lian.</figcaption>
-                    </figure>
-            </div>
-
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Page: Save Real-time AQI recording page.</p>
-            
-            
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/after-test-side-bar.png" alt="Usability Test Result Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/after-test-side-bar.png" alt="Usability Test Result Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The user tests were conducted by Lian and me. The user tests conduct picture was designed by Lian.</figcaption>
-                    </figure>
-            </div>
-          </div>
-            
-          <div id="a/b-test"> 
-            <h3 class="text-3xl font-bold mb-8 my-6 pt-6">A/B Test</h3>
-            
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Most of the users choose optional B.</p>
-            
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/after-ab-test-homepage.png" alt="A/B Test Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/after-ab-test-homepage.png" alt="A/B Test Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The user tests were conducted by Lian and me. The user tests conduct picture was designed by Lian.</figcaption>
-                    </figure>
-            </div>
-          </div>
-        
-        </div>
-
-        <div id="deliver">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Phase 5 - Deliver</h1>
-
-          <div id="hand-off-to-developers">
-            <h3 class="text-3xl font-bold my-4">Hand Off to Developers</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">After everything is ready, the files are about to be handed off to the developers. The design handoff is a point in the product development process where developers implement the finished design. We provided all the hand-off materials and answered any questions developers had about the design or functionality. The all necessary assets include both an interactive prototype and a Figma file with possible status of the screens, detailed descriptions, and design style guide.
-            </p>
-          </div>
-
-          <div id="design-system">
-            <h3 class="text-3xl font-bold mb-8 mt-4">Design System</h3>
-            <div class="flex flex-col items-center mb-3">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/style-guide-1.png" alt="Design System Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/style-guide-1.png" alt="Design System Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-col items-center mb-3">
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/style-guide-2.png" alt="Design System Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/style-guide-2.png" alt="Design System Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/sftlbc/style-guide-3.png" alt="Design System Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/sftlbc/style-guide-3.png" alt="Design System Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The interviews were conducted by Lian and me. The interview conduct picture was designed by me.</figcaption>
-                    </figure>
-            </div>
-
-          </div>
-
-
-        </div>
-
-        <div id="takeaways">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Takeaways</h1>
-         
-        
-          <p class="text-2xl font-bold my-4">Pros: Teamwork</p>
-          <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Teamwork is essential in the world of UX design. Collaborating closely with developers has taught me the value of adopting a developer's mindset and considering the broader perspective. In my designs, I don't just focus on interface elements, user experience, and visuals; I also ensure that the product's functionality is well-addressed, translating my solutions into digital reality effectively.
-            <br>
-            Effective communication is the linchpin of successful teamwork and a seamless design handoff process. It's crucial to communicate proactively and frequently, using the most appropriate channels and methods to ensure a productive and harmonious collaboration.</p>
-          <p class="text-2xl font-bold my-4">Cons: Time Management</p>
-          <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">In the upcoming design cycle, I aim to enhance my time management and project management abilities. To achieve this, I intend to establish both short-term and long-term goals. I will also adopt a strategy of breaking down substantial project milestones into smaller, more manageable tasks, ensuring that each of these smaller milestones is attainable within its respective deadline. This approach will help me optimize my time and project management skills for greater efficiency and productivity.</p> 
-            
-        </div>
-
-
-      </div> 
-
-      
-      
-
-    </div>   
-  
-
-    
-</section>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const sidebarLinks = document.querySelectorAll('#sidebarLinks a');
-
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      // Prevent default anchor behavior
-      event.preventDefault();
-
-      // Get the target element's ID from the href attribute
-      const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      // Scroll to the target element
-      window.scrollTo({
-        top: targetElement.offsetTop - 85, // Adjust this value to match the scroll-margin-top
-        behavior: 'smooth'
-      });
-
-      // Optional: Add 'clicked-link' class to the clicked link
-      sidebarLinks.forEach(l => l.classList.remove('clicked-link'));
-      link.classList.add('clicked-link');
-    });
-  });
-});
-
-</script>
-
-<!-- Back-to-Top Button -->
-<button
-  id="backToTopButton"
-  class="fixed bottom-10 right-10 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center"
-  onclick="scrollToTop()"
->
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-  </svg>
-</button>
-
-<script>
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-</script>
-
-
-<footer class="bg-white dark:bg-gray-900">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-
-    <div class="text-3xl footer col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-center items-center text-center">
-      <p>
-          <!-- <a class="hvr-underline-from-left hover:underline" href="/index.html#project">All</a> / -->
-          <a class="hvr-underline-from-left hover:underline" href="/projects/endear.html">Endear</a> /
-          <a class="hvr-underline-from-left text-gray-400" href="/projects/sftlbc.html">S.F. True Light Baptiset Church</a> /
-          <a class="hvr-underline-from-left hover:underline" href="/projects/trail_angel.html">Trail Angel</a>
-          
-      </p>
-    </div>
-      
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-          
-          <div class="border-t border-gray-500 pt-3"></div>
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-xl  sm:text-center dark:text-gray-400">© 2024 Zheng Wei All Rights Reserved.
-            </span>
-            <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                
-                <!-- <a href="https://discordapp.com/users/Jannnne#1501" class=" hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                          <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                      </svg>
-                    <span class="sr-only">Discord community</span>
-                </a> -->
-                <!-- <a href="#" class=" hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                      <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                  </svg>
-                    <span class="sr-only">Twitter page</span>
-                </a> -->
-                <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="hover:text-gray-900 dark:hover:text-white">
-                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-20c0-1.1-.9-2-2-2zm-11 19h-3v-10h3v10zm-1.5-11.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm11.5 11.5h-3v-5.5c0-.3-.2-.5-.5-.5h-.5c-.3 0-.5.2-.5.5v5.5h-3v-10h3v1.5c.5-.8 1.3-1.5 2.5-1.5 1.9 0 3.5 1.6 3.5 3.5v6.5z"/>
-                  </svg>
-                  <span class="sr-only">LinkedIn page</span>
-                </a>
-                <a href="https://github.com/Jannnne" class=" hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="sr-only">GitHub account</span>
-                </a>
-                
-            </div>
-        </div>
+  <!-- Overview Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Brief</h2>
       </div>
-  </footer>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-xl font-semibold mb-4">S.F. True Light Baptist Church Website Redesign</h3>
+        <p class="text-base mb-16">
+          We spearheaded an end-to-end design process for the S.F. True Light Baptist Church website to increase engagement and visibility for users by 63%.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stakeholders Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Stakeholders</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <img src="/img/sftlbc/sftlbc_stakeholders.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- My Contribution Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">My Contribution</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <!-- Text -->
+        <p class="text-base">
+
+I led the comprehensive redesign of our organization's website, which resulted in a significant 63% increase in user engagement. By implementing strategic search engine optimization, focusing on keyword optimization, and crafting tailored content, I ensured our web presence was both visible and relevant. My approach included conducting thorough research, analyzing both internal and external data sources to align our strategies effectively. I spearheaded a user-centric research process, engaging with a diverse group of 11 users to gather insightful feedback. Working closely with engineers and designers, I played a pivotal role throughout the design process, contributing to every stage of development. Utilizing industry-standard tools such as Figma and FigJam, I was able to create and iterate prototypes efficiently, ensuring our designs were both innovative and user-friendly.
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Process Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Design Process</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <img src="/img/sftlbc/sftlbc_design_process.png" alt="" class="mb-16">
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Background</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300 mb-8">
+        <p class="text-base">
+
+          True Light Baptist Church, founded in 2002 with around 90 members, has an outdated website created in 2017 that fails to effectively promote or facilitate communication and interaction within its community, a shortfall particularly highlighted during the epidemic. Stakeholders now aim to overhaul the website to make it a key platform for information dissemination, enhance engagement among existing and new members, and attract newcomers. The primary objectives for the redesign include improving information promotion about the church, increasing membership, and fostering interaction within the church community.
+        </p>
+        <img src="/img/sftlbc/sftlbc_old_website.png" alt="" class="mb-16">
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem Statement Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Problem Statement</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <!-- Text -->
+        <h3 class="text-xl font-semibold mb-4">How might we encourage engagement and increase conversions on the website?</h3>
+        <p class="text-base">
+          For S.F. True Light Baptist Church, when church members and new visitors seek to engage in community activities or volunteer projects, they often face the challenge of not having a centralized platform to discover these opportunities or find others with similar interests to collaborate with. They are left to rely on personal networks or church announcements, which may not reach everyone effectively or match individuals based on availability and commitment levels. This lack of a streamlined process to connect and participate in church-led initiatives can hinder the overall involvement and growth of the church community.
+        </p>
+        <!-- user need -->
+        
+        <img src="/img/sftlbc/SFTLBC - Persona.png" alt="" class="mb-16">
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Research Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8 mb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Research</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Observation</h3>
+        <p class="text-base mb-4">
+          During California's nine-month wildfire season, people never know if they'll be in a polluted area from a wildfire at any time.
+        </p>
+        <div id="animation-carousel" class="relative w-full z-10 mb-16" data-carousel="static">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+               <!-- Item 1 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+                  <img src="/img/trail-angel/observation3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation4.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Second Research</h3>
+        <p class="text-base mb-4">
+          Find up-to-date statistics on CA wildfires and CAL FIRE activity. The Website www.fire.ca.gov combine state and federal data to track the number of fires and acres burned in California for 2023.
+        </p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
+          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
+              <p class="text-center text-4xl font-bold">5</p>
+              <p class="text-center">Year Average <br> (Same Interval)</p>
+          </div>
+          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
+              <p class="text-center text-4xl font-bold">6,272</p>
+              <p class="text-center">Windland Fires</p>
+          </div>
+          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
+              <p class="text-center text-4xl font-bold">1,158,028</p>
+              <p class="text-center">Acres</p>
+          </div>
+        </div>
+        
+          <figure class="mb-16">
+        <img class="h-auto max-w-full " src="/img/trail-angel/secondary-research.png" alt="image description">
+        <figcaption class=" text-gray-500 text-sm mt-2">Acres burned by Month and Decade for all fires in California in 5 year average (2018-2023)</figcaption>
+          </figure>
+        
+          <h3 class="text-2xl font-bold mb-4">Competitive Analysis</h3>
+        
+        
+          <img class="h-auto max-w-full mb-8" src="/img/trail-angel/competitors.png" alt="image description">
+          
+        <p class="text-base mb-4">
+          In conclusion, my competitive analysis of AllTrails, BreezoMeter, and Atmotube has provided valuable insights into their strengths, such as extensive trail databases, advanced air quality monitoring technologies, and user-friendly interfaces. However, it also highlights notable weaknesses like restricted offline map access, data accuracy issues, and infrequent data visualizations. Each competitor has distinct opportunities and faces unique threats in the evolving landscape shaped by post-pandemic behavior and technological advancements. This analysis serves as a strategic guide for identifying areas of improvement and innovation in my project, ensuring I deliver a product that effectively meets the needs of outdoor enthusiasts with enhanced features and capabilities.
+        </p>
+        <figure class="mb-16">
+          <img class="h-auto max-w-full " src="/img/trail-angel/feature-metrics.png" alt="image description">
+          <figcaption class=" text-gray-500 text-sm mt-2">The three compititors products' feature metrics.</figcaption>
+        </figure>
+
+        <h3 class="text-2xl font-bold mb-4">Interview</h3>
+        <p class="text-base mb-4">
+          
+For better understanding my users, I conducted interviews with 3 target audiences and 2 experts, revealing a strong demand for an app that combines trail information with real-time environmental data. This app, aimed at outdoor enthusiasts, would provide essential details on air quality and wildfire conditions to ensure safety and enhance the planning of outdoor activities. Users highlighted the need for predictive alerts, trail amenities information, and an engaging rewards system. Experts advised focusing on core functionalities that prioritize outdoor safety and suggested simplifying features to avoid overwhelming users. They also pointed out the importance of technical feasibility and strategic user targeting. To refine these insights and ensure the development meets user expectations while addressing technical and strategic challenges, I used an affinity diagram to help me extract insights, aiming for a well-rounded, user-centric solution. In case I couldn't get the sweet spot accurately, the affinity diagram served as a crucial tool to distill insights further.
+</p>
+        
+          <img class="h-auto max-w-full mb-4" src="/img/trail-angel/affinity-diagram.png" alt="image description">
+          
+        <h4 class="text-xl font-bold text-gray-500">Insights & Takeaways</h4>
+        <p class="text-base">
+          <ui>
+            <li>
+              Wildfires significantly impact both the physical health and emotional well-being of individuals, causing fear and frustration due to unpredictability.
+            </li>
+            <li>
+              There is a critical need for quick, trustworthy information regarding the direction and safety of areas affected by wildfire smoke.
+            </li>
+            <li>
+              Users desire predictive insights into air quality and wildfire trends to effectively plan their activities.
+            </li>
+            <li>
+              Accuracy in real-time air quality and wildfire information is essential to avoid misinformation, which is a major source of user dissatisfaction.
+            </li>
+            <li>
+              Tailored information is necessary for users with specific health conditions, such as allergies, requiring more detailed and relevant data.
+            </li>
+            <li>
+              The goal is to develop a product that provides accurate, timely updates on air quality and wildfires, catering to the diverse needs of users, enhancing their safety, and aiding in informed decision-making.
+            </li>
+          </ui>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ideation Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Ideation</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300 mb-24">
+        <!-- Text -->
+        <p class="text-base mb-8">
+          I created MVP sketches to brainstorm solutions for Trail Angel, ultimately selecting three that best meet my users' needs.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">Trail Plan</h3>
+        <p class="text-base mb-4">
+          My trail planning tool helps outdoor lovers choose safer paths by showing air quality, past wildfires, and planned burns. It's great for health-conscious hikers who want to avoid bad air or fire-risk areas. With easy-to-use maps and updates on air pollution, our system makes sure you can enjoy nature without worry.  
+        </p>
+        
+          <img class="h-auto max-w-full mb-16" src="/img/trail-angel/mvp-trail-plan.png" alt="image description">
+         
+
+            <h3 class="text-2xl font-bold mb-4">Wildfire Prediction</h3>
+            <p class="text-base mb-4">
+              My app uses smart tech to help people stay safe from California's wildfires. It's like a guide that shows you where fires happened before and helps you pick safe paths when you're hiking or camping. The app tells you about fire and smoke dangers so you can plan better trips in the woods. It's great for anyone who loves the outdoors. The app checks fire history and tells you which places are safe, so you can relax and enjoy nature without worrying about wildfires.
+            </p>
+            
+              <img class="h-auto max-w-full mb-16" src="/img/trail-angel/mvp-wildfire-prediction.png" alt="image description">
+              
+
+                <h3 class="text-2xl font-bold mb-4">AQI Alert</h3>
+                <p class="text-base mb-4">
+                  The Air Tracker app uses smart tech to give instant alerts about dirty air. It's great for people who love being outdoors and need clean air to stay safe. This app works with IoT and Bluetooth to keep users updated on air quality, so they can move away from pollution fast.  
+                </p>
+               
+                  <img class="h-auto max-w-full" src="/img/trail-angel/mvp-aqi-alert.png" alt="image description">
+                  
+      </div>
+    </div>
+  </div>
+
+  <!-- Prototype Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8 mb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Prototype</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Information Architecture</h3>
+        <p class="text-base mb-4">
+          The information architecture for Trail Angel was meticulously designed from the ground up, inspired by insights gathered during the MVP development phase. It represents a well-thought-out blueprint of the app’s structure, detailing the organization and hierarchy of pages such as the home page, search filter, trail list, and more. This architecture is critical in establishing a logical flow for the application, guiding users naturally from one function to the next, ensuring that the core features are accessible and that the user journey is coherent and intuitive.  
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/information-architecture.png" alt="image description">
+        <h3 class="text-2xl font-bold mb-4">Wireframe</h3>
+        <p class="text-base mb-4">
+          Moving from the abstract structure of information architecture to tangible interfaces, the wireframe creation process was informed by this groundwork. The wireframes translate the information architecture into detailed layouts for each page, considering the user interactions and visual elements. This step is where the theoretical framework of the app’s navigation is brought to life, allowing for the visualization of the user interface. It sets the stage for the actual design and development work, highlighting how users will engage with the app and where key features will be placed for optimal user experience.
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/wireframe.png" alt="image description">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Test & Iteration Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Test & Iteration</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Usability Test</h3>
+        <p class="text-base mb-4">
+        The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/usability-test-result.png" alt="image description">
+        <!-- <h3 class="text-2xl font-bold mb-4">A/B Test</h3>
+        <p class="text-base mb-4">
+        The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/a-&-b-test.png" alt="image description"> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Visual Design -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Visual Design</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Design System</h3>
+        <p class="text-base mb-4">
+          The name "Trail Angel" was conceived with a nod to the rich tradition of American hiking culture, where the term "trail angel" is affectionately used to describe someone who provides support to hikers. Embracing this spirit, I defined the brand personality of Trail Angel with five key adjectives: supportive, reliable, intuitive, adventurous, and empowering. These traits guided the creation of the Trail Angel logo and mood board, encapsulating the essence of the brand in visual form. The brand identity, rich with cultural resonance and personality, then served as the cornerstone for developing the app's design system, ensuring that every element from typography to color palettes aligns with the core values and character of Trail Angel.
+        </p>
+        <h4 class="text-xl font-bold text-gray-500">Color Palette & Scale</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/color_palette_scale.png" alt="image description">
+        <h4 class="text-xl font-bold text-gray-500">Typographic</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/typographic.png" alt="image description">
+        <h4 class="text-xl font-bold text-gray-500">Icongraphic</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/icongraphic.png" alt="image description">
+        <h4 class="text-xl font-bold text-gray-500">UI Component</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/ui_component.png" alt="image description">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Delivery -->
+<div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Title Column -->
+    <div class="lg:col-span-4">
+      <h2 class="text-4xl">Final Delivery</h2>
+    </div>
+    <!-- Text and GIF in a Row on Large Screens -->
+    <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+      <p class="text-base mb-8">
+        After an extensive journey through problem statement, research, ideation, prototype, user-test, and visual design, I present the final delivery for the Trail Angel project. 
+      </p>
+      
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-8">
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">On-time Information</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Individuals can employ the portable air quality monitor to instantaneously visualize and continuously monitor real-time air quality.
+          </p>
+        </div>
+        <div class="lg:w-1/2 flex-1 flex justify-end">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/air-tracker.png" alt="image description" >
+        </div>
+        
+      </div>
+
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-8">
+        
+        <div class="lg:w-1/2 flex-1 flex">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/gif_2.gif" alt="image description" >
+        </div>
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">Make Trail plan</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Users can access a sophisticated platform that not only facilitates the creation of personalized outdoor trail plans but also provides real-time air quality index data. This empowers users to enjoy a pristine outdoor experience, ensuring they breathe in clean, fresh air throughout their journey.
+          </p>
+        </div>
+        
+      </div>
+
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-8">
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">Detour A Trail</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.
+          </p>
+        </div>
+        <div class="lg:w-1/2 flex-1 flex justify-end">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/gif_3.gif" alt="image description" >
+        </div>
+        
+      </div>
+
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-16">
+        
+        <div class="lg:w-1/2 flex-1 flex">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/gif_4.gif" alt="image description" >
+        </div>
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">Change A Trail Plan</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Users can access real-time air pollution forecasts, allowing them to adjust their travel plans proactively prior to reaching their destination.  
+          </p>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Reflection Section -->
+<div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Title Column -->
+    <div class="lg:col-span-4">
+      <h2 class="text-4xl">Reflection</h2>
+    </div>
+    <!-- Text Spanning Remaining Columns -->
+    <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+      <p class="text-base mb-16">
+      
+In reflecting on the Trail Angel case study, I've realized the power of precise market segmentation, the lessons gleaned from competitor analysis, and the depth of user insights, all of which have been pivotal in shaping a product that truly connects with its audience. Adopting a tailored methodology proved crucial for achieving reliable outcomes, while a clear brand strategy and its seamless integration into the app’s design system were key in creating a cohesive and engaging user experience. Smart technology use not only enhanced functionality but also ensured cost-effectiveness. These lessons will guide the next steps in refining our project plan to ensure alignment with our strategic insights, ensuring Trail Angel's continued growth and user-centric evolution.
+ </p>
+    </div>
+  </div>
+</div>
+  
+
+</section>
+
+<!-- Back to Top Text Button -->
+<div class="mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8 text-right">
+  <a href="#top" class="text-black hover:text-gray-500 py-2 px-4 text-2xl">
+    Back to Top
+    <svg xmlns="http://www.w3.org/2000/svg" class="inline h-8 w-8 ml-1" fill="none" viewBox="0 0 48 48" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 15l7-7 7 7" />
+    </svg>
+  </a>
+</div>
+
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 relative overflow-hidden mb-16">
+  <div class="container mx-auto flex justify-between items-center my-8">
+    
+    <!-- Previous Project Link -->
+    <a href="/previous-project-url" class="flex items-center text-3xl font-semibold text-black hover:text-gray-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 19l-7-7 7-7" />
+      </svg>
+      Endear
+    </a>
+
+    <!-- Next Project Link -->
+    <a href="/next-project-url" class="flex items-center text-3xl font-semibold text-black hover:text-gray-600">
+      S.F. True Light Baptist Church
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Let's Get in Touch Section -->
+<div class="bg-white dark:bg-gray-900">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-8 py-10 items-center text-center">
+    <h2 class="text-4xl font-bold text-black dark:text-white mb-4">Let's Get in Touch</h2>
+    
+    <div class="space-x-4">
+      <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="text-2xl text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+        → LinkedIn
+      </a>
+      
+      <a href="mailto:iam.weizheng@gmail.com" class="text-2xl text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+        → Email
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="bg-white text-black">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      
+
+    <div class="sm:flex sm:items-center sm:justify-center">
+        <span class="text-xl  sm:text-center dark:text-gray-400">© 2024 Zheng Wei design and code with passion.
+        </span>
+        
+    </div>
+  </div>
+</footer>
 
 
   

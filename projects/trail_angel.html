@@ -230,7 +230,7 @@
     
 
   <!-- Navigation Bar -->
-  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+  <nav class="bg-white dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         <!-- Logo and Title -->
         <a href="https://zhennnngwei.com/" class="flex items-center">
@@ -241,67 +241,494 @@
         <div class="hidden md:flex items-center space-x-8">
             <!-- Navigation Links -->
             <div class="flex flex-row space-x-8 font-medium" id="navLinks">
-                <a href="/index.html#project" class="hover:underline">Projects</a>
-                <a href="/about.html" class="hover:underline">About</a>
-                <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+                <a href="./index.html#project" class="hover:underline">Projects</a>
+                <a href="./about.html" class="hover:underline">About</a>
+                <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="hover:underline">Resume</a>
+                <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="hover:underline">Email</a>
+                <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="hover:underline">LinkedIn</a>
             </div>
-            <!-- Contact Email Button -->
-            <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
-            </a>
+            
         </div>
         <!-- Mobile Menu Button -->
         <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
     </div>
     <!-- Mobile Menu Dropdown -->
     <div class="hidden md:hidden" id="mobile-menu">
         <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
-            <a href="/index.html#project" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900">Projects</a>
-            <a href="/about.html" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900">About</a>
-            <a href="https://drive.google.com/file/d/1A4unT0Sg_tzU0vgVk_6O27zeuhEStQEz/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900">Resume</a>
-            <a href="mailto:iam.weizheng@gmail.com" class="text-gray-700 hover:underline">
-                <button type="button" class="bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center text-white">Contact</button>
-            </a>
+            <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
+            <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
+            <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+            <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Email</a>
+            <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">LinkedIn</a>
         </div>
     </div>
-</nav>
-
-<script>
+  </nav>
+  
+  <script>
     // JavaScript for the mobile menu toggle
     const mobileMenuButton = document.querySelector('[data-collapse-toggle="mobile-menu"]');
     const mobileMenu = document.getElementById("mobile-menu");
-
+  
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
-
+  
     // Close mobile menu when a link is clicked
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
         });
     });
-
-</script>
+  </script>
 
 
 <!-- Hero Section -->
-<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden">
-  <div class="container mx-auto flex flex-col justify-center items-start text-left">
-    <!-- Title with animation, initially hidden -->
-    <h1 class="text-8xl font-bold opacity-0 animate-drop-in py-20">Make the Invisible Tangible</h1>
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden mb-16">
+  <div class="container mx-auto flex flex-col justify-center items-start text-left ">
+    
     <!-- Container for images with relative positioning -->
-    <div class="relative w-full mt-auto">
+    <div class="relative w-full mt-auto mb-8">
       <!-- Banner image with full width, initially hidden -->
-      <img src="/img/trail-angel/trail_angel_banner.png" alt="Trail Angel Banner" class="w-full h-auto object-cover opacity-0 animate-rise">
+      <img src="/img/trail-angel/trail_angel_banner.png" alt="Trail Angel Banner" class="w-full h-auto object-cover opacity-0 animate-drop-in">
       <!-- Logo image container with absolute positioning, initially hidden -->
       
     </div>
+    <!-- Title with animation, initially hidden -->
+    <h3 class="text-3xl  opacity-0 animate-rise mb-2">A product that guides air quality safety routes outdoors</h3>
+    <h2 class="text-5xl font-bold opacity-0 animate-rise">Trail Angel - Make the Invisible Tangible</h2>
+  </div>
+</section>
+
+
+
+<section id="case_study" class="bg-white dark:bg-gray-900">
+
+  <!-- Overview Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Overview</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-xl font-semibold mb-4">Trail Angel is a mobile app that assists active people to plan adventures outdoors without worrying about air pollution due to wildfires.</h3>
+        <p class="text-base mb-16">
+        The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem Statement Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Problem Statement</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <!-- Text -->
+        <h3 class="text-xl font-semibold mb-4">How might we remind people far away about wildfire and air pollution areas?</h3>
+        <p class="text-base">
+          Forecasting is crucial for joggers, hikers, and cyclists who require access to real-time air quality indices. Currently, there's no straightforward method to determine the air quality index for a specific trail or route.
+        </p>
+        <!-- user need -->
+        <img src="/img/trail-angel/persona1.png" alt="">
+        <img src="/img/trail-angel/persona2.png" alt="">
+        <img src="/img/trail-angel/persona3.png" alt="" class="mb-16">
+      </div>
+    </div>
+  </div>
+
+  <!-- Goal Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Goal</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-xl font-semibold mb-16">My design aims to offer users trail recommendations based on air quality preferences, deliver forecasts on wildfire air pollution, and provide real-time alerts for air pollution incidents.</h3>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Research Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8 mb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Research</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Observation</h3>
+        <p class="text-base mb-4">
+          During California's nine-month wildfire season, people never know if they'll be in a polluted area from a wildfire at any time.
+        </p>
+        <div id="animation-carousel" class="relative w-full z-10 mb-16" data-carousel="static">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+               <!-- Item 1 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+                  <img src="/img/trail-angel/observation3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation4.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-200 ease-linear" data-carousel-item>
+                  <img src="/img/trail-angel/observation5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">Second Research</h3>
+        <p class="text-base mb-4">
+          Find up-to-date statistics on CA wildfires and CAL FIRE activity. The Website www.fire.ca.gov combine state and federal data to track the number of fires and acres burned in California for 2023.
+        </p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
+          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
+              <p class="text-center text-4xl font-bold">5</p>
+              <p class="text-center">Year Average <br> (Same Interval)</p>
+          </div>
+          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
+              <p class="text-center text-4xl font-bold">6,272</p>
+              <p class="text-center">Windland Fires</p>
+          </div>
+          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
+              <p class="text-center text-4xl font-bold">1,158,028</p>
+              <p class="text-center">Acres</p>
+          </div>
+        </div>
+        
+          <figure class="mb-16">
+        <img class="h-auto max-w-full " src="/img/trail-angel/secondary-research.png" alt="image description">
+        <figcaption class=" text-gray-500 text-sm mt-2">Acres burned by Month and Decade for all fires in California in 5 year average (2018-2023)</figcaption>
+          </figure>
+        
+          <h3 class="text-2xl font-bold mb-4">Competitive Analysis</h3>
+        
+        
+          <img class="h-auto max-w-full mb-8" src="/img/trail-angel/competitors.png" alt="image description">
+          
+        <p class="text-base mb-4">
+          In conclusion, my competitive analysis of AllTrails, BreezoMeter, and Atmotube has provided valuable insights into their strengths, such as extensive trail databases, advanced air quality monitoring technologies, and user-friendly interfaces. However, it also highlights notable weaknesses like restricted offline map access, data accuracy issues, and infrequent data visualizations. Each competitor has distinct opportunities and faces unique threats in the evolving landscape shaped by post-pandemic behavior and technological advancements. This analysis serves as a strategic guide for identifying areas of improvement and innovation in my project, ensuring I deliver a product that effectively meets the needs of outdoor enthusiasts with enhanced features and capabilities.
+        </p>
+        <figure class="mb-16">
+          <img class="h-auto max-w-full " src="/img/trail-angel/feature-metrics.png" alt="image description">
+          <figcaption class=" text-gray-500 text-sm mt-2">The three compititors products' feature metrics.</figcaption>
+        </figure>
+
+        <h3 class="text-2xl font-bold mb-4">Interview</h3>
+        <p class="text-base mb-4">
+          
+For better understanding my users, I conducted interviews with 3 target audiences and 2 experts, revealing a strong demand for an app that combines trail information with real-time environmental data. This app, aimed at outdoor enthusiasts, would provide essential details on air quality and wildfire conditions to ensure safety and enhance the planning of outdoor activities. Users highlighted the need for predictive alerts, trail amenities information, and an engaging rewards system. Experts advised focusing on core functionalities that prioritize outdoor safety and suggested simplifying features to avoid overwhelming users. They also pointed out the importance of technical feasibility and strategic user targeting. To refine these insights and ensure the development meets user expectations while addressing technical and strategic challenges, I used an affinity diagram to help me extract insights, aiming for a well-rounded, user-centric solution. In case I couldn't get the sweet spot accurately, the affinity diagram served as a crucial tool to distill insights further.
+</p>
+        
+          <img class="h-auto max-w-full mb-4" src="/img/trail-angel/affinity-diagram.png" alt="image description">
+          
+        <h4 class="text-xl font-bold text-gray-500">Insights & Takeaways</h4>
+        <p class="text-base">
+          <ui>
+            <li>
+              Wildfires significantly impact both the physical health and emotional well-being of individuals, causing fear and frustration due to unpredictability.
+            </li>
+            <li>
+              There is a critical need for quick, trustworthy information regarding the direction and safety of areas affected by wildfire smoke.
+            </li>
+            <li>
+              Users desire predictive insights into air quality and wildfire trends to effectively plan their activities.
+            </li>
+            <li>
+              Accuracy in real-time air quality and wildfire information is essential to avoid misinformation, which is a major source of user dissatisfaction.
+            </li>
+            <li>
+              Tailored information is necessary for users with specific health conditions, such as allergies, requiring more detailed and relevant data.
+            </li>
+            <li>
+              The goal is to develop a product that provides accurate, timely updates on air quality and wildfires, catering to the diverse needs of users, enhancing their safety, and aiding in informed decision-making.
+            </li>
+          </ui>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ideation Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Ideation</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300 mb-24">
+        <!-- Text -->
+        <p class="text-base mb-8">
+          I created MVP sketches to brainstorm solutions for Trail Angel, ultimately selecting three that best meet my users' needs.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">Trail Plan</h3>
+        <p class="text-base mb-4">
+          My trail planning tool helps outdoor lovers choose safer paths by showing air quality, past wildfires, and planned burns. It's great for health-conscious hikers who want to avoid bad air or fire-risk areas. With easy-to-use maps and updates on air pollution, our system makes sure you can enjoy nature without worry.  
+        </p>
+        
+          <img class="h-auto max-w-full mb-16" src="/img/trail-angel/mvp-trail-plan.png" alt="image description">
+         
+
+            <h3 class="text-2xl font-bold mb-4">Wildfire Prediction</h3>
+            <p class="text-base mb-4">
+              My app uses smart tech to help people stay safe from California's wildfires. It's like a guide that shows you where fires happened before and helps you pick safe paths when you're hiking or camping. The app tells you about fire and smoke dangers so you can plan better trips in the woods. It's great for anyone who loves the outdoors. The app checks fire history and tells you which places are safe, so you can relax and enjoy nature without worrying about wildfires.
+            </p>
+            
+              <img class="h-auto max-w-full mb-16" src="/img/trail-angel/mvp-wildfire-prediction.png" alt="image description">
+              
+
+                <h3 class="text-2xl font-bold mb-4">AQI Alert</h3>
+                <p class="text-base mb-4">
+                  The Air Tracker app uses smart tech to give instant alerts about dirty air. It's great for people who love being outdoors and need clean air to stay safe. This app works with IoT and Bluetooth to keep users updated on air quality, so they can move away from pollution fast.  
+                </p>
+               
+                  <img class="h-auto max-w-full" src="/img/trail-angel/mvp-aqi-alert.png" alt="image description">
+                  
+      </div>
+    </div>
+  </div>
+
+  <!-- Prototype Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8 mb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Prototype</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Information Architecture</h3>
+        <p class="text-base mb-4">
+          The information architecture for Trail Angel was meticulously designed from the ground up, inspired by insights gathered during the MVP development phase. It represents a well-thought-out blueprint of the app’s structure, detailing the organization and hierarchy of pages such as the home page, search filter, trail list, and more. This architecture is critical in establishing a logical flow for the application, guiding users naturally from one function to the next, ensuring that the core features are accessible and that the user journey is coherent and intuitive.  
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/information-architecture.png" alt="image description">
+        <h3 class="text-2xl font-bold mb-4">Wireframe</h3>
+        <p class="text-base mb-4">
+          Moving from the abstract structure of information architecture to tangible interfaces, the wireframe creation process was informed by this groundwork. The wireframes translate the information architecture into detailed layouts for each page, considering the user interactions and visual elements. This step is where the theoretical framework of the app’s navigation is brought to life, allowing for the visualization of the user interface. It sets the stage for the actual design and development work, highlighting how users will engage with the app and where key features will be placed for optimal user experience.
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/wireframe.png" alt="image description">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Test & Iteration Section -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Test & Iteration</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Usability Test</h3>
+        <p class="text-base mb-4">
+        The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/usability-test-result.png" alt="image description">
+        <!-- <h3 class="text-2xl font-bold mb-4">A/B Test</h3>
+        <p class="text-base mb-4">
+        The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.
+        </p>
+        <img class="h-auto max-w-full" src="/img/trail-angel/a-&-b-test.png" alt="image description"> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Visual Design -->
+  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <!-- Title Column -->
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl">Visual Design</h2>
+      </div>
+      <!-- Text Spanning Remaining Columns -->
+      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+        <h3 class="text-2xl font-bold mb-4">Design System</h3>
+        <p class="text-base mb-4">
+          The name "Trail Angel" was conceived with a nod to the rich tradition of American hiking culture, where the term "trail angel" is affectionately used to describe someone who provides support to hikers. Embracing this spirit, I defined the brand personality of Trail Angel with five key adjectives: supportive, reliable, intuitive, adventurous, and empowering. These traits guided the creation of the Trail Angel logo and mood board, encapsulating the essence of the brand in visual form. The brand identity, rich with cultural resonance and personality, then served as the cornerstone for developing the app's design system, ensuring that every element from typography to color palettes aligns with the core values and character of Trail Angel.
+        </p>
+        <h4 class="text-xl font-bold text-gray-500">Color Palette & Scale</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/color_palette_scale.png" alt="image description">
+        <h4 class="text-xl font-bold text-gray-500">Typographic</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/typographic.png" alt="image description">
+        <h4 class="text-xl font-bold text-gray-500">Icongraphic</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/icongraphic.png" alt="image description">
+        <h4 class="text-xl font-bold text-gray-500">UI Component</h4>
+        <img class="h-auto max-w-full mb-8" src="/img/trail-angel/ui_component.png" alt="image description">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Delivery -->
+<div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Title Column -->
+    <div class="lg:col-span-4">
+      <h2 class="text-4xl">Final Delivery</h2>
+    </div>
+    <!-- Text and GIF in a Row on Large Screens -->
+    <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+      <p class="text-base mb-8">
+        After an extensive journey through problem statement, research, ideation, prototype, user-test, and visual design, I present the final delivery for the Trail Angel project. 
+      </p>
+      
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-8">
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">On-time Information</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Individuals can employ the portable air quality monitor to instantaneously visualize and continuously monitor real-time air quality.
+          </p>
+        </div>
+        <div class="lg:w-1/2 flex-1 flex justify-end">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/air-tracker.png" alt="image description" >
+        </div>
+        
+      </div>
+
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-8">
+        
+        <div class="lg:w-1/2 flex-1 flex">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/gif_2.gif" alt="image description" >
+        </div>
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">Make Trail plan</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Users can access a sophisticated platform that not only facilitates the creation of personalized outdoor trail plans but also provides real-time air quality index data. This empowers users to enjoy a pristine outdoor experience, ensuring they breathe in clean, fresh air throughout their journey.
+          </p>
+        </div>
+        
+      </div>
+
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-8">
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">Detour A Trail</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.
+          </p>
+        </div>
+        <div class="lg:w-1/2 flex-1 flex justify-end">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/gif_3.gif" alt="image description" >
+        </div>
+        
+      </div>
+
+      <!-- Horizontal layout with text aligned to the left center of the GIF -->
+      <div class="flex flex-col lg:flex-row lg:items-center mb-16">
+        
+        <div class="lg:w-1/2 flex-1 flex">
+          <img class="w-72 h-auto rounded-3xl" src="/img/trail-angel/gif_4.gif" alt="image description" >
+        </div>
+        <div class="lg:w-1/2 lg:pl-4">
+          <h3 class="text-2xl font-bold mb-4">Change A Trail Plan</h3>
+          <p class="text-base mb-4 lg:mb-0">
+            Users can access real-time air pollution forecasts, allowing them to adjust their travel plans proactively prior to reaching their destination.  
+          </p>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Reflection Section -->
+<div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Title Column -->
+    <div class="lg:col-span-4">
+      <h2 class="text-4xl">Reflection</h2>
+    </div>
+    <!-- Text Spanning Remaining Columns -->
+    <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+      <p class="text-base mb-16">
+      
+In reflecting on the Trail Angel case study, I've realized the power of precise market segmentation, the lessons gleaned from competitor analysis, and the depth of user insights, all of which have been pivotal in shaping a product that truly connects with its audience. Adopting a tailored methodology proved crucial for achieving reliable outcomes, while a clear brand strategy and its seamless integration into the app’s design system were key in creating a cohesive and engaging user experience. Smart technology use not only enhanced functionality but also ensured cost-effectiveness. These lessons will guide the next steps in refining our project plan to ensure alignment with our strategic insights, ensuring Trail Angel's continued growth and user-centric evolution.
+ </p>
+    </div>
+  </div>
+</div>
+  
+
+</section>
+
+<!-- Back to Top Text Button -->
+<div class="mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8 text-right">
+  <a href="#top" class="text-black hover:text-gray-500 py-2 px-4 text-2xl">
+    Back to Top
+    <svg xmlns="http://www.w3.org/2000/svg" class="inline h-8 w-8 ml-1" fill="none" viewBox="0 0 48 48" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 15l7-7 7 7" />
+    </svg>
+  </a>
+</div>
+
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 relative overflow-hidden mb-16">
+  <div class="container mx-auto flex justify-between items-center my-8">
+    
+    <!-- Previous Project Link -->
+    <a href="/previous-project-url" class="flex items-center text-3xl font-semibold text-black hover:text-gray-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 19l-7-7 7-7" />
+      </svg>
+      Endear
+    </a>
+
+    <!-- Next Project Link -->
+    <a href="/next-project-url" class="flex items-center text-3xl font-semibold text-black hover:text-gray-600">
+      S.F. True Light Baptist Church
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+
   </div>
 </section>
 
@@ -310,1602 +737,42 @@
 
 
 
-<section id="case_study" class="bg-white dark:bg-gray-900">
-    <div class="flex mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
 
+
+
+
+
+<!-- Let's Get in Touch Section -->
+<div class="bg-white dark:bg-gray-900">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-8 py-10 items-center text-center">
+    <h2 class="text-4xl font-bold text-black dark:text-white mb-4">Let's Get in Touch</h2>
+    
+    <div class="space-x-4">
+      <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="text-2xl text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+        → LinkedIn
+      </a>
       
-        <aside class="w-1/4 p-4 sticky top-16 max-h-screen overflow-y-auto hidden md:block">
-          <!-- Sidebar content -->
-          <br>
-          
+      <a href="mailto:iam.weizheng@gmail.com" class="text-2xl text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300">
+        → Email
+      </a>
+    </div>
+  </div>
+</div>
 
-          <ul class="space-y-2" id="sidebarLinks">
-            <li>
-              <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-overview" data-collapse-toggle="dropdown-overview">
-                  <a href="#overview" class="flex-1 ml-3 text-left whitespace-nowrap text-lg font-medium">Overview</a>
-                  <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </button>
-              <ul id="dropdown-overview" class="hidden py-2 space-y-2">
-                  <li>
-                      <a href="#solution" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Solution</a>
-                  </li>
-                  <li>
-                        <a href="#project-goals" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Project Goals</a>
-                    </li>
-                  <li>
-                      <a href="#approach" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Approach</a>
-                  </li>
-                  
-              </ul>
-            </li>
 
-            <li>
-                <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-thesis" data-collapse-toggle="dropdown-thesis">
-                    <a href="#thesis" class="flex-1 ml-3 text-left whitespace-nowrap">Thesis</a>
-                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-                <ul id="dropdown-thesis" class="hidden py-2 space-y-2">
-                        <li>
-                            <a href="#observation" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Observation</a>
-                        </li>
-                        <li>
-                            <a href="#secondary-research" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Secondary Research</a>
-                        </li>
-                        <li>
-                            <a href="#interview" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Interview</a>
-                        </li>
-                        <li>
-                          <a href="#affinity-diagram" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Affinity Diagram</a>
-                      </li>
-                      <li>
-                          <a href="#how-might-we" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">How Might We...</a>
-                      </li>
-                      <li>
-                          <a href="#inspiration" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Inspiration</a>
-                      </li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-antithesis" data-collapse-toggle="dropdown-antithesis">
-                    <a href="#antithesis" class="flex-1 ml-3 text-left whitespace-nowrap">Antithesis</a>
-                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-                <ul id="dropdown-antithesis" class="hidden py-2 space-y-2">
-                    
-                    <li>
-                        <a href="#market-research" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Market Research</a>
-                    </li>
-                    <li>
-                        <a href="#target-audience" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Target Audience</a>
-                    </li>
-                    <li>
-                      <a href="#competitive-analysis" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Competitive Analysis</a>
-                  </li>
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-synthesis" data-collapse-toggle="dropdown-synthesis">
-                    <a href="#synthesis" class="flex-1 ml-3 text-left whitespace-nowrap">Synthesis</a>
-                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-                <ul id="dropdown-synthesis" class="hidden py-2 space-y-2">
-                    <li>
-                        <a href="#design-goals" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Design Goals</a>
-                    </li>
-                    <li>
-                        <a href="#MVP" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">MVPs</a>
-                    </li>
-                    <li>
-                        <a href="#proof-of-consept" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Proof of Consept</a>
-                    </li>
-                    <li>
-                      <a href="#information-architecture" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Information Architecture</a>
-                  </li>
-                  <li>
-                      <a href="#user-test" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">User Test</a>
-                  </li>
-                  <li>
-                      <a href="#design-system" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Design System</a>
-                  </li>
-                  <li>
-                    <a href="#air-tracker-sketch" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Air Tracker Sketch</a>
-                </li>
-                <li>
-                    <a href="#tech-implement" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Tech Implement</a>
-                </li>
-                <li>
-                  <a href="#final-delivery" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Final Delivery</a>
-              </li>
-                </ul>
-            </li>
-          
-            <li>
-              <button type="button" class="flex items-center p-2 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline" aria-controls="dropdown-takeaways" data-collapse-toggle="dropdown-takeaways">
-                <a href="#takeaways" class="flex-1 ml-3 text-left whitespace-nowrap">Takeaways</a>
-                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-            <ul id="dropdown-takeaways" class="hidden py-2 space-y-2">
-                    
-              <li>
-                  <a href="#what-i-learned" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">What I Learned</a>
-              </li>
-              <li>
-                  <a href="#next-step" class="flex items-center p-2 pl-11 w-full text-lg font-medium text-gray-900 rounded-lg transition duration-75 group hover:underline dark:text-white dark:hover:underline">Next Step</a>
-              </li>
-              
-          </ul>
-          </li>
-        </ul>
 
-        </aside>
-        <script>
-          document.addEventListener('DOMContentLoaded', () => {
-  const sidebarLinks = document.querySelectorAll('aside ul li a');
 
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      // Remove 'clicked-link' class from all links
-      sidebarLinks.forEach(l => l.classList.remove('clicked-link'));
+<footer class="bg-white text-black">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
       
-      // Add 'clicked-link' class to the clicked link
-      link.classList.add('clicked-link');
-    });
-  });
-});
-      </script>
-      
-  
-     
 
-      <div class="flex-1 max-w-3xl mx-auto p-4">
+    <div class="sm:flex sm:items-center sm:justify-center">
+        <span class="text-xl  sm:text-center dark:text-gray-400">© 2024 Zheng Wei design and code with passion.
+        </span>
         
-        <div id="overview">
-          <br>
-          
-          
-          <h1 class="text-4xl font-bold mb-6">Overview</h1>
-        
-          <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Trail Angel is a mobile app that assists active people to plan adventures outdoors without worrying about air pollution due to wildfires. The app includes a connection to a portable air tracker to monitor conditions in real-time. Trail Angel also provides alternative route planning should an area become unsafe, so outdoor activities can still be enjoyed safely.</p>
-          
-          
-          <div id="solution">
-            
-            <h2 class="text-3xl font-bold my-6 pt-6">Solution</h2>
-            <div class="flex flex-col items-start justify-center">
-              <h3 class="text-2xl font-bold my-4">On-time Information</h3>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Individuals can employ the portable air quality monitor to instantaneously visualize and continuously monitor real-time air quality.</p>
-              <div class="flex flex-col items-center mb-6">
-              <figure>
-                <img class="h-3/5 w-auto" src="/img/trail-angel/air-tracker.png" alt="Air Tracker Image">
-                <figcaption class=" text-gray-500 text-sm mt-2">Portable Air Quality Monitor</figcaption>
-            </figure>
-          </div>
-              
-              
-            </div>
-
-            <div class="flex flex-col items-start justify-center">
-              <h3 class="text-2xl font-bold my-4">Make a Trail Plan</h3>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">
-                Users can access a sophisticated platform that not only facilitates the creation of personalized outdoor trail plans but also provides real-time air quality index data. This empowers users to enjoy a pristine outdoor experience, ensuring they breathe in clean, fresh air throughout their journey.
-              </p>
-              
-              <div class="self-center w-full mb-6">
-                <figure>
-                <video class="h-auto max-w-full" controls>
-                  <source src="/img/trail-angel/gif_2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption class=" text-gray-500 text-sm mt-2">User makes a trail plan walkthrough video</figcaption>
-              </figure>
-              </div>
-            </div>
-            
-            <div class="flex flex-col items-start justify-center">
-              <h3 class="text-2xl font-bold my-4">Detour A Trail</h3>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">
-                Users can enhance awarenesses of real-time outdoor local air pollution alerts, enabling them to promptly assess the safety of their current location with respect to air quality.
-              </p>
-              
-              <div class="self-center w-full mb-6">
-                <figure>
-                <video class="h-auto max-w-full" controls>
-                  <source src="/img/trail-angel/gif_3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption class=" text-gray-500 text-sm mt-2">User detours a trail walkthrough video</figcaption>
-              </figure>
-              </div>
-            </div>
-          
-            <div class="flex flex-col items-start justify-center">
-              <h3 class="text-2xl font-bold my-4">Change A Trail Plan</h3>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">
-                Users can access real-time air pollution forecasts, allowing them to adjust their travel plans proactively prior to reaching their destination.
-              </p>
-              
-              <div class="self-center w-full mb-6">
-                <figure>
-                <video class="h-auto max-w-full" controls>
-                  <source src="/img/trail-angel/gif_4.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption class=" text-gray-500 text-sm mt-2">User changes a trail walkthrough video</figcaption>
-              </figure>
-              </div>
-            </div>
-
-          </div>
-
-          <div id="project-goals">
-            <h3 class="text-3xl font-bold my-6 pt-6">Project Goals</h3>
-
-            <h3 class="text-2xl font-bold my-4">Business Goals</h3>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Sell more than 100 air track monitors in one week with our new Trail Angel software.</li>
-              <li>Partner with BreezoMeter and use its Hyper-local Environmental Intelligence, Wildfire Tracker +, and Historical Environmental Data.</li>
-            </ul>
-            <h3 class="text-2xl font-bold my-4">Product Goals</h3>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Have users sign up.</li>
-              <li>Allow users using Trail Angel to make trail plans.</li>
-              <li>Allow users to access wildfire history maps to check trail conditions.</li>
-              <li>Allow users to have real-time alerts and access pollution details.</li>
-              <li>Allow users to change trail plans after getting alerts.</li>
-              <li>Allow users to connect with an air tracker monitoring to get a location warning.</li>
-            </ul>
-            <h3 class="text-2xl font-bold my-4">Users & Their Goals</h3>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Nature enthusiasts who are into the outdoors in the San Francisco Bay Area.</li>
-              <li>Bay Area outdoor hikers, cyclists, and joggers.</li>
-              <li>People who want to be active outdoors during wildfire season.</li>
-            </ul>
-            <h3 class="text-2xl font-bold my-4">The Risk</h3>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Users do not want to buy an air tracker monitor.</li>
-              <li>Users still stick to the apps they are used to.</li>
-              <li>Cell Phones and monitors might run out of power and signal.</li>
-            </ul>
-          </div>
-
-          <div id="approach">
-            <h2 class="text-3xl font-bold my-6 pt-6">Approach</h2>
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-              <!-- Card 1: Thesis -->
-              <div class="bg-white p-4 rounded-lg ">
-                  <h5 class="text-lg font-semibold mb-2">Thesis</h5>
-                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                       <li>Observation</li>
-                       <li>Secondary Research</li>
-                       <li>Interview</li>
-                       <li>Affinity Diagram</li>
-                       <li>How Might We...</li>
-                       <li>Inspirations</li>
-                       
-                  </ul>
-              </div>
-            
-
-              <!-- Card 2: Antithesis -->
-              <div class="bg-white p-4 rounded-lg ">
-                  <h5 class="text-lg font-semibold mb-2">Antithesis</h5>
-                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                      <li>Market Research</li>
-                      <li>Target Audience</li>
-                      <li>Compeptitive Analysis</li>
-                  </ul>
-              </div>
-
-              <!-- Card 3: Synthesis -->
-              <div class="bg-white p-4 rounded-lg ">
-                  <h5 class="text-lg font-semibold mb-2">Synthesis</h5>
-                  <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-                      
-                      <li>MVP</li>
-                      <li>Poof of Concept</li>
-                      <li>Information Architecture</li>
-                      <li>Test and Iteration</li>
-                      <li>Brand strategy</li>
-                      <li>Industrail Design</li>
-                      <li>Tech Implement</li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="thesis">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Thesis</h1>
-      
-          <div id="observation">
-            <h3 class="text-3xl font-bold my-6 pt-6">Observation</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">During California's nine-month wildfire season, people never know if they'll be in a polluted area from a wildfire at any time.</p>
-            <div id="animation-carousel" class="relative w-full z-10" data-carousel="static">
-              <!-- Carousel wrapper -->
-              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                   <!-- Item 1 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/trail-angel/observation1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 2 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/trail-angel/observation2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 3 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                      <img src="/img/trail-angel/observation3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 4 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/trail-angel/observation4.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-                  <!-- Item 5 -->
-                  <div class="hidden duration-200 ease-linear" data-carousel-item>
-                      <img src="/img/trail-angel/observation5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                  </div>
-              </div>
-              <!-- Slider controls -->
-              <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                      <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                      </svg>
-                      <span class="sr-only">Previous</span>
-                  </span>
-              </button>
-              <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                      <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                      </svg>
-                      <span class="sr-only">Next</span>
-                  </span>
-              </button>
-            </div>
-          </div>
-
-          <div id="secondary-research">
-            <h3 class="text-3xl font-bold my-6 pt-6">Secondary Research</h3>
-            <p class="mb-3 text-lg text-gray-700 dark:text-gray-300">Find up-to-date statistics on CA wildfires and CAL FIRE activity. The Website www.fire.ca.gov combine state and federal data to track the number of fires and acres burned in California for 2023.</p>
-            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-              <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
-                  <p class="text-center text-4xl font-bold">5</p>
-                  <p class="text-center">Year Average <br> (Same Interval)</p>
-              </div>
-              <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
-                  <p class="text-center text-4xl font-bold">6,272</p>
-                  <p class="text-center">Windland Fires</p>
-              </div>
-              <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
-                  <p class="text-center text-4xl font-bold">1,158,028</p>
-                  <p class="text-center">Acres</p>
-              </div>
-            </div>
-            <div class="flex flex-col items-center mb-6">
-          <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/secondary-research.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">Acres burned by Month and Decade for all fires in California in 5 year average (2018-2023)</figcaption>
-          </figure>
-        </div>
-          
-            <h3 class="text-2xl font-bold my-4">Health Impact</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">For some wildfire smoke, PM2.5 is used to make health recommendations : It defines the cutoff for particles that can travel deep into the lungs and cause the most damage. According to a report released by the American Lung Association, wildfires were responsible for the rise in pollution in the western U.S. 2.1 million more Americans now live in counties with unhealthy air.</p>
-            <div class="flex flex-col items-center mb-6">
-            <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/health-impact.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">The typical contents of wildfire smoke inforgraphic was designed by Zheng.</figcaption>
-          </figure>
-          </div>
-            
-          </div>
-
-          <div id="interview">
-            <h3 class="text-3xl font-bold my-6 pt-6">Interview</h3>
-            <h3 class="text-2xl font-bold my-4">Audiences Interview</h3>
-            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Summary from target audience:</h2>
-    
-    <div class="text-gray-700 dark:text-gray-300">
-        <h3 class="text-lg font-semibold mb-2">User Needs:</h3>
-        <p class="mb-4 text-lg">Users seek an app for outdoor activity planning, especially hiking and camping, that integrates trail information with real-time air quality data, especially during wildfire seasons.</p>
-
-        <h3 class="text-lg font-semibold mb-2">Tech Usage:</h3>
-        <p class="mb-4 text-lg">Moderate tech-savviness among users, with current reliance on various independent apps like AllTrails and recreation.gov.</p>
-
-        <h3 class="text-lg font-semibold mb-2">Air Quality Concerns:</h3>
-        <p class="mb-4 text-lg">Significant worry about air quality due to wildfires, affecting outdoor plans. A need for an app providing specific air quality information for outdoor locations.</p>
-
-        <h3 class="text-lg font-semibold mb-2">Desired Features:</h3>
-        <ul class="list-disc pl-5 mb-4 text-lg">
-            <li>Integration of trail planning with real-time air quality and wildfire information.</li>
-            <li>Predictive alerts about changing conditions.</li>
-            <li>Information on trail amenities and open camping spots.</li>
-        </ul>
-
-        <h3 class="text-lg font-semibold mb-2">App Engagement:</h3>
-        <p class="mb-4 text-lg">Interest in features like earning points for activities and supporting environmental projects.</p>
-
-        <h3 class="text-lg font-semibold mb-2">Development Recommendation:</h3>
-        <p class="mb-4 text-lg">Create a user-friendly app that combines trail information with environmental data, supported by accurate and regularly updated content.</p>
     </div>
-            <img class="h-auto max-w-full mb-6" src="/img/trail-angel/interview-audience.png" alt="image description">
-
-          
-            <h3 class="text-2xl font-bold my-4">Experts Interview</h3>
-            <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Summary from Experts:</h2>
-    
-    <div class="text-gray-700 dark:text-gray-300 mb-6">
-        <h3 class="text-lg font-semibold mb-2">Summary for the Product Portfolio Project</h3>
-        <p class="mb-4 text-lg">Diverse Perspectives: Insights from Haoyu Yan (computer science student) and Doug Van Praet (brand strategist).</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-6">
-        <h3 class="text-lg font-semibold mb-2">App Concept - Trail Angel:</h3>
-        <p class="mb-4 text-lg">Aims to assist outdoor enthusiasts with real-time air quality, pollen, and wildfire information for safer activity planning.</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-6">
-        <h3 class="text-xl font-semibold mb-2">Key Features:</h3>
-        <ul class="list-disc pl-5 mb-4">
-            <li class="text-lg">Real-time environmental alerts.</li>
-            <li class="text-lg">Points system for user engagement and environmental contributions.</li>
-        </ul>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-6">
-        <h3 class="text-lg font-semibold mb-2">Development Challenges:</h3>
-        <ul class="list-disc pl-5 mb-4">
-            <li class="text-lg">Technical feasibility, especially the hardware monitor.</li>
-            <li class="text-lg">Effective user targeting based on location and risk factors.</li>
-        </ul>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-6">
-        <h3 class="text-lg font-semibold mb-2">Strategic Focus:</h3>
-        <p class="text-lg">Prioritize core functionality for outdoor safety.</p>
-        <p class="text-lg">Consider simplifying features to avoid user confusion.</p>
-    </div>
-            <img class="h-auto max-w-full" src="/img/trail-angel/interview-expert.png" alt="image description">
-
-          </div>
-
-          <div id="affinity-diagram">
-            <h3 class="text-3xl font-bold my-6 pt-6">Affinity Diagram</h3>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Wildfire Impact & Air Quality Solutions Summary:</h3>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-4">
-        <h4 class="text-lg font-bold mb-2">Emotional and Physical Effects:</h4>
-        <p class="text-lg mb-2">Wildfires hurt people's health and their feelings. People are scared and upset because they can't control wildfires.</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-4">
-        <h4 class="text-lg font-bold mb-2">Important Information Needs:</h4>
-        <p class="text-lg mb-2">People need to know where the smoke from wildfires is going and if it's safe to go outside. They want this information quickly and in a way they can trust.</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-4">
-        <h4 class="text-lg font-bold mb-2">Predictable Information:</h4>
-        <p class="text-lg mb-2">People want to know what to expect with air quality and wildfires so they can plan ahead.</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-4">
-        <h4 class="text-lg font-bold mb-2">Real-Time Accuracy:</h4>
-        <p class="text-lg mb-2">The information given to people about wildfires and air quality must be right and up to date. They are frustrated with wrong information.</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300 mb-4">
-        <h4 class="text-lg font-bold mb-2">Special Needs for Certain People:</h4>
-        <p class="text-lg mb-2">Some people, like those with allergies, need more detailed information that is specific to their health needs.</p>
-    </div>
-
-    <div class="text-gray-700 dark:text-gray-300">
-        <h4 class="text-lg font-bold mb-2">Conclusion:</h4>
-        <p class="text-lg mb-2">I will make a product that gives people reliable and timely updates about air quality and wildfires to help them feel safer and make good decisions.</p>
-    </div>
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/affinity-diagram.png" alt="Affinity Diagram Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/affinity-diagram.png" alt="Affinity Diagram Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Trail Angel Affinity Diagram made using FigJam by Zheng.</figcaption>
-          </figure>
-            </div>
-            
-          </div>
-
-          <div id="how-might-we">
-            <h3 class="text-3xl font-bold my-6 pt-6">How Might We...</h3>
-            <h3 class="text-2xl font-bold mb-3">Remind people far away about wildfire and air pollution areas in wildfire season?</h3>
-            
-          </div>
-
-          <div id="inspiration">
-            <h3 class="text-3xl font-bold my-6 pt-6">Inspiration</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Inspired by three case studies, The Tesla Automobile Is A Big Example Of The Internet Of Things And Potential Problems And Benefits Of This Idea, How Netflix Uses Data To Pick Movies And Curate Content, and Using Machine Learning To Predict Value Of Homes On Airbnb, I have an idea for a new product. It will use smart technology to warn people about wildfire smoke, like how Tesla cars stay connected. It will learn from people's habits to give personalized alerts, similar to how Netflix suggests shows. And it will predict which areas might get smoke, just like Airbnb figures out home prices. This product will combine these smart features to help people stay safe from wildfire smoke.</p>
-            <div class="flex flex-col items-center mb-6">
-            <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/inspiration.png" alt="image description">
-            <figcaption class=" text-gray-500 text-sm mt-2">Inspiration diagram made by Zheng.</figcaption>
-          </figure>
-          </div>
-          </div>
-        </div>
-
-        <div id="antithesis">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Antithesis</h1>
-      
-          <div id="market-research">
-            <h3 class="text-3xl font-bold my-6 pt-6">Market Research</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The market size is overlap with following segmentation:</p>
-            
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Weather closely followers</li>
-              <li>Outdoor Activity People</li>
-              <li>Healthy Sensitive group</li>
-            </ul>
-            <div class="flex flex-col items-center mb-6">
-            <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/market-size.png" alt="Market Size Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Market size research diagram made by Zheng.</figcaption>
-          </figure>
-        </div>
-          </div>
-
-          <div id="target-audience">
-            <h3 class="text-3xl font-bold my-6 pt-6">Target Audience</h3>
-            <h3 class="text-2xl font-bold mb-3">Primary Audience</h3>
-            
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/target-audience.png" alt="Target Audience Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/target-audience.png" alt="Target Audience Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Primary audience figure designed and illustrated by Zheng.</figcaption>
-          </figure>
-            </div>
-            
-          
-            <h3 class="text-2xl font-bold mb-3">Secondary Audience</h3>
-            
-            <div class="flex flex-col items-center mb-3">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/secondary-audience.png" alt="Secondary Audience Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/secondary-audience.png" alt="Secondary Audience Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Secondary audience figure designed and illustrated by Zheng.</figcaption>
-          </figure>
-            </div>
-            
-            
-          </div>
-
-          <div id="competitive-analysis">
-            <h3 class="text-3xl font-bold my-6 pt-6">Competitive Analysis</h3>
-            <h3 class="text-2xl font-bold my-4">Competitors</h3>
-            <div class="flex flex-col items-center mb-6">
-            <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/competitors.png" alt="Competitors Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Competitors selected after market research.</figcaption>
-          </figure>
-        </div>
-            <h3 class="text-xl font-bold my-3">AllTrails Marketing Analyse</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">AllTrails is a comprehensive route guide by region, designed for those who do not run in the city simply because they don't know there are trails nearby. The app allows users to search by area to find the nearest trails and find information about those trails.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Pros</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Trail Search</li>
-              <li>Filtering options</li>
-              <li>Ease of use</li>
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Cons</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Offline map for Pro members only</li>
-              <li>Lack of detailed information</li>
-            </ul>
-            <div class="flex flex-col items-center mb-6">
-            <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/competitor1-image.png" alt="Competitors Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Competitor AllTrails figure credit by Google Play.</figcaption>
-          </figure>
-        </div>
-            <h3 class="text-xl font-semibold mb-3">SWOT/PEST Analysis</h3>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Strength</p>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Provides distances and user ratings, reviews, and user recordings crowdsourced for each trail, as well as photos uploaded by millions of registered hikers, mountain bikers, and trail runners. Alltrails has over 50,000 trails with details. Its datalg helps people explore the outdoors with trail maps.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Weakness</p>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The E-book map does not offer interactive location searches.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Opportunities</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>P: Some places still require masks because of COVID.</li>
-              <li>E: AllTrails raised $150M after COVID.</li>
-              <li>S: Global Community.</li>
-              <li>T: GPS navigation.</li>
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Threats</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>P: COVID lockdowns (for now) have largely ended.</li>
-              <li>E: Well-known in hiking marketing, member cost risk.</li>
-              <li>S: The app is more utilitarian than it is social.</li>
-              <li>T: Organic keywords more related to hiking.</li>
-            </ul>
-          
-            <h3 class="text-xl font-bold my-3">BreezoMeter Marketing Analyse</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">BreezoMeter combines big data and machine learning technology to provide intuitive, personalised information on air quality and pollen levels to companies and consumers around the world. It scales business with BreezoMeter's environmental intelligence platform & API products. Provides Air Quality API for accuracy-Monitored, real Time & forecast, etc.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Pros</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>The app is easy to use.</li>
-              <li>Great for adding air quality maps and data to our product.</li>
-              
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Cons</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Inaccurate readings</li>
-              <li>Over-notification</li>
-              <li>Serious problems with data presentation</li>
-            </ul>
-            <div class="flex flex-col items-center mb-6">
-          <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/competitor2-image.png" alt="Competitors Image">
-            
-            <figcaption class=" text-gray-500 text-sm mt-2">Competitor BreezoMeter figure credit by Google Play.</figcaption>
-          </figure>
-        </div>
-            <h3 class="text-xl font-semibold mb-3">SWOT/PEST Analysis</h3>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Strength</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Live Accuracy Monitoring</li>
-              <li>External Validation Of Technology</li>
-              <li>Hourly-Refresh</li>
-              <li>Granular Resolution - (5 Meters/16.5 Feet)</li>
-              <li>Detection Of 34 Different Pollutants And 13 Pollen-Producing Plants</li>
-              <li>Air Pollution Forecast (Up To 96 Hrs)</li>
-              <li>Pollen Forecast (Up To 3 Days)</li>
-              <li>Location-lgd Fire Alerts</li>
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Weakness</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>The content index in the App is not accurate enough.</li>
-              <li>It doesn't have an individual air quality monitor for data collection.</li>
-              
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Opportunities</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>P: New air quality politics in Califonia.</li>
-              <li>E: Selling different weather map APIs for B2B.</li>
-              <li>S: People are realizing the air quality is not as safe as they imagined.</li>
-              <li>T: Wildfire navigation.</li>
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Threats</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>P: Different air quality standards around the world.</li>
-              <li>E: Partner company with Alltrails.</li>
-              <li>S: Lack of communities.</li>
-              <li>T: GPS map support.</li>
-            </ul>
-          
-            <h3 class="text-xl font-bold my-3">ATMOTUBE Marketing Analyse</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Atmotube Pro is a wearable, portable advanced solution for both indoor and outdoor air quality tracking. Measures real-time air pollution caused by harmful gases and a wide range of Volatile Organic compounds (VOCs). It also measures atmospheric pressure, temperature, and humidity.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Pros</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>User-friendly interface.</li>
-              <li>Offers advice on understanding the data and how you can act on it.</li>
-              <li>The Biggest battery in the market.</li>
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Cons</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Graphic data</li>
-              <li>Environmental information about your location changes frequently.</li>
-            </ul>
-            <div class="flex flex-col items-center mb-6">
-          <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/competitor3-image.png" alt="Competitors Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Competitor ATMOTUBE figure credit by santacruzworks.org/.</figcaption>
-          </figure>
-        </div>
-            <h3 class="text-xl font-semibold mb-3">SWOT/PEST Analysis</h3>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Strength</p>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Analyze personal exposure to air pollution with real-time and cumulative data using the Atmotube mobile app.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Weakness</p>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">No screen for user to visualize the air quality index data.</p>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Opportunities</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>P: Some places still require masks because of COVID.</li>
-              <li>E: Partnership with the European environmental research institution.</li>
-              <li>S: To have an ATMOTUBE community.</li>
-              <li>T: Opt-in to contribute anonymous, aggregated environmental data to a free global air quality map.</li>
-            </ul>
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Threats</p>
-            <ul class="mb-8 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>P: COVID lockdowns (for now) have largely ended.</li>
-              <li>E: Well-known in hiking marketing, member cost risk.</li>
-              <li>S: The app is more utilitarian than it is social.</li>
-              <li>T: The battery lasts a day</li>
-            </ul>
-          </div>
-
-          <div id="competitive-metrics">
-            <h3 class="text-2xl font-bold my-4">Competitive Metrics</h3>
-          
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/usability-metrics.png" alt="Usability Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/usability-metrics.png" alt="Usability Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Usability competitive metrics designed by Zheng.</figcaption>
-          </figure>
-            </div>
-            
-          
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/feature-metrics.png" alt="Feature Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/feature-metrics.png" alt="Feature Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Feature competitive metrics designed by Zheng.</figcaption>
-          </figure>
-            </div>
-            
-          </div>
-
-          
-
-        </div>
-
-        <div id="synthesis">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Synthesis</h1>
-
-          <div id="design-goals">
-            <h3 class="text-3xl font-bold my-6 pt-6">Design Goals</h3>
-              <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#1</p>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Provide users with trails that meet their air quality requirements.</p>
-            
-              <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#2</p>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Make wildfire air pollution forecasts for users.</p>
-            
-              <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Goal#3</p>
-              <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Alert users to air pollution in real-time.</p>
-            
-          </div>
-
-          <div id="MVP">
-            <h3 class="text-3xl font-bold my-6 pt-6">MVPs</h3>
-            <h3 class="text-2xl font-bold my-4">Trail plan</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Our trail planning tool helps outdoor lovers choose safer paths by showing air quality, past wildfires, and planned burns. It's great for health-conscious hikers who want to avoid bad air or fire-risk areas. With easy-to-use maps and updates on air pollution, our system makes sure you can enjoy nature without worry.</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/mvp-trail-plan.png" alt="MVP Trail Plan Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Trail plan MVP sketched by Zheng.</figcaption>
-          </figure>
-        </div>
-            <br>
-            <h3 class="text-2xl font-bold mb-3">Wildfire Prediction</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Our app uses smart tech to help people stay safe from California's wildfires. It's like a guide that shows you where fires happened before and helps you pick safe paths when you're hiking or camping. The app tells you about fire and smoke dangers so you can plan better trips in the woods. It's great for anyone who loves the outdoors. The app checks fire history and tells you which places are safe, so you can relax and enjoy nature without worrying about wildfires.</p>
-             <div class="flex flex-col items-center mb-6">
-                <figure>
-              <img class="h-auto max-w-full" src="/img/trail-angel/mvp-wildfire-prediction.png" alt="Wildfire Prediction Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">Wildfire Prediction MVP sketched by Zheng.</figcaption>
-          </figure>
-        </div>
-            <br>
-            <h3 class="text-2xl font-bold mb-3">AQI Alert</h3>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">The Air Tracker app uses smart tech to give instant alerts about dirty air. It's great for people who love being outdoors and need clean air to stay safe. This app works with IoT and Bluetooth to keep users updated on air quality, so they can move away from pollution fast.</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-            <img class="h-auto max-w-full" src="/img/trail-angel/mvp-aqi-alert.png" alt="MVP AQI Alert Image">
-            <figcaption class=" text-gray-500 text-sm mt-2">AQI alert MVP sketched by Zheng.</figcaption>
-          </figure>
-        </div>
-          </div>
-          
-          <div id="proof-of-consept">
-            <h3 class="text-3xl font-bold my-6 pt-6">Proof of Consept</h3>
-
-            <div id="personas">
-              <h3 class="text-2xl font-bold my-4">Personas</h3>
-              <div class="flex flex-col items-center mb-6">
-                <figure>
-                <div x-data="{ isZoomed: false }">
-                  <img src="/img/trail-angel/personas.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                  <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                      <div class="relative">
-                          <img src="/img/trail-angel/personas.png" alt="Persona1 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                          <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                          </button>
-                      </div>
-                  </div>
-                </div>
-                <figcaption class=" text-gray-500 text-sm mt-2">Personas defined by Zheng.</figcaption>
-          </figure>
-              </div>
-
-            </div>
-          </div>
-
-          
-
-          <div id="task-flow">
-            
-            <h3 class="text-xl font-bold my-3">Persona: Wyatt Hill</h3>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona1.png" alt="Persona1 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The photo of the persona, Wyatt Hill, credit by unsplash.com. </figcaption>
-          </figure>
-            </div>
-            
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Design Goals #1 Mind Map</p>
-            
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/design-goal-1-mindmap.png" alt="Mindmap Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/design-goal-1-mindmap.png" alt="Mindmap Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The design goal #1 user story mind map was made in FigJam by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Story</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Wyatt, a dad and product manager, often faces Saturday disruptions due to wildfire smoke affecting his son's soccer practice. Living near a forest, smoke is a common issue. One Saturday, after another cancellation, the coach recommends the Trail Angel app. Wyatt downloads it, quickly sets up an account, and uses it to find a hiking trail with clean air. That day, instead of staying indoors, the family enjoys a hike at West Shore and Bass Cove Trail, away from the smoke.</p>
-              <p class="mb-8 text-lg font-semibold text-gray-700 dark:text-gray-300">User Story Map</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/user-story-map1.png" alt="User Story Map Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/user-story-map1.png" alt="User Story Map Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Wyatt Hill's user story map was made in FigJam by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Storyboard</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/storyboard 1.jpg" alt="Storyboard" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/storyboard 1.jpg" alt="Storyboard" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Wyatt Hill's storyboard was illustrated by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Flow</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Scenario:The Wyatt family will have a plan for hiking. Wyatt is going to make the trail plan on the best AQI Trail (Red Hill Trail and Nike Trail) on Dec 3, at 3:00 PM in Saturday afternoon. </p>
-            <div class="flex flex-col items-center mb-6">
-              
-                <img src="/img/trail-angel/user-flow1.png" alt="User Flow Image" alt="image description">
-                
-            </div>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Outcome: The new trial plan is on the trail plan list.</p>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">WireFrame</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/wireframe1.png" alt="Wireframe Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/wireframe1.png" alt="Wireframe Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Wyatt Hill's low-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Key Pages</p>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona-1-key-pages.png" alt="Wireframe Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona-1-key-pages.png" alt="Wireframe Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Wyatt Hill's medium-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <h3 class="text-xl font-bold my-3">Persona: Harper Forest</h3>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona2.png" alt="Persona2 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The photo of the persona, Harper Forest, credit by unsplash.com. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Design Goals #2 Mind Map</p>
-            
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/design-goal-2-mindmap.png" alt="Mindmap Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/design-goal-2-mindmap.png" alt="Mindmap Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The design goal #2 user story mind map was made in FigJam by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Story</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Harper and his friends cycle off-road every weekend. They use an app called Trail Angel to avoid pollution. When their air quality trackers, linked to the app, detect high pollution, the app warns them and suggests a cleaner route. This way, they can enjoy their ride without the bad air. One time, the app suggested a detour to Tafoni Loop for better air, and they all followed it to continue their ride safely.</p>
-              <p class="mb-8 text-lg font-semibold text-gray-700 dark:text-gray-300">User Story Map</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/user-story-map2.png" alt="User Story Map Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/user-story-map2.png" alt="User Story Map Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Harper Forest's user story map was made in FigJam by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Storyboard</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/storyboard 2.jpg" alt="Storyboard" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/storyboard 2.jpg" alt="Storyboard" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Harper Forest's storyboard was illustrated by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Flow</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Harper Detour to Tafoni Loop and then ride back to the EI Corte de Madera Outer and safe the route. Send Beacon text to his ride mate. Save the realtime AQI recording from the air tracker.
-            </p>
-            <div class="flex flex-col items-center mb-6">
-              
-                <img src="/img/trail-angel/user-flow2.png" alt="User Flow Image" alt="image description">
-                
-            </div>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Outcome: The detoured trail recording is in the trail list.</p>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">WireFrame</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/wireframe2.png" alt="Wireframe Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/wireframe2.png" alt="Wireframe Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Harper Forest's low-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Key Pages</p>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona-2-key-pages.png" alt="Wireframe Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona-2-key-pages.png" alt="Wireframe Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Harper Forest's medium-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-            
-
-            <h3 class="text-xl font-bold my-3">Persona: Judy Woodruff</h3>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona3.png" alt="Persona3 Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">The photo of the persona, Judy Woodruff, credit by unsplash.com. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Design Goals #3 Mind Map</p>
-            
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/design-goal-3-mindmap.png" alt="Mindmap Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/design-goal-3-mindmap.png" alt="Mindmap Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The design goal #3 user story mind map made in FigJam by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Story</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Judy jogs every Saturday but sometimes smoke ruins her plans. After hearing about Trail Angel from her friend Amy, Judy tried it out. She scheduled a run on The Preserve Trail, but Trail Angel warned her on Wednesday about possible smoke from a controlled burn nearby. Using the app, Judy easily changed her run to a clearer trail, Calaveras Ridge. With no more bad air alerts, she had a great run that Saturday.</p>
-              <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Story Map</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/user-story-map3.png" alt="User Story Map Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/user-story-map3.png" alt="User Story Map Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Judy Woodruff's user story map is made in FigJam by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Storyboard</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/storyboard3.png" alt="Storyboard" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/storyboard3.png" alt="Storyboard" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Judy Woodruff's storyboard was illustrated by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">User Flow</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Scenario:Judy needs to filter the requirements there are No pollution detect in 14 days. So Judy has to reset her trail plan and change to the longest trail that with the lowest air quality index (Calaveras Ridge Regional Trail). </p>
-            <div class="flex flex-col items-center mb-6">
-              
-                <img src="/img/trail-angel/user-flow3.png" alt="User Flow Image" alt="image description">
-                
-            </div>
-            <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">Outcome: The trial plan is changed on the trail list page.</p>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">WireFrame</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/wireframe3.png" alt="Wireframe Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/wireframe3.png" alt="Wireframe Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Judy Woodruff's low-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <p class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300">Key Pages</p>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/persona-3-key-pages.png" alt="Wireframe Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/persona-3-key-pages.png" alt="Wireframe Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Judy Woodruff's medium-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-
-          </div>
-
-          <div id="information-architecture">
-            <h3 class="text-2xl font-bold my-6 pt-6">Information Architecture</h3>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/information-architecture.png" alt="Information Architecture Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/information-architecture.png" alt="Information Architecture Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <figcaption class=" text-gray-500 text-sm mt-2"> The information architecture was created by Zheng. </figcaption>
-          </figure>
-          </div>
-
-          <div id="user-test">
-            <h3 class="text-2xl font-bold my-6 pt-6">User Test</h3>
-            <h3 class="text-xl font-bold my-4">Usability Test</h3>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Summary of Feedback</p>
-            <ul class="mb-4 text-lg list-disc list-inside text-gray-700 dark:text-gray-300">
-              <li>Home page 3 sessions' proposition is not right.</li>
-              <li>The map need more feature, micromotion.</li>
-              <li>The beacon tech need education.</li>
-              <li>The AQI alert page need emphasize.</li>
-              <li>The recording page arrangement need to be improved.</li>
-              <li>The flow is not few comfortable.</li>
-            </ul>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/usability-test-card-sorting.png" alt="Usability Test Card Sorting Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/usability-test-card-sorting.png" alt="Usability Test Card Sorting Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The usability test was conducted by Zheng. </figcaption>
-          </figure>
-            </div>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Page: Save Real-time AQI recording page.</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Modification: Recognized the layout of Save Real-time AQI recording page.</p>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/usability-test-result.png" alt="Usability Test Result Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/usability-test-result.png" alt="Usability Test Result Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> After usability test, the save Real-time AQI recording page was redesigned by Zheng. </figcaption>
-          </figure>
-            </div>
-            
-            
-            <h3 class="text-xl font-bold my-4">A/B Test</h3>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">Page: Trail Detail Page</p>
-            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">The result is optional B, it organize the layout of the Trail detail page modal.</p>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/a-&-b-test.png" alt="A/B Test Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/a-&-b-test.png" alt="A/B Test Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> After A/B test, the trail detail page was redesigned by Zheng. </figcaption>
-          </figure>
-            </div>
-          </div>
-
-          <div id="design-system">
-            <h3 class="text-2xl font-bold my-6 pt-6">Design System</h3>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/design-system.png" alt="Design System Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/design-system.png" alt="Design System Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The design system was designed by Zheng. </figcaption>
-          </figure>
-            </div>
-          </div>
-
-          <div id="air-tracker-sketch">
-            <h3 class="text-2xl font-bold my-6 pt-6">Air Tracker Sketch</h3>
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              
-                <img src="/img/trail-angel/product-design-sketch.png" alt="Product Design Image" >
-                
-                <figcaption class=" text-gray-500 text-sm mt-2"> The product was sketched by Zheng. </figcaption>
-              </figure>
-            </div>
-
-          </div>
-
-          <div id="tech-implement">
-            <h3 class="text-2xl font-bold my-6 pt-6">Tech Implement</h3>
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/technical-diagram-hardware.png" alt="Usability Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/technical-diagram-hardware.png" alt="Usability Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Technical Diagram - Hardware</figcaption>
-          </figure>
-            </div>
-
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/Sensor-module-spec-air-tracker.png" alt="Usability Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/Sensor-module-spec-air-tracker.png" alt="Usability Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Air Tracker Sensors/Module Spec</figcaption>
-          </figure>
-            </div>
-            
-          
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/technical-diagram-software.png" alt="Feature Metrics Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/technical-diagram-software.png" alt="Feature Metrics Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                            &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2">Technical Diagram - Software</figcaption>
-          </figure>
-            </div>
-          </div>
-
-          <div id="final-delivery">
-            <h3 class="text-2xl font-bold my-6 pt-6">Final Delivery</h3>
-            
-
-            <div class="flex flex-col items-center mb-6">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/final-delivery.jpg" alt="Final Delivery Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/final-delivery.jpg" alt="Final Delivery Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The Trail Angel high-fidelity prototype was created by Zheng. </figcaption>
-          </figure>
-            </div>
-
-            <div class="flex flex-col items-center mb-8">
-              <figure>
-              <div x-data="{ isZoomed: false }">
-                <img src="/img/trail-angel/product-design-mockup.png" alt="Product Design Image" class="cursor-pointer" @click="isZoomed = !isZoomed">
-                <div x-show="isZoomed" class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div class="relative">
-                        <img src="/img/trail-angel/product-design-mockup.png" alt="Product Design Image" class="max-h-screen max-w-screen" @click="isZoomed = !isZoomed">
-                        <button @click="isZoomed = !isZoomed" class="absolute top-4 right-4 text-white text-2xl hover:text-red-500">
-                          &times;
-                        </button>
-                    </div>
-                </div>
-              </div>
-              <figcaption class=" text-gray-500 text-sm mt-2"> The mockup of the air tracker rendering by Zheng </figcaption>
-          </figure>
-            </div>
-          </div>
-
-        </div>
-
-        <div id="takeaways">
-          <h1 class="text-4xl font-bold mb-6 pt-6">Takeaways</h1>
-          <div id="what-i-learned">
-          <h3 class="text-2xl font-bold my-6 pt-6">What I Learned</h3>
-        
-          <div class="text-gray-700 dark:text-gray-300 mb-4">
-            <h3 class="text-lg font-semibold mb-2">Segmentation:</h3>
-            <p class="text-lg mb-2"></p>Choosing the right market segments is key. Good segmentation helps in making better products and marketing them.</p>
-        </div>
-    
-        <div class="text-gray-700 dark:text-gray-300 mb-4">
-            <h3 class="text-lg font-semibold mb-2">Learning from Competitors:</h3>
-            <p class="text-lg mb-2">Look at what competitors do and don't do well to find chances to do better.</p>
-        </div>
-    
-        <div class="text-gray-700 dark:text-gray-300 mb-4">
-            <h3 class="text-lg font-semibold mb-2">User Insight:</h3>
-            <p class="text-lg mb-2">Know why and how users act, including psychological and biological reasons, to make products they'll love.</p>
-        </div>
-    
-        <div class="text-gray-700 dark:text-gray-300 mb-4">
-            <h3 class="text-lg font-semibold mb-2">Methodology Fit:</h3>
-            <p class="text-lg mb-2">Use methods that work well for your project to get reliable results.</p>
-        </div>
-    
-        <div class="text-gray-700 dark:text-gray-300 mb-4">
-            <h3 class="text-lg font-semibold mb-2">Brand Strategy:</h3>
-            <p class="text-lg mb-2">Have a clear brand strategy to show what your brand stands for and what makes it different.</p>
-        </div>
-    
-        <div class="text-gray-700 dark:text-gray-300 mb-4">
-            <h3 class="text-lg font-semibold mb-2">Brand in Design:</h3>
-            <p class="text-lg mb-2">Make sure your brand's style shows up in your UX/UI to make a lasting impression and keep users coming back.</p>
-        </div>
-    
-        <div class="text-gray-700 dark:text-gray-300">
-            <h3 class="text-lg font-semibold mb-2">Practical Tech Use:</h3>
-            <p class="text-lg mb-2">Be smart about using technology to keep costs down and make sure your project works well.</p>
-        </div>
-        </div>
-        <div id="next-step">
-          <h3 class="text-2xl font-bold my-6 pt-6">Next Step</h3>
-          <p class="text-lg mb-2">Review the current project plan to ensure it aligns with our key learnings. This includes checking our market segmentation, evaluating our competitors for any opportunities, deepening our understanding of user behavior, ensuring our methodology is project-specific, refining our brand strategy, integrating our brand identity into UX/UI design, and planning a realistic technology implementation strategy. Set a meeting with the team to discuss these points and make necessary adjustments to the project plan.</p>
-        
-          
-        </div> 
-        </div>
-
-
-      </div> 
-
-      
-      
-
-    </div>   
-  
-
-    
-</section>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const sidebarLinks = document.querySelectorAll('#sidebarLinks a');
-
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      // Prevent default anchor behavior
-      event.preventDefault();
-
-      // Get the target element's ID from the href attribute
-      const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      // Scroll to the target element
-      window.scrollTo({
-        top: targetElement.offsetTop - 85, // Adjust this value to match the scroll-margin-top
-        behavior: 'smooth'
-      });
-
-      // Optional: Add 'clicked-link' class to the clicked link
-      sidebarLinks.forEach(l => l.classList.remove('clicked-link'));
-      link.classList.add('clicked-link');
-    });
-  });
-});
-
-</script>
-
-<!-- Back-to-Top Button -->
-<button
-  id="backToTopButton"
-  class="fixed bottom-10 right-10 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center"
-  onclick="scrollToTop()"
->
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-  </svg>
-</button>
-
-<script>
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-</script>
-
-
-<footer class="bg-white dark:bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-
-      <div class="text-3xl footer col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-center items-center text-center pb-16">
-        <p>
-          <!-- <a class="hvr-underline-from-left hover:underline" href="/index.html#project">All</a> / -->
-          <a class="hvr-underline-from-left hover:underline" href="/projects/endear.html">Endear</a> /
-          <a class="hvr-underline-from-left hover:underline" href="/projects/sftlbc.html">S.F. True Light Baptiset Church</a> /
-          <a class="hvr-underline-from-left text-gray-400" href="/projects/trail_angel.html">Trail Angel</a>
-          
-      </p>
-      </div>
-        
-      
-            
-            <div class="border-t border-gray-500 pt-3 pb-3"></div>
-          <div class="sm:flex sm:items-center sm:justify-between">
-              <span class="text-xl  sm:text-center dark:text-gray-400">© 2024 Zheng Wei All Rights Reserved.
-              </span>
-              <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                  
-                  <!-- <a href="https://discordapp.com/users/Jannnne#1501" class=" hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
-                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
-                        </svg>
-                      <span class="sr-only">Discord community</span>
-                  </a> -->
-                  <!-- <a href="#" class=" hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
-                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
-                    </svg>
-                      <span class="sr-only">Twitter page</span>
-                  </a> -->
-                  <a href="https://www.linkedin.com/in/zheng-wei-428618194/" class="hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-20c0-1.1-.9-2-2-2zm-11 19h-3v-10h3v10zm-1.5-11.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm11.5 11.5h-3v-5.5c0-.3-.2-.5-.5-.5h-.5c-.3 0-.5.2-.5.5v5.5h-3v-10h3v1.5c.5-.8 1.3-1.5 2.5-1.5 1.9 0 3.5 1.6 3.5 3.5v6.5z"/>
-                    </svg>
-                    <span class="sr-only">LinkedIn page</span>
-                  </a>
-                  <a href="https://github.com/Jannnne" class=" hover:text-gray-900 dark:hover:text-white">
-                      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
-                      </svg>
-                      <span class="sr-only">GitHub account</span>
-                  </a>
-                  
-              </div>
-          </div>
-        </div>
-    </footer>
+  </div>
+</footer>
 
 
   
