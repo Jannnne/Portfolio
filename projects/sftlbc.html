@@ -22,7 +22,10 @@
   }
 
   /* Carousel controls */
-  
+  .carousel-control {
+    z-index: 30; /* Lower z-index value than the navbar */
+    /* other styles for carousel controls */
+  }
       /* video */
       .self-center {
   display: flex;
@@ -225,8 +228,9 @@
 </head>
 <body>
     
+
   <!-- Navigation Bar -->
-  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+  <nav class="bg-white dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600">
     <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         <!-- Logo and Title -->
         <a href="https://zhennnngwei.com/" class="flex items-center">
@@ -256,7 +260,7 @@
         <div class="flex flex-col items-center justify-center pt-2 pb-3 space-y-1">
             <a href="./index.html#project" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Projects</a>
             <a href="./about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">About</a>
-            <a href="https://drive.google.com/file/d/1PSHv78nV2h26grlrxsMyTJdlu0ByPYZ5/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
+            <a href="https://drive.google.com/file/d/1H4nDQAL4Y2uUXLvxBQAdjba4bgr0y84j/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Resume</a>
             <a href="mailto:iam.weizheng@gmail.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">Email</a>
             <a href="https://www.linkedin.com/in/zheng-wei-428618194/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900">LinkedIn</a>
         </div>
@@ -281,8 +285,9 @@
   </script>
 
 
+
 <!-- Hero Section -->
-<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-20 pb-5 px-4 relative overflow-hidden mb-16">
+<section class="bg-white text-black mx-auto w-full max-w-screen-xl pt-4 pb-5 px-4 relative overflow-hidden mb-16">
   <div class="container mx-auto flex flex-col justify-center items-start text-left ">
     
     <!-- Container for banner image -->
@@ -325,36 +330,62 @@
 
 <section id="case_study" class="bg-white dark:bg-gray-900">
 
-  <!-- Overview Section -->
-  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-      <!-- Title Column -->
-      <div class="lg:col-span-4">
-        <h2 class="text-4xl">Brief</h2>
-      </div>
-      <!-- Text Spanning Remaining Columns -->
-      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
-        <h3 class="text-xl font-semibold mb-4">S.F. True Light Baptist Church Website Redesign</h3>
+ 
+
+    <!-- Overview Section -->
+    <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <!-- Title Column -->
+        <div class="lg:col-span-4">
+          <h2 class="text-4xl">Brief</h2>
+        </div>
+        <!-- Text Spanning Remaining Columns -->
+        <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+          <h3 class="text-xl font-semibold mb-4">S.F. True Light Baptist Church Website Redesign</h3>
         <p class="text-base mb-16">
           We spearheaded an end-to-end design process for the S.F. True Light Baptist Church website to increase engagement and visibility for users by 63%.
         </p>
-      </div>
-    </div>
-  </div>
+        
+  
+          <h3 class="text-2xl font-bold mb-4">Background</h3>
+          
+          <!-- Text -->
+          <p class="text-base mb-16">
 
-  <!-- Stakeholders Section -->
-  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-      <!-- Title Column -->
-      <div class="lg:col-span-4">
-        <h2 class="text-4xl">Stakeholders</h2>
-      </div>
-      <!-- Text Spanning Remaining Columns -->
-      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
-        <img src="/img/sftlbc/sftlbc_stakeholders.png" alt="">
+            The ten-year-old website of S.F. True Light Baptist Church requires a redesign due to its outdated visual style and lack of interactive features. The current layout is cluttered and lacks modern design elements, making it difficult for users, especially new visitors, to navigate and find relevant information. Improving the website's aesthetics and functionality will enhance user engagement, better communicate church activities, and attract new members.
+          </p>
+          <img src="/img/sftlbc/sftlbc_old_website.png" alt="Old Website" class="mb-16">
+
+
+          <h3 class="text-2xl font-bold mb-4">Stakeholders</h3>
+          <!-- Text -->
+          <p class="text-base">
+            The pastor of S.F. True Light Baptist Church approached us to redesign their website in order to attract new members and enhance engagement within the church community. I am working with five key stakeholders: the Pastor, an Elder, the Deacon Board, another UX Designer, and a Developer. Each stakeholder group has different priorities, impacts, and associated risks that we need to consider throughout the redesign process.
+          </p>
+          <img src="/img/sftlbc/sftlbc_stakeholders.png" alt="Stakeholders" class="mb-16" >
+
+
+          <h3 class="text-2xl font-bold mb-4">challenge</h3>
+          
+          <!-- Text -->
+          <h3 class="text-xl font-semibold mb-4">How might we encourage engagement and increase conversions on the website?</h3>
+        <p class="text-base">
+          The ten-year-old website of S.F. True Light Baptist Church needs a redesign to improve navigation and update its visual style, enhancing user engagement and effectively communicating church activities to attract new members.
+        </p>
+        <img src="/img/sftlbc/sftlbc_stakeholders.png" alt="Problem Quotes" class="mb-16" >
+        
+        
+  
+        
+        <h3 class="text-2xl font-bold mb-4">Goal</h3>
+        <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
+          <h3 class="text-xl font-semibold mb-16">Redesign the S.F. True Light Baptist Church website to improve user navigation, update visual aesthetics, and enhance engagement to attract and retain members.</h3>
+        </div> 
+      </div> 
       </div>
     </div>
-  </div>
+
+  
 
   <!-- My Contribution Section -->
   <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
@@ -369,62 +400,9 @@
         <!-- Text -->
         <p class="text-base">
 
-I led the comprehensive redesign of our organization's website, which resulted in a significant 63% increase in user engagement. By implementing strategic search engine optimization, focusing on keyword optimization, and crafting tailored content, I ensured our web presence was both visible and relevant. My approach included conducting thorough research, analyzing both internal and external data sources to align our strategies effectively. I spearheaded a user-centric research process, engaging with a diverse group of 11 users to gather insightful feedback. Working closely with engineers and designers, I played a pivotal role throughout the design process, contributing to every stage of development. Utilizing industry-standard tools such as Figma and FigJam, I was able to create and iterate prototypes efficiently, ensuring our designs were both innovative and user-friendly.
-</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Design Process Section -->
-  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-      <!-- Title Column -->
-      <div class="lg:col-span-4">
-        <h2 class="text-4xl">Design Process</h2>
-      </div>
-      <!-- Text Spanning Remaining Columns -->
-      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
-        <img src="/img/sftlbc/sftlbc_design_process.png" alt="" class="mb-16">
-      </div>
-    </div>
-  </div>
-
-  <!-- Background Section -->
-  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-      <!-- Title Column -->
-      <div class="lg:col-span-4">
-        <h2 class="text-4xl">Background</h2>
-      </div>
-      <!-- Text Spanning Remaining Columns -->
-      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300 mb-8">
-        <p class="text-base">
-
-          True Light Baptist Church, founded in 2002 with around 90 members, has an outdated website created in 2017 that fails to effectively promote or facilitate communication and interaction within its community, a shortfall particularly highlighted during the epidemic. Stakeholders now aim to overhaul the website to make it a key platform for information dissemination, enhance engagement among existing and new members, and attract newcomers. The primary objectives for the redesign include improving information promotion about the church, increasing membership, and fostering interaction within the church community.
+          I led the redesign of our organization's website, boosting user engagement by 63% through strategic SEO, keyword optimization, and tailored content. By conducting thorough research and collaborating with engineers and designers using tools like Figma and FigJam, I ensured the final design was innovative, user-friendly, and aligned with our strategic goals.
         </p>
-        <img src="/img/sftlbc/sftlbc_old_website.png" alt="" class="mb-16">
-      </div>
-    </div>
-  </div>
-
-  <!-- Problem Statement Section -->
-  <div class="flex mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-      <!-- Title Column -->
-      <div class="lg:col-span-4">
-        <h2 class="text-4xl">Problem Statement</h2>
-      </div>
-      <!-- Text Spanning Remaining Columns -->
-      
-      <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
-        <!-- Text -->
-        <h3 class="text-xl font-semibold mb-4">How might we encourage engagement and increase conversions on the website?</h3>
-        <p class="text-base">
-          For S.F. True Light Baptist Church, when church members and new visitors seek to engage in community activities or volunteer projects, they often face the challenge of not having a centralized platform to discover these opportunities or find others with similar interests to collaborate with. They are left to rely on personal networks or church announcements, which may not reach everyone effectively or match individuals based on availability and commitment levels. This lack of a streamlined process to connect and participate in church-led initiatives can hinder the overall involvement and growth of the church community.
-        </p>
-        <!-- user need -->
-        
-        <img src="/img/sftlbc/SFTLBC - Persona.png" alt="" class="mb-16">
+        <img src="/img/sftlbc/sftlbc_design_process.png" alt="design process" class="mb-16">
       </div>
     </div>
   </div>
@@ -436,76 +414,78 @@ I led the comprehensive redesign of our organization's website, which resulted i
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
       <!-- Title Column -->
       <div class="lg:col-span-4">
-        <h2 class="text-4xl">Research</h2>
+        <h2 class="text-4xl">Understand</h2>
       </div>
       <!-- Text Spanning Remaining Columns -->
       <div class="lg:col-span-8 text-gray-700 dark:text-gray-300">
         <h3 class="text-2xl font-bold mb-4">Observation</h3>
         <p class="text-base mb-4">
-          During California's nine-month wildfire season, people never know if they'll be in a polluted area from a wildfire at any time.
+          We visited the church on a service day to observe the entire environment, people's behaviors, and the worship service. The photos show various aspects of church life, from community activities to the worship setting, helping us understand the dynamics and needs of the congregation.
         </p>
-        <div id="animation-carousel" class="relative w-full z-10 mb-16" data-carousel="static">
-          <!-- Carousel wrapper -->
-          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-               <!-- Item 1 -->
-              <div class="hidden duration-200 ease-linear" data-carousel-item>
-                  <img src="/img/trail-angel/observation1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-              </div>
-              <!-- Item 2 -->
-              <div class="hidden duration-200 ease-linear" data-carousel-item>
-                  <img src="/img/trail-angel/observation2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-              </div>
-              <!-- Item 3 -->
-              <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-                  <img src="/img/trail-angel/observation3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-              </div>
-              <!-- Item 4 -->
-              <div class="hidden duration-200 ease-linear" data-carousel-item>
-                  <img src="/img/trail-angel/observation4.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-              </div>
-              <!-- Item 5 -->
-              <div class="hidden duration-200 ease-linear" data-carousel-item>
-                  <img src="/img/trail-angel/observation5.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-              </div>
-          </div>
-          <!-- Slider controls -->
-          <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                  </svg>
-                  <span class="sr-only">Previous</span>
-              </span>
-          </button>
-          <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span class="sr-only">Next</span>
-              </span>
-          </button>
-        </div>
+        <img src="/img/trail-angel/observations.png" class="h-auto max-w-full mb-8" alt="observations">
 
-        <h3 class="text-2xl font-bold mb-4">Second Research</h3>
+
+
+        <h3 class="text-2xl font-bold mb-4">Questionnaire</h3>
         <p class="text-base mb-4">
-          Find up-to-date statistics on CA wildfires and CAL FIRE activity. The Website www.fire.ca.gov combine state and federal data to track the number of fires and acres burned in California for 2023.
+          To understand our audience, we conducted a questionnaire survey, as shown in the image. The survey results indicate that while 66% of respondents have visited the S.F. True Light Baptist Church website, many are not regular visitors, suggesting room for improvement in engagement. The main discovery channel is through friends' referrals, highlighting the importance of personal connections. The preferred methods of accessing church information are WeChat and printed weekly announcements, indicating a need for both digital and traditional communication channels. This suggests the target audience values community ties and a mix of modern and traditional information sources.  
         </p>
-        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
-          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
-              <p class="text-center text-4xl font-bold">5</p>
-              <p class="text-center">Year Average <br> (Same Interval)</p>
-          </div>
-          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
-              <p class="text-center text-4xl font-bold">6,272</p>
-              <p class="text-center">Windland Fires</p>
-          </div>
-          <div class="bg-white p-4 flex-1 md:flex-none md:w-1/3">
-              <p class="text-center text-4xl font-bold">1,158,028</p>
-              <p class="text-center">Acres</p>
-          </div>
-        </div>
+        <img src="/img/sftlbc/user-questionnaire-report.png" alt="user-questionnaire-report" class="mb-16">
+
+
+
+        <h3 class="text-2xl font-bold mb-4">Target Audience</h3>
+        <p class="text-base mb-4">
+          After in-depth communication with the church pastor, elders, and deacon board, and using the church's demographics data, we refined our target audience. Given the church's established history, it is not surprising that the congregation tends to be older.
+       </p>
+       <img class="h-auto max-w-full" src="/img/sftlbc/target_audience.png" alt="image description" class="mb=8">
+       <p class="text-base mb-4">
+        Recognizing that the 23-56 age group forms the website's most significant cohort, and noting the 4514 visitors since the website's launch in 2017, we conducted effective user research to segment the target audience into three categories:
+        </p>
+        <ol class="mb-16">
+          <li><strong>Primary User: New Members</strong>
+            <ul>
+              <li>Recently joined individuals seeking integration into the church community.</li>
+            </ul>
+          </li>
+          <li><strong>Potential New Members (Online Visitors)</strong>
+            <ul>
+              <li>Individuals exploring the church website and considering joining, primarily aged 23-56.</li>
+            </ul>
+          </li>
+          <li><strong>Established Members</strong>
+            <ul>
+              <li>Long-term, active members needing updated information and community engagement tools, predominantly aged 41+.</li>
+            </ul>
+          </li>
+        </ol>
         
+
+        <h3 class="text-3xl font-bold my-6 pt-6">User Interview & Synthesis</h3>
+            <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">To better understand users' perspectives on the website, we conducted interviews with 16 users from our three target audience categories: new members, established members, and potential new members.</p>
+            <h3 class="text-xl font-semibold mb-4">New Members (6 People)</h3>
+            <ul class="mb-4">
+              <li><strong>Informative and Up-to-date Content:</strong> New members want the site to be informative and regularly updated.</li>
+              <li><strong>Event Photos and Information:</strong> 75% want to see photos of past events and get more event information.</li>
+              <li><strong>Church Personnel:</strong> 80% are interested in knowing the composition of church personnel.</li>
+              <li><strong>Weekly Sundays:</strong> 55% wish it were easier to watch weekly Sunday services.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-4">Established Members (5 People)</h3>
+            <ul class="mb-4">
+              <li><strong>Interaction with Members:</strong> Established members hope to have more interaction with other members.</li>
+              <li><strong>Mobile Compatibility:</strong> 85% want the website to have a mobile-friendly page.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mb-4">Potential New Members (5 People)</h3>
+            <ul class="mb-4">
+              <li><strong>Font Readability:</strong> 90% think the Chinese fonts on the original church website are too crowded.</li>
+              <li><strong>Terminology Understanding:</strong> Most do not know church terminology.</li>
+              <li><strong>Effective Page Area:</strong> All think that the effective page area of the website is too small.</li>
+            </ul>
+            
+                <img src="/img/sftlbc/interview-audience.png" alt="Interview Image" class="mb-16">
+
           <figure class="mb-16">
         <img class="h-auto max-w-full " src="/img/trail-angel/secondary-research.png" alt="image description">
         <figcaption class=" text-gray-500 text-sm mt-2">Acres burned by Month and Decade for all fires in California in 5 year average (2018-2023)</figcaption>
